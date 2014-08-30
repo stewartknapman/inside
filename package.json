@@ -1,0 +1,20 @@
+{
+  "name": "inside",
+  "version": "0.0.0",
+  "description": "another css framework",
+  "main": "src/inside.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stewartknapman/inside.git"
+  },
+  "author": "Stewart Knapman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stewartknapman/inside/issues"
+  },
+  "homepage": "https://github.com/stewartknapman/inside",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-sass": "^0.7.3"
+  }
+}
