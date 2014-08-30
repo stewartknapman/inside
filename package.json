@@ -15,6 +15,7 @@
   "homepage": "https://github.com/stewartknapman/inside",
   "devDependencies": {
     "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.10",
     "gulp-sass": "^0.7.3"
   }
 }
