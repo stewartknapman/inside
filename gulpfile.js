@@ -14,7 +14,7 @@ var paths = {
 
     styles: {
         src: './src',
-        files: './src/*.scss',
+        files: ['./src/*.scss', './src/*/*.scss'],
         dest: './demo'
     }
 

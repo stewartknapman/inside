@@ -1,9 +1,21 @@
 @import 'inside/_variables.scss';
+@import 'inside/_placeholders.scss';
 @import 'inside/_mixins.scss';
 @import 'inside/_foundation.scss';
-@import 'inside/_sticky_footer.scss';
-@import 'inside/_grid.scss';
+
 @import 'inside/_type.scss';
-@import 'inside/_tables.scss';
 @import 'inside/_forms.scss';
+
+@if $include_grid {
+  @import 'inside/_grid.scss';
+}
+
+@if $include_responsive_tables {
+  @import 'inside/_responsive_tables.scss';
+}
+
+@if $include_sticky_footer {
+  @import 'inside/_sticky_footer.scss';
+}
+
 @import 'inside/_utils.scss';
