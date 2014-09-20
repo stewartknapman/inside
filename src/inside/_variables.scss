@@ -1,8 +1,38 @@
 /*
+  Includes:
   I might make things you don't want, but I'm not going to be a jerk about it.
   So just say if you don't want them.
 */
 
+$include_type:                true !default;
+$include_forms:               true !default;
 $include_grid:                true !default;
 $include_responsive_tables:   true !default;
 $include_sticky_footer:       true !default;
+
+/*
+  Gutters:
+*/
+$gutter_horizontal:           1em !default;
+$gutter_vertical:             2% !default;
+
+/*
+  Breakpoints:
+  These are only here so things don't break when you don't change them.
+  
+  It's better for everyone if you change these to fit your content, but we both know you won't.
+*/
+$breakpoint_sm:               37.5em !default;   // 600px @ 16px
+$breakpoint_md:               60em !default;     // 960px @ 16px
+$breakpoint_lg:               93.75em !default;  // 1500px @16px
+
+/*
+  Type:
+*/
+$font_size_h1:                2.25em !default;
+$font_size_h2:                1.75em !default;
+$font_size_h3:                1.5em !default;
+$font_size_h4:                1.25em !default;
+$font_size_h5:                1em !default;
+$font_size_h6:                0.8em !default;
+$line_height:                 1.5em !default;
