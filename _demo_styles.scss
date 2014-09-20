@@ -13,6 +13,7 @@ $border-large: #ddd dashed 2px;
   @extend %grid;
   width: 98%;
   max-width: 40em;
+  padding: $gutter_horizontal 0;
   @media (min-width: $breakpoint-sm) {
     width: 95%;
   }
@@ -37,6 +38,7 @@ $border-large: #ddd dashed 2px;
 
 /* Grid */
 .grid__col {
+  margin-bottom: $gutter_horizontal;
   border: $border-small;
 }
 
