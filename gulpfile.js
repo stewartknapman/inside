@@ -14,7 +14,8 @@ var paths = {
 
     styles: {
         src: './src',
-        files: ['./src/*.scss', './src/*/*.scss'],
+        compile: './demo/style.scss',
+        watch: ['./src/*.scss', './src/*/*.scss', './demo/style.scss'],
         dest: './demo'
     }
 
@@ -43,7 +44,7 @@ var displayError = function(error) {
 // Setting up the sass task
 gulp.task('sass', function (){
     // Taking the path from the above object
-    gulp.src(paths.styles.files)
+    gulp.src(paths.styles.compile)
     // Sass options - make the output compressed and add the source map
     // Also pull the include path from the paths object
     .pipe(sass({
@@ -67,7 +68,7 @@ gulp.task('sass', function (){
 // The tasks passed in as an array are run before the tasks within the function
 gulp.task('default', ['sass'], function() { 
     // Watch the files in the paths object, and when there is a change, run the functions in the array
-    gulp.watch(paths.styles.files, ['sass'])
+    gulp.watch(paths.styles.watch, ['sass'])
     // Also when there is a change, display what file was changed, only showing the path after the 'sass folder'
     .on('change', function(evt) {
         console.log(
