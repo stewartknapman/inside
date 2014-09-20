@@ -1,0 +1,50 @@
+@import "../src/inside.scss";
+
+.site__container {
+  @extend %grid;
+  width: 98%;
+  max-width: 740px;
+  @media (min-width: $breakpoint-sm) {
+    width: 95%;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 90%;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: 80%;
+  }
+}
+
+.site__header, .site__content, .site__footer {
+  @extend %grid-col;
+  width: 100%;
+}
+
+/*
+  Setting a grid
+*/
+.grid {
+  @extend %grid;
+}
+
+.grid__col {
+  @extend %grid-col;
+  border: #999 solid 1px;
+}
+.grid__col--25 {
+  width: 25%;
+}
+.grid__col--30 {
+  width: 30%;
+}
+.grid__col--50 {
+  width: 50%;
+}
+.grid__col--70 {
+  width: 70%;
+}
+
+.grid__content {
+  text-align: center;
+  background: #eee;
+}
