@@ -9,8 +9,7 @@
 */
 
 %grid {
-  margin: 0 auto $gutter_horizontal auto;
-  
+  margin: 0 auto;
   &:after {
     content: "";
     display: table;
