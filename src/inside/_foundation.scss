@@ -5,7 +5,7 @@
 */
 
 $foundation_colour: #333 !default;
-$foundation_line_height: 1.5em !default;
+$foundation_line_height: $rhythm * 1em !default;
 
 html {
   -ms-text-size-adjust: 100%;
@@ -43,6 +43,7 @@ blockquote,
 figure,
 ol,
 ul,
+dl,
 hr {
   padding: 0;
   margin: 0;
@@ -77,7 +78,7 @@ img {
 }
 
 hr {
-  margin: $foundation_line_height/2 0;
+  margin: $gutter_horizontal/2 0;
   border: none;
   border-bottom: solid 1px $foundation_colour;
 }

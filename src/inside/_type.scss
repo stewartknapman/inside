@@ -1,8 +1,13 @@
 /*
   Read the part about line length:
   http://trentwalton.com/2012/06/19/fluid-type/
+  
+  Also using a "close-enough" vertical rhythm
 */
+
 body {
+  color: $base_colour;
+  
   @media (min-width: $breakpoint_sm){
     font-size: 1.2em;
   }
@@ -11,44 +16,34 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 figure,
 ol,
-ul {
+ul,
+dl {
   margin-bottom: $gutter_horizontal;
 }
 
 h1 {
-  font-size: $font_size_h1;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h1);
 }
 h2 {
-  font-size: $font_size_h2;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h2);
 }
 h3 {
-  font-size: $font_size_h3;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h3);
 }
 h4 {
-  font-size: $font_size_h4;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h4);
 }
 h5 {
-  font-size: $font_size_h5;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h5);
 }
 h6 {
-  font-size: $font_size_h6;
-  line-height: $line_height;
+  @include rhythmic_font_size($font_size_h6);
 }
+
 small {
-  font-size: 0.8em;
+  font-size: $font_size_small;
 }

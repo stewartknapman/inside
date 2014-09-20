@@ -1,0 +1,8 @@
+@mixin rhythmic_font_size ($font-size) {
+  $base: $rhythm * 1em;
+  $height: ($base / $font_size);
+
+  font-size: $font-size;
+  line-height: ceil($font-size / $base) * $height;
+  margin-bottom: $height * 1em;
+}

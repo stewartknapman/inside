@@ -11,10 +11,29 @@ $include_responsive_tables:   true !default;
 $include_sticky_footer:       true !default;
 
 /*
-  Gutters:
+  Grids & Gutters:
 */
-$gutter_horizontal:           1em !default;
+$rhythm:                      1.5 !default;
+
+$gutter_horizontal:           $rhythm * 1em !default;
 $gutter_vertical:             2% !default;
+
+/*
+  Type:
+  
+  Target / Context:
+  Foundtion sets the body font size at 100% which is usually 16px
+  A standard line height of 1.5ems on the body (@16px) is 24px
+*/
+$font_size_base:              1em !default;
+$font_size_small:             0.618em !default;
+
+$font_size_h1:                3.927em !default;
+$font_size_h2:                2.618em !default;
+$font_size_h3:                2.427em !default;
+$font_size_h4:                1.618em !default;
+$font_size_h5:                $font_size_base !default;
+$font_size_h6:                $font_size_small !default;
 
 /*
   Breakpoints:
@@ -27,12 +46,6 @@ $breakpoint_md:               60em !default;     // 960px @ 16px
 $breakpoint_lg:               93.75em !default;  // 1500px @16px
 
 /*
-  Type:
+  Colours:
 */
-$font_size_h1:                2.25em !default;
-$font_size_h2:                1.75em !default;
-$font_size_h3:                1.5em !default;
-$font_size_h4:                1.25em !default;
-$font_size_h5:                1em !default;
-$font_size_h6:                0.8em !default;
-$line_height:                 1.5em !default;
+$base_colour:                 #333;
