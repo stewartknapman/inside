@@ -1,0 +1,24 @@
+/*
+  Examples:
+  Heres how you do this stuff.
+*/
+
+/* Setting a grid */
+.grid {
+  @extend %grid;
+}
+.grid__col {
+  @extend %grid-col;
+}
+.grid__col--25 {
+  width: 25%;
+}
+.grid__col--30 {
+  width: 30%;
+}
+.grid__col--50 {
+  width: 50%;
+}
+.grid__col--70 {
+  width: 70%;
+}
