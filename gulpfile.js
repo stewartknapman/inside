@@ -15,7 +15,7 @@ var paths = {
     styles: {
         src: './src',
         compile: './demo/style.scss',
-        watch: ['./src/*.scss', './src/*/*.scss', './demo/style.scss'],
+        watch: ['./src/*.scss', './src/*/*.scss', './demo/*.scss'],
         dest: './demo'
     }
 

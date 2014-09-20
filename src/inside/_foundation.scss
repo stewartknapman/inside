@@ -4,7 +4,6 @@
   but extended to include a few more things
 */
 
-$foundation_colour: #333 !default;
 $foundation_line_height: $rhythm * 1em !default;
 
 html {
@@ -25,7 +24,7 @@ body {
   font-size: 100%;
   line-height: $foundation_line_height;
   font-family: sans-serif;
-  color: $foundation_colour;
+  color: $base_colour;
 }
 
 html, body {
@@ -80,5 +79,5 @@ img {
 hr {
   margin: $gutter_horizontal/2 0;
   border: none;
-  border-bottom: solid 1px $foundation_colour;
+  border-bottom: solid 1px $base_colour;
 }

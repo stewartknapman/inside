@@ -1,0 +1,46 @@
+/*
+  Demo styles
+  Just so the demo looks good.
+*/
+
+/* style variables */
+$bg-colour: #eee;
+$border-small: #999 solid 1px;
+$border-large: #ddd dashed 2px;
+
+/* Layout */
+.site__container {
+  @extend %grid;
+  width: 98%;
+  max-width: 40em;
+  @media (min-width: $breakpoint-sm) {
+    width: 95%;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 90%;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: 80%;
+  }
+}
+
+.site__header, .site__content, .site__footer {
+  @extend %grid-col;
+  width: 100%;
+}
+
+.example {
+  padding: $gutter_horizontal $gutter_vertical 0;
+  margin-bottom: $gutter_horizontal;
+  border: $border-large;
+}
+
+/* Grid */
+.grid__col {
+  border: $border-small;
+}
+
+.grid__content {
+  text-align: center;
+  background: $bg-colour;
+}
