@@ -43,9 +43,15 @@ figure,
 ol,
 ul,
 dl,
-hr {
+hr,
+th,
+td {
   padding: 0;
   margin: 0;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 li {

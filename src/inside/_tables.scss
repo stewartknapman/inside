@@ -1,0 +1,62 @@
+/*
+ * Tables suck. Make them suck less by making them act like lists.
+ * Not strickly mobile first, but suck it.
+ *
+ * Also uses nifty content: attr(title); for th lables on small screens
+ */
+ 
+%table {
+  width: 100%;
+  margin-bottom: $gutter_horizontal;
+  text-align: left;
+  
+  @media (min-width: $breakpoint_tables + 0.0625em) {
+    thead {
+      border-bottom: solid 2px $border_colour;
+    }
+    
+    tfoot {
+      border-top: solid 2px $border_colour;
+    }
+    
+    tbody tr {
+      border-top: solid 1px $border_colour;
+      &:nth-child(odd) {
+        background-color: $table_bg_colour;
+      }
+    }
+    
+    td, th {
+      padding: 2% 1%;
+    }
+  }
+  
+  @media (max-width: $breakpoint_tables) {
+    display: block;
+    thead {
+      display: none;
+    }
+    tbody, tfoot, tr, td, th {
+      display: block;
+    }
+    
+    tbody tr {
+      border-bottom: solid 1px $border_colour;
+    }
+    
+    tfoot {
+      border-top: solid 2px $border_colour;
+    }
+    
+    tr {
+      padding: $gutter_horizontal/2 2%;
+    }
+    
+    td:before {
+      content: attr(title);
+      display: inline-block;
+      margin-right: 2%;
+      font-weight: bold;
+    }
+  }
+}

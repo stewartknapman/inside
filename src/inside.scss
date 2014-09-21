@@ -15,8 +15,8 @@
   @import 'inside/_grid.scss';
 }
 
-@if $include_responsive_tables {
-  @import 'inside/_responsive_tables.scss';
+@if $include_tables {
+  @import 'inside/_tables.scss';
 }
 
 @if $include_sticky_footer {
