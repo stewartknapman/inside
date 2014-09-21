@@ -22,3 +22,8 @@
 .grid__col--70 {
   width: 70%;
 }
+
+/* Tables */
+.site__content--tables table {
+  @extend %table;
+}
