@@ -10,7 +10,7 @@ $border-large: #ddd dashed 2px;
 
 /* Layout */
 .site__container {
-  @extend %grid;
+  @extend %container;
   width: 98%;
   max-width: 40em;
   padding: $gutter_horizontal 0;
