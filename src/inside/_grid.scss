@@ -8,8 +8,12 @@
   but its fixed now
 */
 
-%grid {
+%container {
   margin: 0 auto;
+}
+
+%grid {
+  margin: 0 -($gutter_vertical / 2);
   &:after {
     content: "";
     display: table;
@@ -20,10 +24,4 @@
 %grid-col {
   float: left;
   padding: 0 $gutter_vertical / 2;
-  .grid &:last-of-type {
-    padding-right: 0;
-  }
-  .grid &:first-of-type {
-    padding-left: 0;
-  }
 }
