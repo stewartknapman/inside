@@ -8,20 +8,22 @@
   but its fixed now
 */
 
-%container {
-  margin: 0 auto;
-}
-
-%grid {
-  margin: 0 -($gutter_vertical / 2);
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
+@if $include_grid {
+  %container {
+    margin: 0 auto;
   }
-}
-
-%grid-col {
-  float: left;
-  padding: 0 $gutter_vertical / 2;
+  
+  %grid {
+    margin: 0 ($gutter_vertical / 2) * -1;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  %grid-col {
+    float: left;
+    padding: 0 $gutter_vertical / 2;
+  }
 }

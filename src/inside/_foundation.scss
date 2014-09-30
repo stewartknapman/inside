@@ -24,7 +24,7 @@ body {
   font-size: 100%;
   line-height: $foundation_line_height;
   font-family: sans-serif;
-  color: $base_colour;
+  color: $text_colour;
 }
 
 html, body {
@@ -72,6 +72,7 @@ a {
   color: inherit;
   transition: .3s;
   p &:hover {
+    color: $highlight_colour;
     text-decoration: underline;
   }
 }
@@ -85,5 +86,5 @@ img {
 hr {
   margin: $gutter_horizontal/2 0;
   border: none;
-  border-bottom: solid 1px $base_colour;
+  border-bottom: solid 1px $border_colour;
 }

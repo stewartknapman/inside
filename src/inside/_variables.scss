@@ -34,6 +34,7 @@ $font_size_h3:                2.427em !default;
 $font_size_h4:                1.618em !default;
 $font_size_h5:                $font_size_base !default;
 $font_size_h6:                $font_size_small !default;
+$font_size_forms:             $font_size_base * 0.9 !default;
 
 /*
   Breakpoints:
@@ -49,6 +50,7 @@ $breakpoint_tables:           $breakpoint_sm !default;
 /*
   Colours:
 */
-$base_colour:                 #444;
+$text_colour:                 #444;
 $border_colour:               #ddd;
 $table_bg_colour:             #f9f9f9;
+$highlight_colour:            #00B8E3;

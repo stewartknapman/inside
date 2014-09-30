@@ -4,46 +4,54 @@
   
   Also using a "close-enough" vertical rhythm
 */
+@if $include_type {
 
-body {
-  color: $base_colour;
+  body {
+    color: $text_colour;
+    
+    @media (min-width: $breakpoint_sm){
+      font-size: 1.2em;
+    }
+    @media (min-width: $breakpoint_lg){
+      font-size: 1.4em;
+    }
+  }
+    
+  ::selection {
+    color: #000;
+    background: rgba($highlight_colour, .6);
+    text-shadow: none;
+  }
+
+  p,
+  blockquote,
+  figure,
+  ol,
+  ul,
+  dl {
+    margin-bottom: $gutter_horizontal;
+  }
   
-  @media (min-width: $breakpoint_sm){
-    font-size: 1.2em;
+  h1 {
+    @include rhythmic_font_size($font_size_h1);
   }
-  @media (min-width: $breakpoint_lg){
-    font-size: 1.4em;
+  h2 {
+    @include rhythmic_font_size($font_size_h2);
   }
-}
-
-p,
-blockquote,
-figure,
-ol,
-ul,
-dl {
-  margin-bottom: $gutter_horizontal;
-}
-
-h1 {
-  @include rhythmic_font_size($font_size_h1);
-}
-h2 {
-  @include rhythmic_font_size($font_size_h2);
-}
-h3 {
-  @include rhythmic_font_size($font_size_h3);
-}
-h4 {
-  @include rhythmic_font_size($font_size_h4);
-}
-h5 {
-  @include rhythmic_font_size($font_size_h5);
-}
-h6 {
-  @include rhythmic_font_size($font_size_h6);
-}
-
-small {
-  font-size: $font_size_small;
+  h3 {
+    @include rhythmic_font_size($font_size_h3);
+  }
+  h4 {
+    @include rhythmic_font_size($font_size_h4);
+  }
+  h5 {
+    @include rhythmic_font_size($font_size_h5);
+  }
+  h6 {
+    @include rhythmic_font_size($font_size_h6);
+  }
+  
+  small {
+    font-size: $font_size_small;
+  }
 }

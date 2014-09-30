@@ -2,3 +2,7 @@
  * Table based sticky footer for dynamic footer magic-ness.
  * Add the sticky-footer class to opt in.
  */
+ 
+@if $include_sticky_footer {
+
+}
