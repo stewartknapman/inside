@@ -50,7 +50,7 @@ $breakpoint_tables:           $breakpoint_sm !default;
 /*
   Colours:
 */
-$text_colour:                 #444;
-$border_colour:               #ddd;
-$table_bg_colour:             #f9f9f9;
-$highlight_colour:            #00B8E3;
+$text_colour:                 #444 !default;
+$border_colour:               #ddd !default;
+$table_bg_colour:             #f9f9f9 !default;
+$highlight_colour:            #00B8E3 !default;
