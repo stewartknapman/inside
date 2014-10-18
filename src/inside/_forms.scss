@@ -5,6 +5,11 @@
 
 @if $include_forms {
   
+  %input-wrapping-label {
+    @include rhythmic_font_size($font_size_base);
+    margin-right: $gutter_vertical;
+  }
+  
   fieldset {
     border: none;
   }
@@ -20,8 +25,34 @@
     display: inline-block;
   }
   
-  input, textarea, select {
-
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=url],
+  input[type=tel],
+  input[type=text],
+  input[type=number],
+  input[type=search],
+  input[type=time],
+  input[type=week],
+  input[type=month],
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=checkbox],
+  input[type=radio],
+  textarea,
+  select {
+    color: rgba($text_colour, .8);
+    border: solid 1px $border_colour;
+    border-radius: $input_border_radius;
+    outline: none;
+    transition: .3s;
+    &:focus {
+      color: $text_colour;
+      border-color: rgba($highlight_colour, .6);
+      box-shadow: 0 0 6px rgba($highlight_colour, .6);
+    }
   }
 
   input[type=text],
@@ -37,21 +68,13 @@
   input[type=month],
   input[type=date],
   input[type=datetime],
-  input[type=datetime-local], textarea {
+  input[type=datetime-local],
+  textarea,
+  select {
     @include rhythmic_font_size($font_size_forms);
     font-weight: 100;
     display: block;
     padding: 0.25em 0.5em;
-    color: rgba($text_colour, .8);
-    border: solid 1px $border_colour;
-    border-radius: $input_border_radius;
-    outline: none;
-    transition: .3s;
-    &:focus {
-      color: $text_colour;
-      border-color: rgba($highlight_colour, .6);
-      box-shadow: 0 0 6px rgba($highlight_colour, .6);
-    }
   }
   
   input[type=text],
@@ -60,8 +83,20 @@
   input[type=url],
   input[type=tel],
   input[type=text],
-  input[type=number], textarea {
+  input[type=number],
+  input[type=range],
+  textarea {
     width: 100%;
+  }
+  
+  input[type=file],
+  input[type=range],
+  input[type=color] {
+    @include rhythmic_font_size($font_size_forms);
+  }
+  
+  input[type=file] {
+    line-height: 1em;
   }
   
   input[type=search] {
@@ -69,8 +104,19 @@
     border-radius: 1.5em;
   }
   
+  input[type=checkbox],
+  input[type=radio] {
+    vertical-align: middle;
+  }
+  
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
+    resize: vertical;
+  }
+  
   select {
-    
+    display: inline-block;
   }
   
   // watch out for things like ranges and other crazy new things
