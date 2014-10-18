@@ -3,6 +3,16 @@
   Heres how you do this stuff.
 */
 
+/* Checkboxes & Radios */
+.form--checkbox, .form--radio {
+  @extend %input-wrapping-label;
+}
+
+/* Buttons */
+.button--link {
+  @extend %button;
+}
+
 /* Setting a grid */
 .grid {
   @extend %grid;
