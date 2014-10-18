@@ -4,9 +4,24 @@
 */
 
 @if $include_forms {
+  
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    width: 100%;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    border-bottom: solid 1px $border_colour;
+  }
 
   label {
     display: inline-block;
+  }
+  
+  input, textarea, select {
+
   }
 
   input[type=text],
@@ -54,15 +69,8 @@
     border-radius: 1.5em;
   }
   
-  fieldset {
-    border: none;
-  }
-  
-  legend {
-    width: 100%;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.75em;
-    border-bottom: solid 1px $border_colour;
+  select {
+    
   }
   
   // watch out for things like ranges and other crazy new things
