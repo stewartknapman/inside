@@ -6,6 +6,7 @@
 
 $include_type:                true !default;
 $include_forms:               true !default;
+$include_buttons:             true !default;
 $include_grid:                true !default;
 $include_tables:              true !default;
 $include_sticky_footer:       true !default;
@@ -17,6 +18,8 @@ $rhythm:                      1.5 !default;
 
 $gutter_horizontal:           $rhythm * 1em !default;
 $gutter_vertical:             4% !default;
+
+$border_radius:               3px;
 
 /*
   Type:
@@ -54,3 +57,9 @@ $text_colour:                 #444 !default;
 $border_colour:               #ddd !default;
 $table_bg_colour:             #f9f9f9 !default;
 $highlight_colour:            #00B8E3 !default;
+
+/*
+  Forms & Buttons:
+*/
+$input_border_radius:         $border_radius;
+$button_border_radius:        $border_radius;

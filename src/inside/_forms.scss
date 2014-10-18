@@ -4,34 +4,66 @@
 */
 
 @if $include_forms {
-}
 
-input, textarea, select {
-  @include rhythmic_font_size($font_size_forms);
-  
-  padding: 0.25em 0.5em;
-
-  color: rgba($text_colour, .8);
-  border: solid 1px $border_colour;
-  outline: none;
-  transition: .3s;
-  
-  &:focus {
-    color: $text_colour;
-    border-color: rgba($highlight_colour, .6);
-    box-shadow: 0 0 6px rgba($highlight_colour, .6);
+  label {
+    display: inline-block;
   }
-}
 
-fieldset {
-  border: none;
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=url],
+  input[type=tel],
+  input[type=text],
+  input[type=number],
+  input[type=search],
+  input[type=time],
+  input[type=week],
+  input[type=month],
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local], textarea {
+    @include rhythmic_font_size($font_size_forms);
+    font-weight: 100;
+    display: block;
+    padding: 0.25em 0.5em;
+    color: rgba($text_colour, .8);
+    border: solid 1px $border_colour;
+    border-radius: $input_border_radius;
+    outline: none;
+    transition: .3s;
+    &:focus {
+      color: $text_colour;
+      border-color: rgba($highlight_colour, .6);
+      box-shadow: 0 0 6px rgba($highlight_colour, .6);
+    }
+  }
+  
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=url],
+  input[type=tel],
+  input[type=text],
+  input[type=number], textarea {
+    width: 100%;
+  }
+  
+  input[type=search] {
+    display: inline-block;
+    border-radius: 1.5em;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    width: 100%;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    border-bottom: solid 1px $border_colour;
+  }
+  
+  // watch out for things like ranges and other crazy new things
 }
-
-legend {
-  width: 100%;
-  padding-bottom: $gutter_horizontal / 2;
-  margin-bottom: $gutter_horizontal * 1.5;
-  border-bottom: solid 1px $border_colour;
-}
-
-// watch out for things like ranges and other crazy new things
