@@ -6,7 +6,7 @@
 /* style variables */
 $bg-colour: #f9f9f9;
 $border-small: #ddd solid 1px;
-$border-large: #ddd dashed 2px;
+$border-large: #ddd dashed 1px;
 
 /* Layout */
 .site__container {
@@ -34,6 +34,7 @@ $border-large: #ddd dashed 2px;
   padding: $gutter_horizontal $gutter_vertical 0;
   margin-bottom: $gutter_horizontal;
   border: $border-large;
+  border-radius: $border_radius;
 }
 
 /* Grid */
