@@ -13,6 +13,30 @@
   @extend %button;
 }
 
+.example--highlighted {
+  .button--link,
+  input[type=submit],
+  button {
+    @extend %button-highlight;
+  }
+  
+  .button--highlight-badass {
+    @include highlight_button(#BADA55);
+  }
+  
+  .button--highlight-black-coffee {
+    @include highlight_button(invert(#C0FFEE));
+  }
+  
+  input[type=submit].button--highlight-aboded {
+    @include highlight_button(#AB0DED);
+  }
+  
+  .button--highlight-ebolla {
+    @include highlight_button(#EB011A);
+  }
+}
+
 /* Setting a grid */
 .grid {
   @extend %grid;

@@ -6,3 +6,18 @@
   line-height: ceil($font-size / $base) * $height;
   margin-bottom: $height * 1em;
 }
+
+@mixin highlight_button ($btn_bg_colour, $btn_colour: false) {
+  @if $btn_colour == false {
+    $btn_colour: if(lightness($btn_bg_colour) > 50%, $text_colour, #fff);
+  }
+  @extend %button;
+  color: rgba($btn_colour, .9);
+  background-color: lighten(desaturate($btn_bg_colour, 20%), 15%);
+  border-color: $btn_bg_colour;
+  &:hover, &:active, &:focus {
+    color: $btn_colour;
+    background-color: $btn_bg_colour;
+    border-color: darken($btn_bg_colour, 10%);
+  }
+}

@@ -6,7 +6,7 @@
   %button {
     @include rhythmic_font_size($font_size_forms);
     display: inline-block;
-    padding: 0.25em 0.5em;
+    padding: 0.5em 1em;
     color: rgba($text_colour, .8);
     background-color: white;
     border: solid 1px $border_colour;
@@ -26,6 +26,10 @@
       border-color: rgba($highlight_colour, .6);
       box-shadow: 0 0 6px rgba($highlight_colour, .6);
     }
+  }
+  
+  %button-highlight {
+    @include highlight_button($highlight_button_bg_colour, $highlight_button_colour);
   }
   
   input[type=button],
