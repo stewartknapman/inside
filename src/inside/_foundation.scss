@@ -1,7 +1,7 @@
 /*
   Inspired by some stuff this guy said:
   http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
-  but extended to include a few more things
+  but extended to include a few more things because we are trying to more general
 */
 
 $foundation_line_height: $rhythm * 1em !default;
@@ -23,12 +23,20 @@ body {
   margin: 0;
   font-size: 100%;
   line-height: $foundation_line_height;
-  font-family: sans-serif;
   color: $text_colour;
 }
 
 html, body {
-  height: 100%;
+  //height: 100%;
+}
+
+header,
+main,
+article,
+aside,
+section,
+footer {
+  overflow: auto;
 }
 
 h1,
@@ -40,8 +48,6 @@ h6,
 p,
 blockquote,
 figure,
-ol,
-ul,
 dl,
 hr,
 th,
@@ -50,12 +56,14 @@ td {
   margin: 0;
 }
 
-table {
-  border-collapse: collapse;
+ol,
+ul {
+  padding: 0 0 0 3em;
+  margin: 0;
 }
 
-li {
-  display: block;
+table {
+  border-collapse: collapse;
 }
 
 h1,
@@ -71,14 +79,12 @@ a {
   text-decoration: none;
   color: inherit;
   transition: .3s;
-  p &:hover {
-    color: $highlight_colour;
+  p & {
     text-decoration: underline;
   }
-}
-
-input, textarea, select {
-  font-family: sans-serif;
+  p &:hover {
+    color: $highlight_colour;  
+  }
 }
 
 img {

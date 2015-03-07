@@ -9,11 +9,24 @@
   body {
     color: $text_colour;
     
+/*
     @media (min-width: $breakpoint_sm){
       font-size: 1.2em;
     }
     @media (min-width: $breakpoint_lg){
       font-size: 1.4em;
+    }
+*/
+  }
+
+  body,
+  input,
+  textarea,
+  select {
+    @if $font_family_sans_serif {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    } @else {
+      font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     }
   }
     
@@ -32,6 +45,11 @@
     margin-bottom: $gutter_horizontal;
   }
   
+  small {
+    font-size: $font_size_small;
+  }
+ 
+/*
   h1 {
     @include rhythmic_font_size($font_size_h1);
   }
@@ -50,9 +68,27 @@
   h6 {
     @include rhythmic_font_size($font_size_h6);
   }
+*/
   
-  small {
-    font-size: $font_size_small;
+  header {
+/*
+    h1 {
+      @include rhythmic_font_size($font_size_h1);
+    }
+    h2 {
+      @include rhythmic_font_size($font_size_h2);
+    }
+    h3 {
+      @include rhythmic_font_size($font_size_h3);
+    }
+    h4 {
+      @include rhythmic_font_size($font_size_h4);
+    }
+*/
+  }
+  
+  %type-hero {
+    
   }
   
 }
