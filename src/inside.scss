@@ -2,14 +2,19 @@
 @import './base/foundation.scss';
 @import './base/type.scss';
 @import './base/links.scss';
+@import './base/lists.scss';
 @import './base/forms.scss';
 @import './base/tables.scss';
 
 @import './layout/grid.scss';
+@import './layout/breakpoints.scss';
 
+@import './module/type.scss';
 @import './module/forms.scss';
 @import './module/buttons.scss';
 @import './module/tables.scss';
 @import './module/navs.scss';
+@import './module/hero.scss';
+@import './module/code.scss';
 
 @import './theme/wireframe.scss';

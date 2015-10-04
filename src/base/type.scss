@@ -1,0 +1,70 @@
+/*
+  TODO:
+  - headings inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  - headings inside article, aside, nav, section that are nested inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  
+*/
+
+html {
+  @if $include_fluid_type {
+    @media (min-width: $breakpoint_sm) {
+      font-size: $fluid_type_sm;
+    }
+    @media (min-width: $breakpoint_md) {
+      font-size: $fluid_type_md;
+    }
+    @media (min-width: $breakpoint_lg) {
+      font-size: $fluid_type_lg;
+    }
+    @media (min-width: $breakpoint_xl) {
+      font-size: $fluid_type_xl;
+    }
+  }
+}
+
+body {
+  font-size: 100%;
+  line-height: $line_height_base;
+  font-family: $font_family_body;
+  font-weight: $font_weight_base;
+  color: $text_color;
+  
+  @if $transition_duration_fontsize {
+    transition: font-size $transition_duration_fontsize;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font_family_headings;
+  font-weight: $font_weight_headings;
+}
+
+h1 {
+  font-size: $font_size_h1;
+  line-height: $line_height_h1;
+}
+h2 {
+  font-size: $font_size_h2;
+  line-height: $line_height_h2;
+}
+h3 {
+  font-size: $font_size_h3;
+  line-height: $line_height_h3;
+}
+h4 {
+  font-size: $font_size_h4;
+  line-height: $line_height_h4;
+}
+h5 {
+  font-size: $font_size_h5;
+  line-height: $line_height_h5;
+}
+h6 {
+  font-size: $font_size_h6;
+  line-height: $line_height_h6;
+}

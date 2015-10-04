@@ -1,0 +1,125 @@
+/*
+  Globals & Includes
+  ---
+*/
+
+// Include css classes in output.
+// Set to false if you intend on just using mixins and setting your own classes.
+$include_classes: true !default;
+
+// Include fluid type settings: http://trentwalton.com/2012/06/19/fluid-type/
+// This will increase the font size ans the screen size increases.
+// Set to false if you want to keep a consistent font size across all screen sizes.
+$include_fluid_type: true !default;
+
+// Include modules.
+// Set to false if you don't need the extended modules.
+$include_type:    true !default;
+$include_forms:   true !default;
+$include_buttons: true !default;
+$include_tables:  true !default;
+$include_navs:    true !default;
+$include_hero:    true !default;
+$include_code:    true !default;
+
+// Include breakpoint sizes for js: https://adactio.com/journal/5429
+$include_breakpoint_sizes: true !default;
+
+// Include themes.
+// Set to true if you want to include a theme.
+$include_theme_wireframe: false !default;
+
+/*
+  Breakpoints
+  ---
+  
+  xs is implied by whatever is less than sm
+*/
+$breakpoint_sm:     37.5em !default;  // 600px @ 16px
+$breakpoint_md:     60em !default;    // 960px @ 16px
+$breakpoint_lg:     75em !default;    // 1200px @ 16px
+$breakpoint_xl:     93.75em !default; // 1500px @ 16px
+
+// The max-height in which a table is no longer collapsed for mobile
+$breakpoint_tables: $breakpoint_sm !default;
+
+/*
+  Type
+  ---
+  
+  Target / Context:
+  Foundtion sets the body font size at 100% which is usually 16px
+  A standard line height of 1.5ems on the body (@16px) is 24px
+*/
+
+// Base sizes and heights
+$line_height_base:  1.5 !default;
+$line_height_h1:    1.1 !default;
+$line_height_h2:    1.2 !default;
+$line_height_h3:    1.3 !default;
+$line_height_h4:    1.4 !default;
+$line_height_h5:    1.5 !default;
+$line_height_h6:    1.6 !default;
+
+$font_size_base:  1em !default;
+$font_size_small: 0.8125em !default;
+$font_size_large: 1.5em !default; // used inside hero objects
+
+// Fluid type sizes
+$fluid_type_sm:   1.1em !default;
+$fluid_type_md:   1.2em !default;
+$fluid_type_lg:   1.3em !default;
+$fluid_type_xl:   1.4em !default;
+
+// Heading and component sizes
+$font_size_h1:    2.5em !default;             // ~ 40px
+$font_size_h2:    2em !default;               // ~ 32px
+$font_size_h3:    1.5em !default;             // ~ 24px
+$font_size_h4:    1.25em !default;            // ~ 20px
+$font_size_h5:    $font_size_base !default;   // ~ 16px
+$font_size_h6:    $font_size_small !default;  // ~ 13px
+$font_size_forms: $font_size_base !default;
+
+// Font families
+$font_family_serif:      Georgia, "Times New Roman", Times, serif !default;
+$font_family_sans_serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font_family_monospaced: Consolas, "Lucida Console", Monaco, monospace !default;
+
+$font_family_body:      $font_family_sans_serif !default;
+$font_family_headings:  $font_family_sans_serif !default;
+$font_family_code:      $font_family_monospaced !default;
+
+// Font weights
+$font_weight_base:      300 !default;
+$font_weight_headings:  500 !default;
+
+/*
+  Grids
+  ---
+*/
+
+$gutter_horizontal: 1rem;
+// $gutter_vertical: 1em; // % or em?
+
+
+/*
+  Colours
+  ---
+  
+  TODO:
+*/
+
+$text_color: #333;
+$link_color: #ccc;
+
+/*
+  Misc
+  ---
+*/
+
+// Transition durations.
+// These are here as a nicety for things like link hovers and font size increases.
+// If you don't want the transitions then set them to `false`
+$transition_duration_base:      .3s !default;
+$transition_duration_fontsize:  $transition_duration_base !default;
+$transition_duration_hover:     $transition_duration_base !default;
