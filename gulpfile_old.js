@@ -1,3 +1,7 @@
+/*
+
+  *** MARKED FOR REMOVAL ***
+
 // http://www.mikestreety.co.uk/blog/a-simple-sass-compilation-gulpfilejs
 
 // Define gulp before we start
@@ -76,3 +80,4 @@ gulp.task('default', ['sass'], function() {
         );
     });
 });
+*/

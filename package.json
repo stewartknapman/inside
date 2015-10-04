@@ -2,7 +2,17 @@
   "name": "inside",
   "version": "0.0.0",
   "description": "another css framework",
-  "main": "src/inside.scss",
+  "main": "dist/inside.scss",
+  "scripts": {
+    "build": "npm run build:dist && npm run build:demo",
+    "build:watch": "parallelshell 'npm run watch:dist' 'npm run watch:demo' 'npm run livereload:demo'",
+    "build:dist": "node-sass ./src/inside.scss | postcss --use autoprefixer -o ./dist/inside.css",
+    "build:demo": "node-sass ./demo/src/demo.scss | postcss --use autoprefixer -o ./demo/dist/demo.css",
+    "postbuild:dist": "cssmin ./dist/inside.css > ./dist/inside.min.css",
+    "watch:dist": "watch 'npm run build:dist' ./src/",
+    "watch:demo": "watch 'npm run build:demo' ./demo/src/ ./src/",
+    "livereload:demo": "live-reload --port 9091 ./demo/*.html ./demo/dist/ ./dist/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stewartknapman/inside.git"
@@ -14,8 +24,12 @@
   },
   "homepage": "https://github.com/stewartknapman/inside",
   "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "0.0.10",
-    "gulp-sass": "^0.7.3"
+    "autoprefixer": "^6.0.3",
+    "cssmin": "^0.4.3",
+    "live-reload": "^1.1.0",
+    "node-sass": "^3.3.3",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.1.0",
+    "watch": "^0.16.0"
   }
 }

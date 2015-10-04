@@ -1,8 +1,6 @@
-$y: -50%;
-$bg: green;
 body {
-/*
+  /*
   transform: translateY($y);
   background-color: $bg;
-*/
-}
+*/ }
+
