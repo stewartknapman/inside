@@ -77,12 +77,6 @@ ul,
 dl {
   margin-bottom: 1rem; }
 
-/*
-  TODO:
-  - headings inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
-  - headings inside article, aside, nav, section that are nested inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
-  
-*/
 @media (min-width: 37.5em) {
   html {
     font-size: 1.1em; } }
@@ -168,7 +162,9 @@ body:after {
       content: 'xl'; } }
 
 /*
-  Creates classes/mixins for font sizes
-  because <h2 class="h3"> is shitty 
+  TODO:
+  - headings inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  - headings inside article, aside, nav, section that are nested inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  - Creates classes/mixins for font sizes because <h2 class="h3"> is shitty 
 */
 
