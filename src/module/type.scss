@@ -1,4 +1,29 @@
 /*
-  Creates classes/mixins for font sizes
-  because <h2 class="h3"> is shitty 
+  TODO:
+  - headings inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  - headings inside article, aside, nav, section that are nested inside article, aside, nav, section should adjust sizing (ala -webkit-user-stylesheets)
+  - Creates classes/mixins for font sizes because <h2 class="h3"> is shitty 
 */
+
+.font-size-xs {} // h6
+.font-size-sm {} // h5
+.font-size-md {} // h4
+.font-size-lg {} // h3
+.font-size-xl {} // h2
+.font-size-xxl {} // h1
+
+.text-align-left-xs {}
+.text-align-center-xs {}
+.text-align-right-xs {}
+.text-align-left-sm {}
+.text-align-center-sm {}
+.text-align-right-sm {}
+.text-align-left-md {}
+.text-align-center-md {}
+.text-align-right-md {}
+.text-align-left-lg {}
+.text-align-center-lg {}
+.text-align-right-lg {}
+.text-align-left-xl {}
+.text-align-center-xl {}
+.text-align-right-xl {}
