@@ -136,6 +136,13 @@ h6 {
   line-height: 1.6; }
 
 /*
+  TODO:
+  - mixins
+  - classes (just wrappers for mixins)
+  - push and pull
+  - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+/*
   Pass media queries to JS: https://adactio.com/journal/5429
   We do this so we are using one consitant source for this value.
   But also slightly tweaked because Chrome stopped letting us collect the value if the content was inside display:none;
