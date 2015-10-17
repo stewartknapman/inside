@@ -34,3 +34,79 @@
   font-family: $font_family_headings;
   font-weight: $font_weight_headings;
 }
+
+// Mixins outside of module check are used by base
+@if $include_type {
+  
+  // Alignment
+  @mixin text-align-left-xs {
+    text-align: left;
+  }
+  @mixin text-align-center-xs {
+    text-align: center;
+  }
+  @mixin text-align-right-xs {
+    text-align: right;
+  }
+  @mixin text-align-left-sm {
+    @media ($breakpoint_sm) {
+      text-align: left;
+    }
+  }
+  @mixin text-align-center-sm {
+    @media ($breakpoint_sm) {
+      text-align: center;
+    }
+  }
+  @mixin text-align-right-sm {
+    @media ($breakpoint_sm) {
+      text-align: right;
+    }
+  }
+  @mixin text-align-left-md {
+    @media ($breakpoint_md) {
+      text-align: left;
+    }
+  }
+  @mixin text-align-center-md {
+    @media ($breakpoint_md) {
+      text-align: center;
+    }
+  }
+  @mixin text-align-right-md {
+    @media ($breakpoint_md) {
+      text-align: right;
+    }
+  }
+  @mixin text-align-left-lg {
+    @media ($breakpoint_lg) {
+      text-align: left;
+    }
+  }
+  @mixin text-align-center-lg {
+    @media ($breakpoint_lg) {
+      text-align: center;
+    }
+  }
+  @mixin text-align-right-lg {
+    @media ($breakpoint_lg) {
+      text-align: right;
+    }
+  }
+  @mixin text-align-left-xl {
+    @media ($breakpoint_xl) {
+      text-align: left;
+    }
+  }
+  @mixin text-align-center-xl {
+    @media ($breakpoint_xl) {
+      text-align: center;
+    }
+  }
+  @mixin text-align-right-xl {
+    @media ($breakpoint_xl) {
+      text-align: right;
+    }
+  }
+  
+}

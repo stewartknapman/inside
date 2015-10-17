@@ -1,42 +1,26 @@
-@if $include_type {
-
-  // -webkit-user-stylesheets adjusts the size of h1's nested in these block elements, so we do as well.
-  // Future note: it would be good to use :any() https://developer.mozilla.org/en-US/docs/Web/CSS/%3Aany
-  // TODO: Should this be in base?
-  article, aside, nav, section {
-    h1 {
-      @include font-size-xl;
-    }
-    article, aside, nav, section {
-      h1 {
-        @include font-size-lg;
-      }
-    }
-  }
-
-  @if $include_classes {  
-    .font-size-xs { @include font-size-xs; } // h6
-    .font-size-sm { @include font-size-sm; } // h5
-    .font-size-md { @include font-size-md; } // h4
-    .font-size-lg { @include font-size-lg; } // h3
-    .font-size-xl { @include font-size-xl; } // h2
-    .font-size-xxl { @include font-size-xxl; } // h1
-    
-    .text-align-left-xs {}
-    .text-align-center-xs {}
-    .text-align-right-xs {}
-    .text-align-left-sm {}
-    .text-align-center-sm {}
-    .text-align-right-sm {}
-    .text-align-left-md {}
-    .text-align-center-md {}
-    .text-align-right-md {}
-    .text-align-left-lg {}
-    .text-align-center-lg {}
-    .text-align-right-lg {}
-    .text-align-left-xl {}
-    .text-align-center-xl {}
-    .text-align-right-xl {}
-  }
+@if $include_type and $include_classes {
   
+  .font-size-xs { @include font-size-xs; } // h6
+  .font-size-sm { @include font-size-sm; } // h5
+  .font-size-md { @include font-size-md; } // h4
+  .font-size-lg { @include font-size-lg; } // h3
+  .font-size-xl { @include font-size-xl; } // h2
+  .font-size-xxl { @include font-size-xxl; } // h1
+  
+  .text-align-left-xs { @include text-align-left-xs; }
+  .text-align-center-xs { @include text-align-center-xs; }
+  .text-align-right-xs { @include text-align-right-xs; }
+  .text-align-left-sm { @include text-align-left-sm; }
+  .text-align-center-sm { @include text-align-center-sm; }
+  .text-align-right-sm { @include text-align-right-sm; }
+  .text-align-left-md { @include text-align-left-md; }
+  .text-align-center-md { @include text-align-center-md; }
+  .text-align-right-md { @include text-align-right-md; }
+  .text-align-left-lg { @include text-align-left-lg; }
+  .text-align-center-lg { @include text-align-center-lg; }
+  .text-align-right-lg { @include text-align-right-lg; }
+  .text-align-left-xl { @include text-align-left-xl; }
+  .text-align-center-xl { @include text-align-center-xl; }
+  .text-align-right-xl { @include text-align-right-xl; }
+
 }

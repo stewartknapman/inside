@@ -135,12 +135,23 @@ h6 {
   font-size: 0.8125em;
   line-height: 1.6; }
 
+article h1, aside h1, nav h1, section h1 {
+  font-size: 2em;
+  line-height: 1.2; }
+
+article article h1, article aside h1, article nav h1, article section h1, aside article h1, aside aside h1, aside nav h1, aside section h1, nav article h1, nav aside h1, nav nav h1, nav section h1, section article h1, section aside h1, section nav h1, section section h1 {
+  font-size: 1.5em;
+  line-height: 1.3; }
+
 /*
   TODO:
   - mixins
   - classes (just wrappers for mixins)
   - push and pull
   - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  
+  http://droppen.org/?droppen=m66dtgqcwhfr
+  
 */
 /*
   Pass media queries to JS: https://adactio.com/journal/5429
@@ -168,14 +179,6 @@ body:after {
     body:after {
       content: 'xl'; } }
 
-article h1, aside h1, nav h1, section h1 {
-  font-size: 2em;
-  line-height: 1.2; }
-
-article article h1, article aside h1, article nav h1, article section h1, aside article h1, aside aside h1, aside nav h1, aside section h1, nav article h1, nav aside h1, nav nav h1, nav section h1, section article h1, section aside h1, section nav h1, section section h1 {
-  font-size: 1.5em;
-  line-height: 1.3; }
-
 .font-size-xs {
   font-size: 0.8125em;
   line-height: 1.6; }
@@ -199,6 +202,63 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
 .font-size-xxl {
   font-size: 2.5em;
   line-height: 1.1; }
+
+.text-align-left-xs {
+  text-align: left; }
+
+.text-align-center-xs {
+  text-align: center; }
+
+.text-align-right-xs {
+  text-align: right; }
+
+@media (37.5em) {
+  .text-align-left-sm {
+    text-align: left; } }
+
+@media (37.5em) {
+  .text-align-center-sm {
+    text-align: center; } }
+
+@media (37.5em) {
+  .text-align-right-sm {
+    text-align: right; } }
+
+@media (60em) {
+  .text-align-left-md {
+    text-align: left; } }
+
+@media (60em) {
+  .text-align-center-md {
+    text-align: center; } }
+
+@media (60em) {
+  .text-align-right-md {
+    text-align: right; } }
+
+@media (75em) {
+  .text-align-left-lg {
+    text-align: left; } }
+
+@media (75em) {
+  .text-align-center-lg {
+    text-align: center; } }
+
+@media (75em) {
+  .text-align-right-lg {
+    text-align: right; } }
+
+@media (93.75em) {
+  .text-align-left-xl {
+    text-align: left; } }
+
+@media (93.75em) {
+  .text-align-center-xl {
+    text-align: center; } }
+
+@media (93.75em) {
+  .text-align-right-xl {
+    text-align: right; } }
 
 /*
   .hero {

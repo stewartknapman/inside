@@ -54,3 +54,16 @@ h5 {
 h6 {
   @include font-size-xs;
 }
+
+// -webkit-user-stylesheets adjusts the size of h1's nested in these block elements, so we do as well.
+// Future note: it would be good to use :any() https://developer.mozilla.org/en-US/docs/Web/CSS/%3Aany
+article, aside, nav, section {
+  h1 {
+    @include font-size-xl;
+  }
+  article, aside, nav, section {
+    h1 {
+      @include font-size-lg;
+    }
+  }
+}
