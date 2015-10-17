@@ -1,0 +1,23 @@
+a {
+  color: $link_color;
+//   text-decoration: none;
+  transition: $transition_duration_hover;
+  
+  h1 &:hover,
+  h2 &:hover,
+  h3 &:hover,
+  h4 &:hover,
+  h5 &:hover,
+  h6 &:hover,
+  p &:hover,
+  ul &:hover {
+    color: $link_color_hover;
+  }
+  
+/*
+  p &:hover,
+  ul &:hover {
+    text-decoration: underline;
+  }
+*/
+}

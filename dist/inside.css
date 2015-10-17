@@ -102,6 +102,16 @@ body {
   -webkit-transition: font-size 0.3s;
           transition: font-size 0.3s; }
 
+::-moz-selection {
+  color: #000;
+  background: rgba(0, 184, 227, 0.6);
+  text-shadow: none; }
+
+::selection {
+  color: #000;
+  background: rgba(0, 184, 227, 0.6);
+  text-shadow: none; }
+
 h1,
 h2,
 h3,
@@ -131,7 +141,8 @@ h5 {
   font-size: 1em;
   line-height: 1.5; }
 
-h6 {
+h6,
+small {
   font-size: 0.8125em;
   line-height: 1.6; }
 
@@ -143,6 +154,26 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
   font-size: 1.5em;
   line-height: 1.3; }
 
+a {
+  color: inherit;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  /*
+  p &:hover,
+  ul &:hover {
+    text-decoration: underline;
+  }
+*/ }
+  h1 a:hover,
+  h2 a:hover,
+  h3 a:hover,
+  h4 a:hover,
+  h5 a:hover,
+  h6 a:hover,
+  p a:hover,
+  ul a:hover {
+    color: #00b8e3; }
+
 /*
   TODO:
   - mixins
@@ -153,6 +184,26 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
   http://droppen.org/?droppen=m66dtgqcwhfr
   
 */
+.container-fluid {
+  width: 98%;
+  margin: 0 auto; }
+
+.container {
+  width: 98%;
+  margin: 0 auto; }
+  @media (min-width: 37.5em) {
+    .container {
+      width: 95%; } }
+  @media (min-width: 60em) {
+    .container {
+      width: 90%; } }
+  @media (min-width: 75em) {
+    .container {
+      width: 85%; } }
+  @media (min-width: 93.75em) {
+    .container {
+      width: 80%; } }
+
 /*
   Pass media queries to JS: https://adactio.com/journal/5429
   We do this so we are using one consitant source for this value.
@@ -212,51 +263,51 @@ body:after {
 .text-align-right-xs {
   text-align: right; }
 
-@media (37.5em) {
+@media (min-width: 37.5em) {
   .text-align-left-sm {
     text-align: left; } }
 
-@media (37.5em) {
+@media (min-width: 37.5em) {
   .text-align-center-sm {
     text-align: center; } }
 
-@media (37.5em) {
+@media (min-width: 37.5em) {
   .text-align-right-sm {
     text-align: right; } }
 
-@media (60em) {
+@media (min-width: 60em) {
   .text-align-left-md {
     text-align: left; } }
 
-@media (60em) {
+@media (min-width: 60em) {
   .text-align-center-md {
     text-align: center; } }
 
-@media (60em) {
+@media (min-width: 60em) {
   .text-align-right-md {
     text-align: right; } }
 
-@media (75em) {
+@media (min-width: 75em) {
   .text-align-left-lg {
     text-align: left; } }
 
-@media (75em) {
+@media (min-width: 75em) {
   .text-align-center-lg {
     text-align: center; } }
 
-@media (75em) {
+@media (min-width: 75em) {
   .text-align-right-lg {
     text-align: right; } }
 
-@media (93.75em) {
+@media (min-width: 93.75em) {
   .text-align-left-xl {
     text-align: left; } }
 
-@media (93.75em) {
+@media (min-width: 93.75em) {
   .text-align-center-xl {
     text-align: center; } }
 
-@media (93.75em) {
+@media (min-width: 93.75em) {
   .text-align-right-xl {
     text-align: right; } }
 

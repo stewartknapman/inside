@@ -14,6 +14,7 @@ $include_fluid_type: true !default;
 
 // Include modules.
 // Set to false if you don't need the extended modules.
+$include_grid:    true !default;
 $include_type:    true !default;
 $include_forms:   true !default;
 $include_buttons: true !default;
@@ -96,9 +97,14 @@ $font_weight_headings:  500 !default;
   ---
 */
 
-$gutter_horizontal: 1rem;
-// $gutter_vertical: 1em; // % or em?
+$gutter_horizontal: 1rem !default;
+$gutter_vertical: 1em !default; // ?rem
 
+$container_width_xs: 98% !default;
+$container_width_sm: 95% !default;
+$container_width_md: 90% !default;
+$container_width_lg: 85% !default;
+$container_width_xl: 80% !default;
 
 /*
   Colours
@@ -107,8 +113,13 @@ $gutter_horizontal: 1rem;
   TODO:
 */
 
-$text_color: #333;
-$link_color: #ccc;
+$highlight_colour: #00b8e3 !default;
+
+$text_color: #333 !default;
+$link_color: inherit !default;
+$link_color_hover: $highlight_colour !default;
+$selection_color: #000 !default;
+$selection_bg_color: rgba($highlight_colour, .6) !default;
 
 /*
   Misc
