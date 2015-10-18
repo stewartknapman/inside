@@ -84,12 +84,6 @@ dl {
 
 img {
   max-width: 100%; }
-  figure img {
-    display: block;
-    margin-bottom: 0.5rem; }
-
-figcaption {
-  overflow: auto; }
 
 hr {
   border: none;
@@ -185,12 +179,6 @@ a {
   a:hover,
   a:active {
     color: #00b8e3; }
-  a:focus {
-    outline: none;
-    color: #000;
-    background: rgba(0, 184, 227, 0.3);
-    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
-    text-shadow: none; }
   h1 a,
   h2 a,
   h3 a,
@@ -198,6 +186,16 @@ a {
   h5 a,
   h6 a {
     text-decoration: none; }
+  :not(figure) > a:focus {
+    outline: none;
+    color: #000;
+    background: rgba(0, 184, 227, 0.3);
+    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
+    text-shadow: none; }
+  figure > a:hover + figcaption a {
+    color: #00b8e3; }
+  figure > a:focus {
+    outline-color: rgba(0, 184, 227, 0.3); }
 
 ul {
   padding-left: 1em; }
@@ -207,6 +205,13 @@ ol {
 
 dd {
   margin-left: 2em; }
+
+figure img {
+  display: block;
+  margin-bottom: 0.5rem; }
+
+figcaption {
+  overflow: auto; }
 
 .container-fluid {
   width: 98%;

@@ -7,14 +7,6 @@ a {
     color: $link_color_hover;
   }
   
-  &:focus {
-    outline: none;
-    color: $selection_color;
-    background: rgba($selection_bg_color, 0.3);
-    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
-    text-shadow: none;
-  }
-  
   h1 &,
   h2 &,
   h3 &,
@@ -22,5 +14,21 @@ a {
   h5 &,
   h6 & {
     text-decoration: none;
+  }
+  
+  :not(figure) > &:focus {
+    outline: none;
+    color: $selection_color;
+    background: rgba($selection_bg_color, 0.3);
+    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
+    text-shadow: none;
+  }
+  
+  figure > &:hover + figcaption a {
+    color: $link_color_hover;
+  }
+  
+  figure > &:focus {
+    outline-color: rgba($selection_bg_color, 0.3);
   }
 }

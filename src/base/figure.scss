@@ -1,0 +1,10 @@
+figure {
+  img {
+    display: block;
+    margin-bottom: ($gutter_horizontal / 2);
+  }
+}
+
+figcaption {
+  overflow: auto;
+}

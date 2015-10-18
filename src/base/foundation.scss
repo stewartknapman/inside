@@ -53,14 +53,6 @@ dl {
 
 img {
   max-width: 100%;
-  figure & {
-    display: block;
-    margin-bottom: ($gutter_horizontal / 2);
-  }
-}
-
-figcaption {
-  overflow: auto;
 }
 
 hr {
