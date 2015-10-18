@@ -1,3 +1,9 @@
+/*
+  http://droppen.org/?droppen=m66dtgqcwhfr
+  TODO:
+  - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/  
+*/
+
 @if $include_grid {
   
   @mixin container-fluid {
@@ -49,6 +55,16 @@
       }
     } @else {
       width: $size;
+    }
+  }
+  
+  @mixin grid-col-offset ($offset, $breakpoint: false, $direction: left) {
+    @if $breakpoint {
+      @media (min-width: $breakpoint) {
+        margin-#{$direction}: $offset;
+      }
+    } @else {
+      margin-#{$direction}: $offset;
     }
   }
   
