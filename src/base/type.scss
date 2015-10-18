@@ -69,9 +69,7 @@ article, aside, nav, section {
   }
 }
 
-hr {
-  border: none;
-  border-bottom: $border_color $border_size $border_style;
-  margin-top: $gutter_horizontal;
-  margin-bottom: $gutter_horizontal;
+blockquote {
+  border-left: $blockquote_border_color $blockquote_border_size $blockquote_border_style;
+  padding-left: $gutter_vertical;
 }

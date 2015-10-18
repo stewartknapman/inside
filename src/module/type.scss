@@ -1,5 +1,9 @@
 @if $include_type and $include_classes {
   
+  .reading-length {
+    @include reading-length;
+  }
+  
   .font-size-xs { @include font-size-xs; } // h6
   .font-size-sm { @include font-size-sm; } // h5
   .font-size-md { @include font-size-md; } // h4
@@ -13,6 +17,10 @@
         @include text-align($alignment, $breakpoint);
       }
     }
+  }
+  
+  .pull-quote {
+    @include pull-quote;
   }
 
 }

@@ -51,6 +51,25 @@ dl {
   margin-bottom: $gutter_horizontal;
 }
 
+img {
+  max-width: 100%;
+  figure & {
+    display: block;
+    margin-bottom: ($gutter_horizontal / 2);
+  }
+}
+
+figcaption {
+  overflow: auto;
+}
+
+hr {
+  border: none;
+  border-bottom: $border_color $border_size $border_style;
+  margin-top: $gutter_horizontal;
+  margin-bottom: $gutter_horizontal;
+}
+
 ::selection {
   color: $selection_color;
   background: $selection_bg_color;

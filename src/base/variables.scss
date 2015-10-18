@@ -73,6 +73,8 @@ $fluid_type_md:   1.2em !default;
 $fluid_type_lg:   1.3em !default;
 $fluid_type_xl:   1.4em !default;
 
+$max_reading_length: 40em;
+
 // Heading and component sizes
 $font_size_xxl:   2.5em !default;             // ~ 40px
 $font_size_xl:    2em !default;               // ~ 32px
@@ -126,14 +128,19 @@ $link_color_hover: $highlight_colour !default;
 $selection_color: #000 !default;
 $selection_bg_color: rgba($highlight_colour, .6) !default;
 
-$border_color: #eee;
-$border_size: 1px;
-$border_style: solid;
+$border_color: #eee !default;
+$border_size: 1px !default;
+$border_style: solid !default;
 
 /*
   Misc
   ---
 */
+
+// blockquotes
+$blockquote_border_size: $border_size * 4 !default;
+$blockquote_border_color: $border_color !default;
+$blockquote_border_style: $border_style !default;
 
 // Transition durations.
 // These are here as a nicety for things like link hovers and font size increases.

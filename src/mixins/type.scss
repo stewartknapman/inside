@@ -39,6 +39,10 @@
 // Mixins outside of module check are used by base
 @if $include_type {
   
+  @mixin reading-length {
+    max-width: $max_reading_length;
+  }
+  
   // Alignment
   @mixin text-align($alignment, $breakpoint: false) {
     @if $breakpoint {
@@ -48,6 +52,12 @@
     } @else {
       text-align: $alignment;
     }
+  }
+  
+  @mixin pull-quote {
+    border-left: none;
+    padding-left: 0;
+    @include font-size-lg;
   }
   
 }
