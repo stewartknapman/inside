@@ -27,12 +27,6 @@ body {
   }
 }
 
-::selection {
-  color: $selection_color;
-  background: $selection_bg_color;
-  text-shadow: none;
-}
-
 h1,
 h2,
 h3,

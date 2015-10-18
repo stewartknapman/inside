@@ -1,23 +1,26 @@
 a {
   color: $link_color;
-//   text-decoration: none;
   transition: $transition_duration_hover;
   
-  h1 &:hover,
-  h2 &:hover,
-  h3 &:hover,
-  h4 &:hover,
-  h5 &:hover,
-  h6 &:hover,
-  p &:hover,
-  ul &:hover {
+  &:hover,
+  &:active {
     color: $link_color_hover;
   }
   
-/*
-  p &:hover,
-  ul &:hover {
-    text-decoration: underline;
+  &:focus {
+    outline: none;
+    color: $selection_color;
+    background: rgba($selection_bg_color, 0.3);
+    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
+    text-shadow: none;
   }
-*/
+  
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  h6 & {
+    text-decoration: none;
+  }
 }

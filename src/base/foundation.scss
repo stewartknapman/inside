@@ -50,3 +50,9 @@ ul,
 dl {
   margin-bottom: $gutter_horizontal;
 }
+
+::selection {
+  color: $selection_color;
+  background: $selection_bg_color;
+  text-shadow: none;
+}
