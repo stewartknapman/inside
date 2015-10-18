@@ -82,6 +82,21 @@ ul,
 dl {
   margin-bottom: 1rem; }
 
+img {
+  max-width: 100%; }
+  figure img {
+    display: block;
+    margin-bottom: 0.5rem; }
+
+figcaption {
+  overflow: auto; }
+
+hr {
+  border: none;
+  border-bottom: #eee 1px solid;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
 ::-moz-selection {
   color: #000;
   background: rgba(0, 184, 227, 0.6);
@@ -159,11 +174,9 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
   font-size: 1.5em;
   line-height: 1.3; }
 
-hr {
-  border: none;
-  border-bottom: #eee 1px solid;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+blockquote {
+  border-left: #eee 4px solid;
+  padding-left: 1em; }
 
 a {
   color: inherit;
@@ -1153,6 +1166,9 @@ body:after {
     body:after {
       content: 'xl'; } }
 
+.reading-length {
+  max-width: 40em; }
+
 .font-size-xs {
   font-size: 0.8125em;
   line-height: 1.6; }
@@ -1233,6 +1249,12 @@ body:after {
 @media (min-width: 93.75em) {
   .text-align-right-xl {
     text-align: right; } }
+
+.pull-quote {
+  border-left: none;
+  padding-left: 0;
+  font-size: 1.5em;
+  line-height: 1.3; }
 
 ol.list-unstyled,
 ul.list-unstyled {
