@@ -162,6 +162,12 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
 ul {
   padding-left: 1em; }
 
+hr {
+  border: none;
+  border-bottom: #eee 1px solid;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
 a {
   color: inherit;
   -webkit-transition: 0.3s;
