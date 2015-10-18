@@ -1,0 +1,30 @@
+@if $include_lists {
+  
+  @mixin list-unstyled {
+    padding: 0;
+    list-style: none;
+  }
+  
+  @mixin list-inline {
+    @include list-unstyled;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  
+  @mixin dl-list-unstyled {
+    dd {
+      margin-left: 0;
+    }
+  }
+  
+  @mixin dl-list-inline {
+    @include clearfix;
+    dt {
+      float: left;
+      margin-right: ($gutter_vertical / 2);
+    }
+  }
+  
+}

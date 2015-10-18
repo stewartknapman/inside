@@ -3,6 +3,7 @@
 @import './mixins/utilities.scss';
 @import './mixins/grid.scss';
 @import './mixins/type.scss';
+@import './mixins/lists.scss';
 
 @import './base/foundation.scss';
 @import './base/type.scss';
@@ -15,6 +16,7 @@
 @import './layout/breakpoints.scss';
 
 @import './module/type.scss';
+@import './module/lists.scss';
 @import './module/forms.scss';
 @import './module/buttons.scss';
 @import './module/tables.scss';
