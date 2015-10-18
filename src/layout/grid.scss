@@ -19,4 +19,24 @@
     @include container;
   }
   
+  .grid-row {
+    @include grid-row;
+  }
+  
+  .grid-col {
+    @include grid-col;
+  }
+  
+  .grid-col-rev {
+    @include grid-col-rev;
+  }
+
+  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+    @each $col_key, $col_size in $col_sizes {
+      .grid-col-#{$col_key}-#{$breakpoint_key} {
+        @include grid-col-size($col_size, $breakpoint);
+      }
+    }
+  }
+  
 }

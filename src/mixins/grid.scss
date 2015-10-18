@@ -21,4 +21,35 @@
     }
   }
   
+  @mixin grid-row {
+    margin: auto ($gutter_vertical / 2) * -1;
+    @include clearfix;
+  }
+  
+  @mixin grid-col-base {
+    width: 100%;
+    padding-left: ($gutter_vertical / 2);
+    padding-right: ($gutter_vertical / 2);
+  }
+  
+  @mixin grid-col {
+    float: left;
+    @include grid-col-base;
+  }
+  
+  @mixin grid-col-rev {
+    float: right;
+    @include grid-col-base;
+  }
+  
+  @mixin grid-col-size ($size, $breakpoint: false) {
+    @if $breakpoint {
+      @media (min-width: $breakpoint) {
+        width: $size;
+      }
+    } @else {
+      width: $size;
+    }
+  }
+  
 }
