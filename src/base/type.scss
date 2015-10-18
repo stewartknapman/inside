@@ -72,3 +72,10 @@ article, aside, nav, section {
 ul {
   padding-left: 1em;
 }
+
+hr {
+  border: none;
+  border-bottom: $border_color $border_size $border_style;
+  margin-top: $gutter_horizontal;
+  margin-bottom: $gutter_horizontal;
+}
