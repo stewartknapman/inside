@@ -1,5 +1,16 @@
-/*
-  .hero {
-    font-size: $font_size_lg
+.hero-block {
+  padding-top: ($gutter_horizontal * 2);
+  padding-bottom: $gutter_horizontal;
+  font-size: $font_size_md;
+  
+  @include clearfix;
+  @media (min-width: $breakpoint_sm) {
+    font-size: $font_size_lg;
   }
-*/
+  @media (min-width: $breakpoint_md) {
+    font-size: $font_size_xl;
+  }
+  @media (min-width: $breakpoint_lg) {
+    font-size: $font_size_xxl;
+  }
+}
