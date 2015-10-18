@@ -77,6 +77,16 @@ ul,
 dl {
   margin-bottom: 1rem; }
 
+::-moz-selection {
+  color: #000;
+  background: rgba(0, 184, 227, 0.6);
+  text-shadow: none; }
+
+::selection {
+  color: #000;
+  background: rgba(0, 184, 227, 0.6);
+  text-shadow: none; }
+
 @media (min-width: 37.5em) {
   html {
     font-size: 1.1em; } }
@@ -101,16 +111,6 @@ body {
   color: #333;
   -webkit-transition: font-size 0.3s;
           transition: font-size 0.3s; }
-
-::-moz-selection {
-  color: #000;
-  background: rgba(0, 184, 227, 0.6);
-  text-shadow: none; }
-
-::selection {
-  color: #000;
-  background: rgba(0, 184, 227, 0.6);
-  text-shadow: none; }
 
 h1,
 h2,
@@ -157,22 +157,23 @@ article article h1, article aside h1, article nav h1, article section h1, aside 
 a {
   color: inherit;
   -webkit-transition: 0.3s;
-          transition: 0.3s;
-  /*
-  p &:hover,
-  ul &:hover {
-    text-decoration: underline;
-  }
-*/ }
-  h1 a:hover,
-  h2 a:hover,
-  h3 a:hover,
-  h4 a:hover,
-  h5 a:hover,
-  h6 a:hover,
-  p a:hover,
-  ul a:hover {
+          transition: 0.3s; }
+  a:hover,
+  a:active {
     color: #00b8e3; }
+  a:focus {
+    outline: none;
+    color: #000;
+    background: rgba(0, 184, 227, 0.3);
+    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
+    text-shadow: none; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    text-decoration: none; }
 
 /*
   TODO:
