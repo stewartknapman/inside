@@ -1260,9 +1260,21 @@ dl.list-inline dt {
   float: left;
   margin-right: 0.5em; }
 
-/*
-  .hero {
-    font-size: $font_size_lg
-  }
-*/
+.hero-block {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 1.25em; }
+  .hero-block:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 37.5em) {
+    .hero-block {
+      font-size: 1.5em; } }
+  @media (min-width: 60em) {
+    .hero-block {
+      font-size: 2em; } }
+  @media (min-width: 75em) {
+    .hero-block {
+      font-size: 2.5em; } }
 
