@@ -7,20 +7,12 @@
   .font-size-xl { @include font-size-xl; } // h2
   .font-size-xxl { @include font-size-xxl; } // h1
   
-  .text-align-left-xs { @include text-align(left); }
-  .text-align-center-xs { @include text-align(center); }
-  .text-align-right-xs { @include text-align(right); }
-  .text-align-left-sm { @include text-align(left, $breakpoint_sm); }
-  .text-align-center-sm { @include text-align(center, $breakpoint_sm); }
-  .text-align-right-sm { @include text-align(right, $breakpoint_sm); }
-  .text-align-left-md { @include text-align(left, $breakpoint_md); }
-  .text-align-center-md { @include text-align(center, $breakpoint_md); }
-  .text-align-right-md { @include text-align(right, $breakpoint_md); }
-  .text-align-left-lg { @include text-align(left, $breakpoint_lg); }
-  .text-align-center-lg { @include text-align(center, $breakpoint_lg); }
-  .text-align-right-lg { @include text-align(right, $breakpoint_lg); }
-  .text-align-left-xl { @include text-align(left, $breakpoint_xl); }
-  .text-align-center-xl { @include text-align(center, $breakpoint_xl); }
-  .text-align-right-xl { @include text-align(right, $breakpoint_xl); }
+  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+    @each $alignment in (left, center, right) {
+      .text-align-#{$alignment}-#{$breakpoint_key} {
+        @include text-align($alignment, $breakpoint);
+      }
+    }
+  }
 
 }
