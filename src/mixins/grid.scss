@@ -28,14 +28,44 @@
   }
   
   @mixin grid-row {
-    margin: auto ($gutter_vertical / 2) * -1;
     @include clearfix;
+    margin: auto ($grid_gutter_xs / 2) * -1;
+    
+    @media (min-width: $breakpoint_sm) {
+      margin: auto ($grid_gutter_sm / 2) * -1;
+    }
+    @media (min-width: $breakpoint_md) {
+      margin: auto ($grid_gutter_md / 2) * -1;
+    }
+    @media (min-width: $breakpoint_lg) {
+      margin: auto ($grid_gutter_lg / 2) * -1;
+    }
+    @media (min-width: $breakpoint_xl) {
+      margin: auto ($grid_gutter_xl / 2) * -1;
+    }
   }
   
   @mixin grid-col-base {
     width: 100%;
-    padding-left: ($gutter_vertical / 2);
-    padding-right: ($gutter_vertical / 2);
+    padding-left: ($grid_gutter_xs / 2);
+    padding-right: ($grid_gutter_xs / 2);
+    
+    @media (min-width: $breakpoint_sm) {
+      padding-left: ($grid_gutter_sm / 2);
+      padding-right: ($grid_gutter_sm / 2);
+    }
+    @media (min-width: $breakpoint_md) {
+      padding-left: ($grid_gutter_md / 2);
+      padding-right: ($grid_gutter_md / 2);
+    }
+    @media (min-width: $breakpoint_lg) {
+      padding-left: ($grid_gutter_lg / 2);
+      padding-right: ($grid_gutter_lg / 2);
+    }
+    @media (min-width: $breakpoint_xl) {
+      padding-left: ($grid_gutter_xl / 2);
+      padding-right: ($grid_gutter_xl / 2);
+    }
   }
   
   @mixin grid-col {

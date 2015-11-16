@@ -31,8 +31,6 @@
 /*
   Colours
   ---
-  
-  TODO:
 */
 /*
   Misc
@@ -243,17 +241,45 @@ figcaption {
       width: 80%; } }
 
 .grid-row {
-  margin: auto -0.5em; }
+  margin: auto -0.125em; }
   .grid-row:after {
     content: "";
     display: table;
     clear: both; }
+  @media (min-width: 37.5em) {
+    .grid-row {
+      margin: auto -0.25em; } }
+  @media (min-width: 60em) {
+    .grid-row {
+      margin: auto -0.375em; } }
+  @media (min-width: 75em) {
+    .grid-row {
+      margin: auto -0.5em; } }
+  @media (min-width: 93.75em) {
+    .grid-row {
+      margin: auto -0.75em; } }
 
 .grid-col {
   float: left;
   width: 100%;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
+  padding-left: 0.125em;
+  padding-right: 0.125em; }
+  @media (min-width: 37.5em) {
+    .grid-col {
+      padding-left: 0.25em;
+      padding-right: 0.25em; } }
+  @media (min-width: 60em) {
+    .grid-col {
+      padding-left: 0.375em;
+      padding-right: 0.375em; } }
+  @media (min-width: 75em) {
+    .grid-col {
+      padding-left: 0.5em;
+      padding-right: 0.5em; } }
+  @media (min-width: 93.75em) {
+    .grid-col {
+      padding-left: 0.75em;
+      padding-right: 0.75em; } }
   .grid-col.grid-col-offset-5-xs {
     margin-left: 5%; }
   .grid-col.grid-col-offset-10-xs {
@@ -524,8 +550,24 @@ figcaption {
 .grid-col-rev {
   float: right;
   width: 100%;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
+  padding-left: 0.125em;
+  padding-right: 0.125em; }
+  @media (min-width: 37.5em) {
+    .grid-col-rev {
+      padding-left: 0.25em;
+      padding-right: 0.25em; } }
+  @media (min-width: 60em) {
+    .grid-col-rev {
+      padding-left: 0.375em;
+      padding-right: 0.375em; } }
+  @media (min-width: 75em) {
+    .grid-col-rev {
+      padding-left: 0.5em;
+      padding-right: 0.5em; } }
+  @media (min-width: 93.75em) {
+    .grid-col-rev {
+      padding-left: 0.75em;
+      padding-right: 0.75em; } }
   .grid-col-rev.grid-col-offset-5-xs {
     margin-right: 5%; }
   .grid-col-rev.grid-col-offset-10-xs {
@@ -1313,4 +1355,23 @@ dl.list-inline dt {
   @media (min-width: 75em) {
     .hero-block {
       font-size: 2.5em; } }
+  .hero-block p {
+    font-size: 0.8125em; }
+
+header {
+  overflow: hidden;
+  padding-bottom: 2rem;
+  background: #E91E63;
+  color: #FFF6FA; }
+  header .description {
+    max-width: 40em;
+    margin: auto; }
+
+main {
+  padding: 2rem 0; }
+
+.grid-item {
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #eee; }
 

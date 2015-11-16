@@ -1,10 +1,10 @@
 @if $include_hero {
   @mixin hero-block {
+    @include clearfix;
     padding-top: ($gutter_horizontal * 2);
     padding-bottom: $gutter_horizontal;
-    font-size: $font_size_md;
     
-    @include clearfix;
+    font-size: $font_size_md;      
     @media (min-width: $breakpoint_sm) {
       font-size: $font_size_lg;
     }
@@ -13,6 +13,12 @@
     }
     @media (min-width: $breakpoint_lg) {
       font-size: $font_size_xxl;
+    }
+    
+    // Should roughly match stndard p on small screens
+    // and on larger screen be big but not too big
+    p {
+      font-size: $font_size_xs;
     }
   }
 }
