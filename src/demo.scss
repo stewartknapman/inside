@@ -1,5 +1,23 @@
 @import '../../src/inside.scss';
 
-body {
-//   color: white;
+header {
+  overflow: hidden;
+  padding-bottom: $gutter_horizontal * 2;
+  background: #E91E63;
+  color: #FFF6FA;
+  
+  .description {
+    @include reading-length;
+    margin: auto;
+  }
+}
+
+main {
+  padding: ($gutter_horizontal * 2) 0;
+}
+
+.grid-item {
+  margin-bottom: $gutter_horizontal;
+  text-align: center;
+  background-color: #eee;
 }
