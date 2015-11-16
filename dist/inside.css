@@ -257,7 +257,7 @@ figcaption {
       margin: auto -0.5em; } }
   @media (min-width: 93.75em) {
     .grid-row {
-      margin: auto -0.75em; } }
+      margin: auto -0.5em; } }
 
 .grid-col {
   float: left;
@@ -278,8 +278,8 @@ figcaption {
       padding-right: 0.5em; } }
   @media (min-width: 93.75em) {
     .grid-col {
-      padding-left: 0.75em;
-      padding-right: 0.75em; } }
+      padding-left: 0.5em;
+      padding-right: 0.5em; } }
   .grid-col.grid-col-offset-5-xs {
     margin-left: 5%; }
   .grid-col.grid-col-offset-10-xs {
@@ -566,8 +566,8 @@ figcaption {
       padding-right: 0.5em; } }
   @media (min-width: 93.75em) {
     .grid-col-rev {
-      padding-left: 0.75em;
-      padding-right: 0.75em; } }
+      padding-left: 0.5em;
+      padding-right: 0.5em; } }
   .grid-col-rev.grid-col-offset-5-xs {
     margin-right: 5%; }
   .grid-col-rev.grid-col-offset-10-xs {
