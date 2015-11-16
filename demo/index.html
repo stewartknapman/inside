@@ -31,7 +31,7 @@
   <div class="container">
     <h2>Grids</h2>
     <div class="reading-length">
-      <p>The basic grid uses percentage widths, with classes pre set for: 5%, 10%, 20%, 25%, 30%, 40%, 50%, 60%, 70%, 75%, 80%, 90% and 100%, as well as `.quarter`, `.half`, `.three-quarters`, `.full`, `.one-third` and `.two-thirds`.</p>
+      <p>The basic grid uses percentage widths, with classes pre set for: 5%, 10%, 20%, 25%, 30%, 40%, 50%, 60%, 70%, 75%, 80%, 90% and 100%, as well as quarter, half, three-quarters, full, one-third and two-thirds.</p>
       <p>However with the use of the mixin you can use any percentage width you like. Columns that exceed a total width of 100% will just flow onto the next line.</p>
     </div>
     
@@ -129,7 +129,23 @@
     <div class="reading-length">
       <p></p>
     </div>
-    
+    <div class="grid-row">
+      <div class="grid-col grid-col-full-xs">
+        <div class="grid-item">container width</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="grid-row">
+      <div class="grid-col grid-col-full-xs">
+        <div class="grid-item">container-fluid width (bug?)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr>
   </div>
 
 </main>
