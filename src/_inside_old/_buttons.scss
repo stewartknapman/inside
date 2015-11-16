@@ -23,8 +23,8 @@
     &:focus {
       color: $text_colour;
       background-color: lighten($border_colour, 10%);
-      border-color: rgba($highlight_colour, .6);
-      box-shadow: 0 0 6px rgba($highlight_colour, .6);
+      border-color: rgba($highlight_color, .6);
+      box-shadow: 0 0 6px rgba($highlight_color, .6);
     }
   }
   

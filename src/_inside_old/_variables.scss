@@ -56,8 +56,8 @@ $breakpoint_tables:           $breakpoint_sm !default;
 $text_colour:                 #444 !default;
 $border_colour:               #ddd !default;
 $table_bg_colour:             #f9f9f9 !default;
-$highlight_colour:            #00B8E3 !default;
-$highlight_button_bg_colour:  $highlight_colour !default;
+$highlight_color:            #00B8E3 !default;
+$highlight_button_bg_colour:  $highlight_color !default;
 $highlight_button_colour:     if(lightness($highlight_button_bg_colour) > 50%, $text_colour, #fff);
 
 /*

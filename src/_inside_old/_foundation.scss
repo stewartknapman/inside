@@ -72,7 +72,7 @@ a {
   color: inherit;
   transition: .3s;
   p &:hover {
-    color: $highlight_colour;
+    color: $highlight_color;
     text-decoration: underline;
   }
 }
