@@ -1,101 +1,97 @@
 /*
   http://droppen.org/?droppen=m66dtgqcwhfr
   TODO:
-  - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/  
+  - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 */
 
-@if $include_grid {
-  
-  @mixin container-fluid {
-    width: $container_width_xs;
-    margin: 0 auto;
+@mixin container-fluid {
+  width: $container_width_xs;
+  margin: 0 auto;
+}
+
+@mixin container {
+  @include container-fluid;
+  @media (min-width: $breakpoint_sm) {
+    width: $container_width_sm;
   }
-  
-  @mixin container {
-    @include container-fluid;
-    @media (min-width: $breakpoint_sm) {
-      width: $container_width_sm;
-    }
-    @media (min-width: $breakpoint_md) {
-      width: $container_width_md;
-    }
-    @media (min-width: $breakpoint_lg) {
-      width: $container_width_lg;
-    }
-    @media (min-width: $breakpoint_xl) {
-      width: $container_width_xl;
-    }
+  @media (min-width: $breakpoint_md) {
+    width: $container_width_md;
   }
-  
-  @mixin grid-row {
-    @include clearfix;
-    margin: auto ($grid_gutter_xs / 2) * -1;
-    
-    @media (min-width: $breakpoint_sm) {
-      margin: auto ($grid_gutter_sm / 2) * -1;
-    }
-    @media (min-width: $breakpoint_md) {
-      margin: auto ($grid_gutter_md / 2) * -1;
-    }
-    @media (min-width: $breakpoint_lg) {
-      margin: auto ($grid_gutter_lg / 2) * -1;
-    }
-    @media (min-width: $breakpoint_xl) {
-      margin: auto ($grid_gutter_xl / 2) * -1;
-    }
+  @media (min-width: $breakpoint_lg) {
+    width: $container_width_lg;
   }
-  
-  @mixin grid-col-base {
-    width: 100%;
-    padding-left: ($grid_gutter_xs / 2);
-    padding-right: ($grid_gutter_xs / 2);
-    
-    @media (min-width: $breakpoint_sm) {
-      padding-left: ($grid_gutter_sm / 2);
-      padding-right: ($grid_gutter_sm / 2);
-    }
-    @media (min-width: $breakpoint_md) {
-      padding-left: ($grid_gutter_md / 2);
-      padding-right: ($grid_gutter_md / 2);
-    }
-    @media (min-width: $breakpoint_lg) {
-      padding-left: ($grid_gutter_lg / 2);
-      padding-right: ($grid_gutter_lg / 2);
-    }
-    @media (min-width: $breakpoint_xl) {
-      padding-left: ($grid_gutter_xl / 2);
-      padding-right: ($grid_gutter_xl / 2);
-    }
+  @media (min-width: $breakpoint_xl) {
+    width: $container_width_xl;
   }
+}
+
+@mixin grid-row {
+  @include clearfix;
+  margin: auto ($grid_gutter_xs / 2) * -1;
   
-  @mixin grid-col {
-    float: left;
-    @include grid-col-base;
+  @media (min-width: $breakpoint_sm) {
+    margin: auto ($grid_gutter_sm / 2) * -1;
   }
-  
-  @mixin grid-col-rev {
-    float: right;
-    @include grid-col-base;
+  @media (min-width: $breakpoint_md) {
+    margin: auto ($grid_gutter_md / 2) * -1;
   }
+  @media (min-width: $breakpoint_lg) {
+    margin: auto ($grid_gutter_lg / 2) * -1;
+  }
+  @media (min-width: $breakpoint_xl) {
+    margin: auto ($grid_gutter_xl / 2) * -1;
+  }
+}
+
+@mixin grid-col-base {
+  width: 100%;
+  padding-left: ($grid_gutter_xs / 2);
+  padding-right: ($grid_gutter_xs / 2);
   
-  @mixin grid-col-size ($size, $breakpoint: false) {
-    @if $breakpoint {
-      @media (min-width: $breakpoint) {
-        width: $size;
-      }
-    } @else {
+  @media (min-width: $breakpoint_sm) {
+    padding-left: ($grid_gutter_sm / 2);
+    padding-right: ($grid_gutter_sm / 2);
+  }
+  @media (min-width: $breakpoint_md) {
+    padding-left: ($grid_gutter_md / 2);
+    padding-right: ($grid_gutter_md / 2);
+  }
+  @media (min-width: $breakpoint_lg) {
+    padding-left: ($grid_gutter_lg / 2);
+    padding-right: ($grid_gutter_lg / 2);
+  }
+  @media (min-width: $breakpoint_xl) {
+    padding-left: ($grid_gutter_xl / 2);
+    padding-right: ($grid_gutter_xl / 2);
+  }
+}
+
+@mixin grid-col {
+  float: left;
+  @include grid-col-base;
+}
+
+@mixin grid-col-rev {
+  float: right;
+  @include grid-col-base;
+}
+
+@mixin grid-col-size ($size, $breakpoint: false) {
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
       width: $size;
     }
+  } @else {
+    width: $size;
   }
-  
-  @mixin grid-col-offset ($offset, $breakpoint: false, $direction: left) {
-    @if $breakpoint {
-      @media (min-width: $breakpoint) {
-        margin-#{$direction}: $offset;
-      }
-    } @else {
+}
+
+@mixin grid-col-offset ($offset, $breakpoint: false, $direction: left) {
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
       margin-#{$direction}: $offset;
     }
+  } @else {
+    margin-#{$direction}: $offset;
   }
-  
 }
