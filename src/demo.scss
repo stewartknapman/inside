@@ -19,5 +19,9 @@ main {
 .grid-item {
   margin-bottom: $gutter_horizontal;
   text-align: center;
-  background-color: #eee;
+  background-color: rgba(0,0,0,0.1);
+  .grid-item {
+    margin-top: $gutter_horizontal / 2;
+    margin-bottom: $gutter_horizontal / 2;
+  }
 }
