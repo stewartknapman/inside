@@ -92,10 +92,15 @@ $font_family_monospaced: Consolas, "Lucida Console", Monaco, monospace !default;
 $font_family_body:      $font_family_sans_serif !default;
 $font_family_headings:  $font_family_sans_serif !default;
 $font_family_code:      $font_family_monospaced !default;
+$font_family_pullquote: $font_family_headings !default;
 
 // Font weights
 $font_weight_base:      300 !default;
 $font_weight_headings:  500 !default;
+$font_weight_pullquote: 300 !default;
+
+// Font styles
+$font_style_pullquote: italic !default;
 
 /*
   Grids

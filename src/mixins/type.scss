@@ -54,4 +54,7 @@
   border-left: none;
   padding-left: 0;
   @include font-size-lg;
+  font-family: $font_family_pullquote;
+  font-weight: $font_weight_pullquote;
+  font-style: $font_style_pullquote;
 }
