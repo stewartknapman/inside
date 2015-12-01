@@ -287,6 +287,8 @@ figcaption {
     margin-left: 5%; }
   .grid-col.grid-col-offset-10-xs {
     margin-left: 10%; }
+  .grid-col.grid-col-offset-15-xs {
+    margin-left: 15%; }
   .grid-col.grid-col-offset-20-xs {
     margin-left: 20%; }
   .grid-col.grid-col-offset-25-xs {
@@ -305,8 +307,12 @@ figcaption {
     margin-left: 75%; }
   .grid-col.grid-col-offset-80-xs {
     margin-left: 80%; }
+  .grid-col.grid-col-offset-85-xs {
+    margin-left: 85%; }
   .grid-col.grid-col-offset-90-xs {
     margin-left: 90%; }
+  .grid-col.grid-col-offset-95-xs {
+    margin-left: 95%; }
   .grid-col.grid-col-offset-100-xs {
     margin-left: 100%; }
   .grid-col.grid-col-offset-quarter-xs {
@@ -327,6 +333,9 @@ figcaption {
   @media (min-width: 37.5em) {
     .grid-col.grid-col-offset-10-sm {
       margin-left: 10%; } }
+  @media (min-width: 37.5em) {
+    .grid-col.grid-col-offset-15-sm {
+      margin-left: 15%; } }
   @media (min-width: 37.5em) {
     .grid-col.grid-col-offset-20-sm {
       margin-left: 20%; } }
@@ -355,8 +364,14 @@ figcaption {
     .grid-col.grid-col-offset-80-sm {
       margin-left: 80%; } }
   @media (min-width: 37.5em) {
+    .grid-col.grid-col-offset-85-sm {
+      margin-left: 85%; } }
+  @media (min-width: 37.5em) {
     .grid-col.grid-col-offset-90-sm {
       margin-left: 90%; } }
+  @media (min-width: 37.5em) {
+    .grid-col.grid-col-offset-95-sm {
+      margin-left: 95%; } }
   @media (min-width: 37.5em) {
     .grid-col.grid-col-offset-100-sm {
       margin-left: 100%; } }
@@ -385,6 +400,9 @@ figcaption {
     .grid-col.grid-col-offset-10-md {
       margin-left: 10%; } }
   @media (min-width: 60em) {
+    .grid-col.grid-col-offset-15-md {
+      margin-left: 15%; } }
+  @media (min-width: 60em) {
     .grid-col.grid-col-offset-20-md {
       margin-left: 20%; } }
   @media (min-width: 60em) {
@@ -412,8 +430,14 @@ figcaption {
     .grid-col.grid-col-offset-80-md {
       margin-left: 80%; } }
   @media (min-width: 60em) {
+    .grid-col.grid-col-offset-85-md {
+      margin-left: 85%; } }
+  @media (min-width: 60em) {
     .grid-col.grid-col-offset-90-md {
       margin-left: 90%; } }
+  @media (min-width: 60em) {
+    .grid-col.grid-col-offset-95-md {
+      margin-left: 95%; } }
   @media (min-width: 60em) {
     .grid-col.grid-col-offset-100-md {
       margin-left: 100%; } }
@@ -442,6 +466,9 @@ figcaption {
     .grid-col.grid-col-offset-10-lg {
       margin-left: 10%; } }
   @media (min-width: 75em) {
+    .grid-col.grid-col-offset-15-lg {
+      margin-left: 15%; } }
+  @media (min-width: 75em) {
     .grid-col.grid-col-offset-20-lg {
       margin-left: 20%; } }
   @media (min-width: 75em) {
@@ -469,8 +496,14 @@ figcaption {
     .grid-col.grid-col-offset-80-lg {
       margin-left: 80%; } }
   @media (min-width: 75em) {
+    .grid-col.grid-col-offset-85-lg {
+      margin-left: 85%; } }
+  @media (min-width: 75em) {
     .grid-col.grid-col-offset-90-lg {
       margin-left: 90%; } }
+  @media (min-width: 75em) {
+    .grid-col.grid-col-offset-95-lg {
+      margin-left: 95%; } }
   @media (min-width: 75em) {
     .grid-col.grid-col-offset-100-lg {
       margin-left: 100%; } }
@@ -499,6 +532,9 @@ figcaption {
     .grid-col.grid-col-offset-10-xl {
       margin-left: 10%; } }
   @media (min-width: 93.75em) {
+    .grid-col.grid-col-offset-15-xl {
+      margin-left: 15%; } }
+  @media (min-width: 93.75em) {
     .grid-col.grid-col-offset-20-xl {
       margin-left: 20%; } }
   @media (min-width: 93.75em) {
@@ -526,8 +562,14 @@ figcaption {
     .grid-col.grid-col-offset-80-xl {
       margin-left: 80%; } }
   @media (min-width: 93.75em) {
+    .grid-col.grid-col-offset-85-xl {
+      margin-left: 85%; } }
+  @media (min-width: 93.75em) {
     .grid-col.grid-col-offset-90-xl {
       margin-left: 90%; } }
+  @media (min-width: 93.75em) {
+    .grid-col.grid-col-offset-95-xl {
+      margin-left: 95%; } }
   @media (min-width: 93.75em) {
     .grid-col.grid-col-offset-100-xl {
       margin-left: 100%; } }
@@ -575,6 +617,8 @@ figcaption {
     margin-right: 5%; }
   .grid-col-rev.grid-col-offset-10-xs {
     margin-right: 10%; }
+  .grid-col-rev.grid-col-offset-15-xs {
+    margin-right: 15%; }
   .grid-col-rev.grid-col-offset-20-xs {
     margin-right: 20%; }
   .grid-col-rev.grid-col-offset-25-xs {
@@ -593,8 +637,12 @@ figcaption {
     margin-right: 75%; }
   .grid-col-rev.grid-col-offset-80-xs {
     margin-right: 80%; }
+  .grid-col-rev.grid-col-offset-85-xs {
+    margin-right: 85%; }
   .grid-col-rev.grid-col-offset-90-xs {
     margin-right: 90%; }
+  .grid-col-rev.grid-col-offset-95-xs {
+    margin-right: 95%; }
   .grid-col-rev.grid-col-offset-100-xs {
     margin-right: 100%; }
   .grid-col-rev.grid-col-offset-quarter-xs {
@@ -615,6 +663,9 @@ figcaption {
   @media (min-width: 37.5em) {
     .grid-col-rev.grid-col-offset-10-sm {
       margin-right: 10%; } }
+  @media (min-width: 37.5em) {
+    .grid-col-rev.grid-col-offset-15-sm {
+      margin-right: 15%; } }
   @media (min-width: 37.5em) {
     .grid-col-rev.grid-col-offset-20-sm {
       margin-right: 20%; } }
@@ -643,8 +694,14 @@ figcaption {
     .grid-col-rev.grid-col-offset-80-sm {
       margin-right: 80%; } }
   @media (min-width: 37.5em) {
+    .grid-col-rev.grid-col-offset-85-sm {
+      margin-right: 85%; } }
+  @media (min-width: 37.5em) {
     .grid-col-rev.grid-col-offset-90-sm {
       margin-right: 90%; } }
+  @media (min-width: 37.5em) {
+    .grid-col-rev.grid-col-offset-95-sm {
+      margin-right: 95%; } }
   @media (min-width: 37.5em) {
     .grid-col-rev.grid-col-offset-100-sm {
       margin-right: 100%; } }
@@ -673,6 +730,9 @@ figcaption {
     .grid-col-rev.grid-col-offset-10-md {
       margin-right: 10%; } }
   @media (min-width: 60em) {
+    .grid-col-rev.grid-col-offset-15-md {
+      margin-right: 15%; } }
+  @media (min-width: 60em) {
     .grid-col-rev.grid-col-offset-20-md {
       margin-right: 20%; } }
   @media (min-width: 60em) {
@@ -700,8 +760,14 @@ figcaption {
     .grid-col-rev.grid-col-offset-80-md {
       margin-right: 80%; } }
   @media (min-width: 60em) {
+    .grid-col-rev.grid-col-offset-85-md {
+      margin-right: 85%; } }
+  @media (min-width: 60em) {
     .grid-col-rev.grid-col-offset-90-md {
       margin-right: 90%; } }
+  @media (min-width: 60em) {
+    .grid-col-rev.grid-col-offset-95-md {
+      margin-right: 95%; } }
   @media (min-width: 60em) {
     .grid-col-rev.grid-col-offset-100-md {
       margin-right: 100%; } }
@@ -730,6 +796,9 @@ figcaption {
     .grid-col-rev.grid-col-offset-10-lg {
       margin-right: 10%; } }
   @media (min-width: 75em) {
+    .grid-col-rev.grid-col-offset-15-lg {
+      margin-right: 15%; } }
+  @media (min-width: 75em) {
     .grid-col-rev.grid-col-offset-20-lg {
       margin-right: 20%; } }
   @media (min-width: 75em) {
@@ -757,8 +826,14 @@ figcaption {
     .grid-col-rev.grid-col-offset-80-lg {
       margin-right: 80%; } }
   @media (min-width: 75em) {
+    .grid-col-rev.grid-col-offset-85-lg {
+      margin-right: 85%; } }
+  @media (min-width: 75em) {
     .grid-col-rev.grid-col-offset-90-lg {
       margin-right: 90%; } }
+  @media (min-width: 75em) {
+    .grid-col-rev.grid-col-offset-95-lg {
+      margin-right: 95%; } }
   @media (min-width: 75em) {
     .grid-col-rev.grid-col-offset-100-lg {
       margin-right: 100%; } }
@@ -787,6 +862,9 @@ figcaption {
     .grid-col-rev.grid-col-offset-10-xl {
       margin-right: 10%; } }
   @media (min-width: 93.75em) {
+    .grid-col-rev.grid-col-offset-15-xl {
+      margin-right: 15%; } }
+  @media (min-width: 93.75em) {
     .grid-col-rev.grid-col-offset-20-xl {
       margin-right: 20%; } }
   @media (min-width: 93.75em) {
@@ -814,8 +892,14 @@ figcaption {
     .grid-col-rev.grid-col-offset-80-xl {
       margin-right: 80%; } }
   @media (min-width: 93.75em) {
+    .grid-col-rev.grid-col-offset-85-xl {
+      margin-right: 85%; } }
+  @media (min-width: 93.75em) {
     .grid-col-rev.grid-col-offset-90-xl {
       margin-right: 90%; } }
+  @media (min-width: 93.75em) {
+    .grid-col-rev.grid-col-offset-95-xl {
+      margin-right: 95%; } }
   @media (min-width: 93.75em) {
     .grid-col-rev.grid-col-offset-100-xl {
       margin-right: 100%; } }
@@ -844,6 +928,9 @@ figcaption {
 .grid-col-10-xs {
   width: 10%; }
 
+.grid-col-15-xs {
+  width: 15%; }
+
 .grid-col-20-xs {
   width: 20%; }
 
@@ -871,8 +958,14 @@ figcaption {
 .grid-col-80-xs {
   width: 80%; }
 
+.grid-col-85-xs {
+  width: 85%; }
+
 .grid-col-90-xs {
   width: 90%; }
+
+.grid-col-95-xs {
+  width: 95%; }
 
 .grid-col-100-xs {
   width: 100%; }
@@ -902,6 +995,10 @@ figcaption {
 @media (min-width: 37.5em) {
   .grid-col-10-sm {
     width: 10%; } }
+
+@media (min-width: 37.5em) {
+  .grid-col-15-sm {
+    width: 15%; } }
 
 @media (min-width: 37.5em) {
   .grid-col-20-sm {
@@ -940,8 +1037,16 @@ figcaption {
     width: 80%; } }
 
 @media (min-width: 37.5em) {
+  .grid-col-85-sm {
+    width: 85%; } }
+
+@media (min-width: 37.5em) {
   .grid-col-90-sm {
     width: 90%; } }
+
+@media (min-width: 37.5em) {
+  .grid-col-95-sm {
+    width: 95%; } }
 
 @media (min-width: 37.5em) {
   .grid-col-100-sm {
@@ -980,6 +1085,10 @@ figcaption {
     width: 10%; } }
 
 @media (min-width: 60em) {
+  .grid-col-15-md {
+    width: 15%; } }
+
+@media (min-width: 60em) {
   .grid-col-20-md {
     width: 20%; } }
 
@@ -1016,8 +1125,16 @@ figcaption {
     width: 80%; } }
 
 @media (min-width: 60em) {
+  .grid-col-85-md {
+    width: 85%; } }
+
+@media (min-width: 60em) {
   .grid-col-90-md {
     width: 90%; } }
+
+@media (min-width: 60em) {
+  .grid-col-95-md {
+    width: 95%; } }
 
 @media (min-width: 60em) {
   .grid-col-100-md {
@@ -1056,6 +1173,10 @@ figcaption {
     width: 10%; } }
 
 @media (min-width: 75em) {
+  .grid-col-15-lg {
+    width: 15%; } }
+
+@media (min-width: 75em) {
   .grid-col-20-lg {
     width: 20%; } }
 
@@ -1092,8 +1213,16 @@ figcaption {
     width: 80%; } }
 
 @media (min-width: 75em) {
+  .grid-col-85-lg {
+    width: 85%; } }
+
+@media (min-width: 75em) {
   .grid-col-90-lg {
     width: 90%; } }
+
+@media (min-width: 75em) {
+  .grid-col-95-lg {
+    width: 95%; } }
 
 @media (min-width: 75em) {
   .grid-col-100-lg {
@@ -1132,6 +1261,10 @@ figcaption {
     width: 10%; } }
 
 @media (min-width: 93.75em) {
+  .grid-col-15-xl {
+    width: 15%; } }
+
+@media (min-width: 93.75em) {
   .grid-col-20-xl {
     width: 20%; } }
 
@@ -1168,8 +1301,16 @@ figcaption {
     width: 80%; } }
 
 @media (min-width: 93.75em) {
+  .grid-col-85-xl {
+    width: 85%; } }
+
+@media (min-width: 93.75em) {
   .grid-col-90-xl {
     width: 90%; } }
+
+@media (min-width: 93.75em) {
+  .grid-col-95-xl {
+    width: 95%; } }
 
 @media (min-width: 93.75em) {
   .grid-col-100-xl {
