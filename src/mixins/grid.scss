@@ -5,12 +5,14 @@
 */
 
 @mixin container-fluid {
-  width: $container_width_xs;
+  overflow: hidden;
+  width: $container_width_fluid;
   margin: 0 auto;
 }
 
 @mixin container {
   @include container-fluid;
+  overflow: visible;
   @media (min-width: $breakpoint_sm) {
     width: $container_width_sm;
   }
