@@ -1313,7 +1313,10 @@ body:after {
   border-left: none;
   padding-left: 0;
   font-size: 1.5em;
-  line-height: 1.3; }
+  line-height: 1.3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic; }
 
 ol.list-unstyled,
 ul.list-unstyled {
