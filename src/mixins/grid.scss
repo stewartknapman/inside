@@ -12,6 +12,7 @@
 
 @mixin container {
   @include container-fluid;
+  width: $container_width_xs;
   overflow: visible;
   @media (min-width: $breakpoint_sm) {
     width: $container_width_sm;

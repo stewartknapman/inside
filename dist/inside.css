@@ -232,6 +232,7 @@ figcaption {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
+  width: 98%;
   overflow: visible; }
   @media (min-width: 37.5em) {
     .container {
