@@ -12,6 +12,8 @@ $include_classes: true !default;
 // Set to false if you want to keep a consistent font size across all screen sizes.
 $include_fluid_type: true !default;
 
+// Include pretty underlines: https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9
+// This will stop chromes underlines looking super chunky at larger font sizes.
 $include_pretty_underlines: true !default;
 
 // Include modules.
