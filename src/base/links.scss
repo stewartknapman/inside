@@ -2,9 +2,16 @@ a {
   color: $link_color;
   transition: $transition_duration_hover;
   
+  @if $include_pretty_underlines {
+    @include pretty-underlines($link_color);
+  }
+  
   &:hover,
   &:active {
     color: $link_color_hover;
+    @if $include_pretty_underlines {
+      @include pretty-underlines-color($link_color_hover);
+    }
   }
   
   h1 &,
@@ -15,6 +22,13 @@ a {
   h6 & {
     text-decoration: none;
     color: inherit;
+    @if $include_pretty_underlines {
+      background: none;
+      &:hover,
+      &:active {
+        background: none;
+      }
+    }
   }
   
   :not(figure) > &:focus {
@@ -32,4 +46,6 @@ a {
   figure > &:focus {
     outline-color: rgba($selection_bg_color, 0.3);
   }
+  
+
 }

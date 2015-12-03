@@ -184,10 +184,22 @@ strong {
 a {
   color: inherit;
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+          transition: 0.3s;
+  /*
+    TODO: make underline increase in thickness for large font sizes
+      - prob. requires some sort of calculation
+  */
+  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
+  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-position: 0 1em;
+  background-size: 2px 2px; }
   a:hover,
   a:active {
-    color: #00b8e3; }
+    color: #00b8e3;
+    background-image: -webkit-linear-gradient(top, #fff 50%, #00b8e3 50%);
+    background-image: linear-gradient(to bottom, #fff 50%, #00b8e3 50%); }
   h1 a,
   h2 a,
   h3 a,
@@ -195,7 +207,21 @@ a {
   h5 a,
   h6 a {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    background: none; }
+    h1 a:hover,
+    h1 a:active,
+    h2 a:hover,
+    h2 a:active,
+    h3 a:hover,
+    h3 a:active,
+    h4 a:hover,
+    h4 a:active,
+    h5 a:hover,
+    h5 a:active,
+    h6 a:hover,
+    h6 a:active {
+      background: none; }
   :not(figure) > a:focus {
     outline: none;
     color: #000;
@@ -1462,6 +1488,30 @@ body:after {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: italic; }
+
+.pretty-underlines {
+  /*
+    TODO: make underline increase in thickness for large font sizes
+      - prob. requires some sort of calculation
+  */
+  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
+  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-position: 0 1em;
+  background-size: 2px 2px; }
+
+.pretty-underlines-text {
+  /*
+    TODO: make underline increase in thickness for large font sizes
+      - prob. requires some sort of calculation
+  */
+  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
+  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-position: 0 1em;
+  background-size: 2px 2px; }
 
 ol.list-unstyled,
 ul.list-unstyled {

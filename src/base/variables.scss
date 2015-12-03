@@ -12,6 +12,8 @@ $include_classes: true !default;
 // Set to false if you want to keep a consistent font size across all screen sizes.
 $include_fluid_type: true !default;
 
+$include_pretty_underlines: true !default;
+
 // Include modules.
 // Set to false if you don't need the extended modules.
 $include_grid:    true !default;
@@ -103,6 +105,10 @@ $font_weight_pullquote: 300 !default;
 // Font styles
 $font_style_pullquote: italic !default;
 
+// Underline thickness
+$underline_weight: 2px;
+$underline_position: 1em;
+
 /*
   Grids
   ---
@@ -142,6 +148,8 @@ $selection_bg_color: rgba($highlight_color, .6) !default;
 $border_color: #eee !default;
 $border_size: 1px !default;
 $border_style: solid !default;
+
+$background_color: #fff !default;
 
 /*
   Misc
