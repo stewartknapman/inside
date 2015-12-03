@@ -73,3 +73,7 @@ blockquote {
   border-left: $blockquote_border_color $blockquote_border_size $blockquote_border_style;
   padding-left: $gutter_vertical;
 }
+
+strong {
+  font-weight: $font_weight_bold;
+}

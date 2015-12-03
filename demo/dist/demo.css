@@ -178,6 +178,9 @@ blockquote {
   border-left: #eee 4px solid;
   padding-left: 1em; }
 
+strong {
+  font-weight: 600; }
+
 a {
   color: inherit;
   -webkit-transition: 0.3s;
