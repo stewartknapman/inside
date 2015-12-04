@@ -1,0 +1,18 @@
+@if $include_tables and $include_classes {
+  .table-stripes {
+    @include table-stripes;
+  }
+  
+  .table-borders-horizontal {
+    @include table-borders-horizontal;
+  }
+  
+  .table-borders-vertical {
+    @include table-borders-vertical;
+  }
+  
+  .table-borders {
+    @include table-borders-vertical;
+    @include table-borders-horizontal;
+  }
+}

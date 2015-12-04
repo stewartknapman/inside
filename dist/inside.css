@@ -33,6 +33,10 @@
   ---
 */
 /*
+  Borders
+  ---
+*/
+/*
   Misc
   ---
 */
@@ -248,6 +252,29 @@ figure img {
 
 figcaption {
   overflow: auto; }
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  text-align: left; }
+  @media (min-width: 37.5em) {
+    table td, table th {
+      padding: 0.5rem 0.5em; } }
+  @media (max-width: 37.5em) {
+    table table {
+      display: block; }
+    table thead {
+      display: none; }
+    table tbody, table tfoot, table tr, table td, table th {
+      display: block; }
+    table tr {
+      padding: 0.5rem 0.5em; }
+    table td:before {
+      content: attr(title);
+      display: inline-block;
+      margin-right: 2%;
+      font-weight: 600; } }
 
 .container-fluid {
   overflow: hidden;
@@ -1538,6 +1565,62 @@ dl.list-inline:after {
 dl.list-inline dt {
   float: left;
   margin-right: 0.5em; }
+
+.table-stripes tbody tr {
+  -webkit-transition: 0.3s;
+          transition: 0.3s; }
+  .table-stripes tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; }
+  .table-stripes tbody tr:hover {
+    background-color: #ececec; }
+
+.table-borders-horizontal thead,
+.table-borders-horizontal tfoot {
+  border-top: #eee solid 2px;
+  border-bottom: #eee solid 2px; }
+
+.table-borders-horizontal tbody tr {
+  border-bottom: #eee solid 1px; }
+  .table-borders-horizontal tbody tr:last-child {
+    border-bottom: none; }
+  @media (max-width: 37.5em) {
+    .table-borders-horizontal tbody tr:first-child {
+      border-top: #eee solid 2px; } }
+
+@media (min-width: 37.5em) {
+  .table-borders-vertical td, .table-borders-vertical th {
+    border-left: #eee solid 1px; }
+    .table-borders-vertical td:last-child, .table-borders-vertical th:last-child {
+      border-right: #eee solid 1px; } }
+
+@media (max-width: 37.5em) {
+  .table-borders-vertical tr {
+    border-left: #eee solid 1px;
+    border-right: #eee solid 1px; } }
+
+@media (min-width: 37.5em) {
+  .table-borders td, .table-borders th {
+    border-left: #eee solid 1px; }
+    .table-borders td:last-child, .table-borders th:last-child {
+      border-right: #eee solid 1px; } }
+
+@media (max-width: 37.5em) {
+  .table-borders tr {
+    border-left: #eee solid 1px;
+    border-right: #eee solid 1px; } }
+
+.table-borders thead,
+.table-borders tfoot {
+  border-top: #eee solid 2px;
+  border-bottom: #eee solid 2px; }
+
+.table-borders tbody tr {
+  border-bottom: #eee solid 1px; }
+  .table-borders tbody tr:last-child {
+    border-bottom: none; }
+  @media (max-width: 37.5em) {
+    .table-borders tbody tr:first-child {
+      border-top: #eee solid 2px; } }
 
 .hero-block {
   padding-top: 2rem;

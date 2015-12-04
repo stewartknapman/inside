@@ -108,8 +108,8 @@ $font_weight_pullquote: 300 !default;
 $font_style_pullquote: italic !default;
 
 // Underline thickness
-$underline_weight: 2px;
-$underline_position: 1em;
+$underline_weight: 2px !default;
+$underline_position: 1em !default;
 
 /*
   Grids
@@ -147,11 +147,20 @@ $link_color_hover: $highlight_color !default;
 $selection_color: #000 !default;
 $selection_bg_color: rgba($highlight_color, .6) !default;
 
+$background_color: #fff !default;
+
+$table_background_color: #f9f9f9 !default;
+$table_background_hover_color: darken($table_background_color, 5%);
+
+/*
+  Borders
+  ---
+*/
+
 $border_color: #eee !default;
 $border_size: 1px !default;
 $border_style: solid !default;
-
-$background_color: #fff !default;
+$table_border_size_lg: 2px !default;
 
 /*
   Misc

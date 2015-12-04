@@ -251,6 +251,39 @@
     <blockquote class="pull-quote">
       <p class="reading-length">Lorem Ipsum is simply dummy text of the <a href="#">printing and typesetting industry</a></p>
     </blockquote>
+    
+    
+    <table class="table-borders table-stripes">
+      <thead>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Table Heading 1:">{{ 'Inside surface resistance' | improve }}</td>
+          <td title="Table Heading 2:">{{ '60mm CLT:' | improve }}</td>
+          <td title="Table Heading 3:">{{ 'R 0.50' | improve }}</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">{{ 'Outside surface resistance' | improve }}</td>
+          <td title="Table Heading 2:">{{ '75mm CLT:' | improve }}</td>
+          <td title="Table Heading 3:">{{ 'R 0.625' | improve }}</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">{{ '18mm still air cavity' | improve }}</td>
+          <td title="Table Heading 2:">{{ '90mm CLT:' | improve }}</td>
+          <td title="Table Heading 3:">{{ 'R 0.75' | improve }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer cell</td>
+          <td>Footer cell</td>
+        </tr>
+      </tfoot>
+    </table>
+    
   </div>
 
 </main>
