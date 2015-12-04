@@ -46,18 +46,18 @@
 @mixin table-borders-horizontal {
   thead,
   tfoot {
-    border-top: $border_color $border_style $table_border_size_lg;
-    border-bottom: $border_color $border_style $table_border_size_lg;
+    border-top: $table_border_color $border_style $table_border_size_lg;
+    border-bottom: $table_border_color $border_style $table_border_size_lg;
   }
   
   tbody tr {
-    border-bottom: $border_color $border_style $border_size;
+    border-bottom: $table_border_color $border_style $border_size;
     &:last-child {
       border-bottom: none;
     }
     @media (max-width: $breakpoint_tables) {
       &:first-child {
-        border-top: $border_color $border_style $table_border_size_lg;
+        border-top: $table_border_color $border_style $table_border_size_lg;
       }
     }
   }
@@ -66,17 +66,17 @@
 @mixin table-borders-vertical {
   @media (min-width: $breakpoint_tables) {
     td, th {
-      border-left: $border_color $border_style $border_size;
+      border-left: $table_border_color $border_style $border_size;
       &:last-child {
-        border-right: $border_color $border_style $border_size;
+        border-right: $table_border_color $border_style $border_size;
       }
     }
   }
   
   @media (max-width: $breakpoint_tables) {
     tr {
-      border-left: $border_color $border_style $border_size;
-      border-right: $border_color $border_style $border_size;
+      border-left: $table_border_color $border_style $border_size;
+      border-right: $table_border_color $border_style $border_size;
     }
   }
 }
