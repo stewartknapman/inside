@@ -150,7 +150,7 @@ $selection_bg_color: rgba($highlight_color, .6) !default;
 $background_color: #fff !default;
 
 $table_background_color: #f9f9f9 !default;
-$table_background_hover_color: darken($table_background_color, 5%);
+$table_background_hover_color: darken($table_background_color, 5%) !default;
 
 /*
   Borders
