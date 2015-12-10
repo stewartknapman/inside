@@ -1642,6 +1642,33 @@ dl.list-inline dt {
   .hero-block p {
     font-size: 0.8125em; }
 
+.embed {
+  position: relative;
+  display: block;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  overflow: hidden; }
+
+.embed-16x9 {
+  padding-bottom: 56.25%; }
+
+.embed-4x3 {
+  padding-bottom: 75%; }
+
+.embed-item,
+.embed iframe,
+.embed embed,
+.embed object,
+.embed video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; }
+
 header {
   overflow: hidden;
   padding-bottom: 2rem;

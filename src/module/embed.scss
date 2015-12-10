@@ -1,0 +1,20 @@
+@if $include_classes and $include_embed {
+  .embed {
+    @include embed;
+  }
+  
+  .embed-16x9 {
+    @include embed-16x9;
+  }
+  .embed-4x3 {
+    @include embed-4x3;
+  }
+  
+  .embed-item,
+  .embed iframe,
+  .embed embed,
+  .embed object,
+  .embed video {
+    @include embed-item;
+  }
+}
