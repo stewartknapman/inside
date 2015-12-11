@@ -278,15 +278,12 @@ table {
 
 .container-fluid {
   overflow: hidden;
-  width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .container {
-  overflow: hidden;
-  width: 100%;
   margin: 0 auto;
-  width: 98%;
-  overflow: visible; }
+  width: 98%; }
   @media (min-width: 37.5em) {
     .container {
       width: 95%; } }

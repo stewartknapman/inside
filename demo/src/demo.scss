@@ -1,9 +1,12 @@
 @import '../../src/inside.scss';
 
+$background_color_pink: #E91E63;
+$background_color_grey: rgba(0,0,0,0.1);
+
 header {
   overflow: hidden;
   padding-bottom: $gutter_horizontal * 2;
-  background: #E91E63;
+  background: $background_color_pink;
   color: #FFF6FA;
   
   .description {
@@ -19,9 +22,17 @@ main {
 .grid-item {
   margin-bottom: $gutter_horizontal;
   text-align: center;
-  background-color: rgba(0,0,0,0.1);
+  background-color: $background_color_grey;
   .grid-item {
     margin-top: $gutter_horizontal / 2;
     margin-bottom: $gutter_horizontal / 2;
   }
+}
+
+.container-example {
+  margin-bottom: $gutter_horizontal * 2;
+  padding-top: $gutter_horizontal / 2;
+  padding-bottom: $gutter_horizontal / 2; 
+  text-align: center;
+  background-color: $background_color_grey;
 }
