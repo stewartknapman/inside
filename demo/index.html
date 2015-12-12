@@ -29,7 +29,7 @@
 <main>
 
   <div class="container">
-    <h2>Grids</h2>
+    <h2 class="demo-heading">Grids</h2>
     <div class="reading-length">
       <p>The basic grid uses percentage widths, with classes pre set for: 5%, 10%, 20%, 25%, 30%, 40%, 50%, 60%, 70%, 75%, 80%, 90% and 100%, as well as quarter, half, three-quarters, full, one-third and two-thirds.</p>
       <p>However with the use of the mixin you can use any percentage width you like. Columns that exceed a total width of 100% will just flow onto the next line.</p>
@@ -68,18 +68,18 @@
     
     <div class="grid-row">
       <div class="grid-col-rev grid-col-50-xs">
-        <div class="grid-item">`.grid-col-rev`</div>
+        <div class="grid-item">.grid-col-rev</div>
       </div>
       <div class="grid-col grid-col-50-xs">
-        <div class="grid-item">`.grid-col`</div>
+        <div class="grid-item">.grid-col</div>
       </div>
     </div>
     <div class="grid-row">
       <div class="grid-col grid-col-50-xs">
-        <div class="grid-item">`.grid-col`</div>
+        <div class="grid-item">.grid-col</div>
       </div>
       <div class="grid-col-rev grid-col-50-xs">
-        <div class="grid-item">`.grid-col-rev`</div>
+        <div class="grid-item">.grid-col-rev</div>
       </div>
     </div>
       
@@ -122,7 +122,7 @@
     </div>
       
     <div class="reading-length">
-      <p>Nested grids</p>
+      <p>You can easily nest grids by including a new `.grid-row` and `.grid-col` set inside any other grid column.</p>
     </div>
     
     <div class="grid-row">
@@ -141,14 +141,10 @@
         <div class="grid-item">25%</div>
       </div>
     </div>
-    
-    <hr>
-  </div>
-  
-  <div class="container">
-    <h2>Containers</h2>
+      
+    <h5 class="demo-heading">Containers</h5>
     <div class="reading-length">
-      <p></p>
+      <p>To work cleanly grids do need to be placed inside a container. Containers are percentage widths and can be changed at any breakpoint. Fluid containers are always 100% of the screens width.</p>
     </div>
   </div>
     
@@ -161,9 +157,9 @@
   </div>
 
   <div class="container">
-    <hr>
-    <h2>Typography</h2>
+    <h2 class="demo-heading">Typography</h2>
     
+    <h5 class="demo-heading">Headings</h5>
     <hgroup>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
@@ -174,13 +170,30 @@
       <h6><a href="#">Heading with link</a></h6>
     </hgroup>
     
-    <h6>Paragraphs</h6>
+    <h5 class="demo-heading">Paragraphs</h5>
     <div class="reading-length">
-      <p>Lorem Ipsum is simply dummy text of the <a href="#">print*ing and typesetting industry</a>. *Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p>All type by default, and anything that uses ems &amp; rems for sizes will be effected by the <a href="http://trentwalton.com/2012/06/19/fluid-type/">Fluid Type</a> styles. This means that as the screen size increases, so does the font sizes.</p>
+      <p>Type blocks may also be wrapped with a `.reading-length` class to keep the line length from exceeding an acceptable length&mdash;roughly 30&ndash;40em's.</p>
     
-      <p class="text-align-left-xs text-align-center-sm text-align-right-md">Alignment</p>
+      <p class="text-align-left-xs text-align-center-md text-align-right-xl">Text alignment can be changed at different break points. This text is left aligned as size XS, centre aligned and size MD, and right aligned at size XL.</p>
     </div>
     
+    <h5 class="demo-heading">Block &amp; Pull Quotes</h5>
+    <div class="reading-length">
+      <blockquote>
+        <p>Lorem Ipsum is simply dummy text of the <a href="#">print*ing and typesetting industry</a>. *Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <footer>
+          &mdash; <cite><a href="#">author</a></cite>
+        </footer>
+      </blockquote>
+      
+      <blockquote class="pull-quote">
+        <p>Lorem Ipsum is simply dummy text of the <a href="#">printing and typesetting industry</a></p>
+      </blockquote>
+    </div>
+    
+    <h5 class="demo-heading">Lists</h5>
+    <h6>Un-ordered List:</h6>
     <ul>
       <li>List item</li>
       <li><a href="#">List item link</a></li>
@@ -193,6 +206,7 @@
       </li>
     </ul>
     
+    <h6>Ordered List:</h6>
     <ol>
       <li>List item</li>
       <li><a href="#">List item link</a></li>
@@ -205,16 +219,19 @@
       </li>
     </ol>
     
+    <h6>Un-styled List:</h6>
     <ul class="list-unstyled">
       <li>List unstyled</li>
       <li><a href="#">List item link</a></li>
     </ul>
     
+    <h6>Un-styled &amp; Inline List:</h6>
     <ul class="list-inline">
       <li>List inline</li>
       <li><a href="#">List item link</a></li>
     </ul>
     
+    <h6>Definition List:</h6>
     <dl>
       <dt>Title:</dt>
       <dd>This is a title</dd>
@@ -222,6 +239,7 @@
       <dd>This is a title</dd>
     </dl>
     
+    <h6>Un-styled Definition List:</h6>
     <dl class="list-unstyled">
       <dt>Title:</dt>
       <dd>This is a title</dd>
@@ -229,6 +247,7 @@
       <dd>This is a title</dd>
     </dl>
     
+    <h6>Un-styled &amp; Inline Definition List:</h6>
     <dl class="list-inline">
       <dt>Title:</dt>
       <dd>This is a title</dd>
@@ -236,18 +255,109 @@
       <dd class="reading-length">Lorem Ipsum is simply dummy text of the <a href="#">print*ing and typesetting industry</a>. *Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</dd>
     </dl>
     
-    <blockquote>
-      <p class="reading-length">Lorem Ipsum is simply dummy text of the <a href="#">print*ing and typesetting industry</a>. *Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <footer>
-        &mdash; <cite><a href="#">author</a></cite>
-      </footer>
-    </blockquote>
+    <h5 class="demo-heading">Tables</h5>
+    <div class="reading-length">
+      <p>Tables should be used for tabular data, so by default all tables will have basic styles that make them function better.</p>
+      <p>All tables are responsive and will collapse down into a list-like style on small screen sizes. To include a header for each cell add a title attribute to the td element.</p>
+    </div>
     
-    <blockquote class="pull-quote">
-      <p class="reading-length">Lorem Ipsum is simply dummy text of the <a href="#">printing and typesetting industry</a></p>
-    </blockquote>
+    <h6>Basic:</h6>
+    <table>
+      <thead>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer cell 1</td>
+          <td>Footer cell 2</td>
+        </tr>
+      </tfoot>
+    </table>
     
+    <h6>Borders:</h6>
+    <table class="table-borders">
+      <thead>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer cell 1</td>
+          <td>Footer cell 2</td>
+        </tr>
+      </tfoot>
+    </table>
     
+    <h6>Stripes:</h6>
+    <table class="table-stripes">
+      <thead>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+        <tr>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer cell 1</td>
+          <td>Footer cell 2</td>
+        </tr>
+      </tfoot>
+    </table>
+    
+    <h6>Borders &amp; Stripes:</h6>
     <table class="table-borders table-stripes">
       <thead>
         <th>Table Heading 1</th>
@@ -256,30 +366,32 @@
       </thead>
       <tbody>
         <tr>
-          <td title="Table Heading 1:">{{ 'Inside surface resistance' | improve }}</td>
-          <td title="Table Heading 2:">{{ '60mm CLT:' | improve }}</td>
-          <td title="Table Heading 3:">{{ 'R 0.50' | improve }}</td>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
         </tr>
         <tr>
-          <td title="Table Heading 1:">{{ 'Outside surface resistance' | improve }}</td>
-          <td title="Table Heading 2:">{{ '75mm CLT:' | improve }}</td>
-          <td title="Table Heading 3:">{{ 'R 0.625' | improve }}</td>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
         </tr>
         <tr>
-          <td title="Table Heading 1:">{{ '18mm still air cavity' | improve }}</td>
-          <td title="Table Heading 2:">{{ '90mm CLT:' | improve }}</td>
-          <td title="Table Heading 3:">{{ 'R 0.75' | improve }}</td>
+          <td title="Table Heading 1:">Table data 1</td>
+          <td title="Table Heading 2:">Table data 2</td>
+          <td title="Table Heading 3:">Table data 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer cell</td>
-          <td>Footer cell</td>
+          <td colspan="2">Footer cell 1</td>
+          <td>Footer cell 2</td>
         </tr>
       </tfoot>
     </table>
-    
-    <h5>Responsive Embed</h5>    
+  </div>
+
+  <div class="container">
+    <h2 class="demo-heading">Embedded Videos</h2>
     <div class="embed embed-16x9">
       <iframe class="embed-item" src="https://www.youtube.com/embed/1ZifYcCrStg" frameborder="0" allowfullscreen></iframe>
     </div>

@@ -1,6 +1,5 @@
 /*
   TODO:
-  - tables
   - forms
   - buttons
   - navs
@@ -103,12 +102,12 @@ hr {
 
 ::-moz-selection {
   color: #000;
-  background: rgba(0, 184, 227, 0.6);
+  background: rgba(233, 30, 99, 0.6);
   text-shadow: none; }
 
 ::selection {
   color: #000;
-  background: rgba(0, 184, 227, 0.6);
+  background: rgba(233, 30, 99, 0.6);
   text-shadow: none; }
 
 @media (min-width: 37.5em) {
@@ -201,9 +200,9 @@ a {
   background-size: 2px 2px; }
   a:hover,
   a:active {
-    color: #00b8e3;
-    background-image: -webkit-linear-gradient(top, #fff 50%, #00b8e3 50%);
-    background-image: linear-gradient(to bottom, #fff 50%, #00b8e3 50%); }
+    color: #E91E63;
+    background-image: -webkit-linear-gradient(top, #fff 50%, #E91E63 50%);
+    background-image: linear-gradient(to bottom, #fff 50%, #E91E63 50%); }
   h1 a,
   h2 a,
   h3 a,
@@ -229,13 +228,13 @@ a {
   :not(figure) > a:focus {
     outline: none;
     color: #000;
-    background: rgba(0, 184, 227, 0.3);
-    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
+    background: rgba(233, 30, 99, 0.3);
+    box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3);
     text-shadow: none; }
   figure > a:hover + figcaption a {
-    color: #00b8e3; }
+    color: #E91E63; }
   figure > a:focus {
-    outline-color: rgba(0, 184, 227, 0.3); }
+    outline-color: rgba(233, 30, 99, 0.3); }
 
 ul {
   padding-left: 1em; }
@@ -1678,11 +1677,20 @@ header {
 main {
   padding: 2rem 0; }
 
+h2.demo-heading {
+  padding-bottom: 1rem;
+  border-bottom: #E91E63 1px solid; }
+
+h5.demo-heading {
+  color: #E91E63; }
+
 .grid-item {
+  overflow: hidden;
   margin-bottom: 1rem;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1); }
-  .grid-item .grid-item {
+  .grid-item .grid-item,
+  .grid-item p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
 

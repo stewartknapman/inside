@@ -1,12 +1,12 @@
-@import '../../src/inside.scss';
-
-$background_color_pink: #E91E63;
+$highlight_color: #E91E63;
 $background_color_grey: rgba(0,0,0,0.1);
+
+@import '../../src/inside.scss';
 
 header {
   overflow: hidden;
   padding-bottom: $gutter_horizontal * 2;
-  background: $background_color_pink;
+  background: $highlight_color;
   color: #FFF6FA;
   
   .description {
@@ -19,11 +19,22 @@ main {
   padding: ($gutter_horizontal * 2) 0;
 }
 
+h2.demo-heading {
+  padding-bottom: $gutter_horizontal;
+  border-bottom: $highlight_color $border_size $border_style;
+}
+h5.demo-heading {
+  color: $highlight_color;
+}
+
 .grid-item {
+  overflow: hidden;
   margin-bottom: $gutter_horizontal;
   text-align: center;
   background-color: $background_color_grey;
-  .grid-item {
+  
+  .grid-item,
+  p {
     margin-top: $gutter_horizontal / 2;
     margin-bottom: $gutter_horizontal / 2;
   }
