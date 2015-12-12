@@ -86,7 +86,7 @@ $font_size_lg:    1.5em !default;             // ~ 24px and used inside hero obj
 $font_size_md:    1.25em !default;            // ~ 20px
 $font_size_sm:    $font_size_base !default;   // ~ 16px
 $font_size_xs:    0.8125em !default;          // ~ 13px
-$font_size_forms: $font_size_base !default;
+$font_size_forms: $font_size_xs !default;
 
 // Font families
 $font_family_serif:      Georgia, "Times New Roman", Times, serif !default;
@@ -117,7 +117,7 @@ $underline_position: 1em !default;
 */
 
 $container_width_fluid: 100% !default;
-$container_width_xs: 98% !default;
+$container_width_xs: 95% !default;
 $container_width_sm: 95% !default;
 $container_width_md: 90% !default;
 $container_width_lg: 85% !default;
@@ -162,6 +162,9 @@ $border_size: 1px !default;
 $border_style: solid !default;
 $table_border_size_lg: 2px !default;
 $table_border_color: $border_color !default;
+
+$border_radius: 3px !default;
+$border_radius_input: $border_radius !default;
 
 /*
   Misc
