@@ -13,6 +13,10 @@ header {
     @include reading-length;
     margin: auto;
   }
+  
+  ::selection {
+    background-color: #FFF6FA;
+  }
 }
 
 main {
