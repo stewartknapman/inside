@@ -21,8 +21,6 @@
   }
 
   @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-    @each $col_key, $col_size in $col_sizes {
-      @include build-grid-cols ($col_key, $col_size, $breakpoint_key, $breakpoint);
-    }
+    @include build-grid-cols ($breakpoint_key, $breakpoint);
   }
 }
