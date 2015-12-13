@@ -14,32 +14,15 @@
   
   .grid-col {
     @include grid-col;
-    @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-      @each $col_key, $col_offset in $col_sizes {
-        &.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
-          @include grid-col-offset($col_offset, $breakpoint, left);
-        }
-      }
-    }
   }
   
   .grid-col-rev {
     @include grid-col-rev;
-    @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-      @each $col_key, $col_offset in $col_sizes {
-        &.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
-          @include grid-col-offset($col_offset, $breakpoint, right);
-        }
-      }
-    }
   }
 
   @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
     @each $col_key, $col_size in $col_sizes {
-      .grid-col-#{$col_key}-#{$breakpoint_key} {
-        @include grid-col-size($col_size, $breakpoint);
-      }
+      @include build-grid-cols ($col_key, $col_size, $breakpoint_key, $breakpoint);
     }
   }
-  
 }

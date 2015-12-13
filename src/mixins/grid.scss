@@ -98,3 +98,17 @@
     margin-#{$direction}: $offset;
   }
 }
+
+@mixin build-grid-cols ($col_key, $col_size, $breakpoint_key, $breakpoint) {
+  .grid-col.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
+    @include grid-col-offset($col_size, $breakpoint, left);
+  }
+  
+  .grid-col-rev.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
+    @include grid-col-offset($col_size, $breakpoint, right);
+  }
+  
+  .grid-col-#{$col_key}-#{$breakpoint_key} {
+    @include grid-col-size($col_size, $breakpoint);
+  }
+}
