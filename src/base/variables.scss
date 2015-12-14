@@ -49,7 +49,7 @@ $breakpoint_xl:     93.75em !default; // 1500px @ 16px
 // The max-height in which a table is no longer collapsed for mobile
 $breakpoint_tables: $breakpoint_sm !default;
 
-$breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl);
+$breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
 
 /*
   Type
@@ -97,12 +97,14 @@ $font_family_body:      $font_family_sans_serif !default;
 $font_family_headings:  $font_family_sans_serif !default;
 $font_family_code:      $font_family_monospaced !default;
 $font_family_pullquote: $font_family_headings !default;
+$font_family_button:    $font_family_body !default;
 
 // Font weights
 $font_weight_base:      300 !default;
 $font_weight_bold:      600 !default;
 $font_weight_headings:  500 !default;
 $font_weight_pullquote: 300 !default;
+$font_weight_button:    $font_weight_base !default;
 
 // Font styles
 $font_style_pullquote: italic !default;
@@ -132,7 +134,7 @@ $grid_gutter_md: 0.75em !default;
 $grid_gutter_lg: $gutter_vertical !default;
 $grid_gutter_xl: $grid_gutter_lg !default;
 
-$col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%);
+$col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%) !default;
 
 /*
   Colours
@@ -149,8 +151,15 @@ $selection_bg_color: rgba($highlight_color, .6) !default;
 
 $background_color: #fff !default;
 
-$table_background_color: #f9f9f9 !default;
-$table_background_hover_color: darken($table_background_color, 5%) !default;
+// tables
+$background_color_table: #f9f9f9 !default;
+$background_hover_color_table: darken($background_color_table, 5%) !default;
+
+// buttons
+$text_color_button: $text_color !default;
+$text_hover_color_button: $text_color !default;
+$background_color_button: $background_color !default;
+$background_hover_color_button: darken($background_color_button, 5%) !default;
 
 /*
   Borders
@@ -160,21 +169,37 @@ $table_background_hover_color: darken($table_background_color, 5%) !default;
 $border_color: #eee !default;
 $border_size: 1px !default;
 $border_style: solid !default;
-$table_border_size_lg: 2px !default;
-$table_border_color: $border_color !default;
-
 $border_radius: 3px !default;
+
+// tables
+$border_color_table: $border_color !default;
+$border_size_table: $border_size !default;
+$border_size_table_lg: 2px !default;
+$border_style_table: $border_style !default;
+
+// inputs
+$border_color_input: $border_color !default;
+$border_size_input: $border_size !default;
+$border_style_input: $border_style !default;
 $border_radius_input: $border_radius !default;
+
+// buttons
+$border_color_button: $border_color !default;
+$border_color_hover_button: $border_color !default;
+$border_size_button: $border_size !default;
+$border_style_button: $border_style !default;
+$border_radius_button: $border_radius !default;
+
+// blockquotes
+$border_color_blockquote: $border_color !default;
+$border_size_blockquote: $border_size * 4 !default;
+$border_style_blockquote: $border_style !default;
+
 
 /*
   Misc
   ---
 */
-
-// blockquotes
-$blockquote_border_size: $border_size * 4 !default;
-$blockquote_border_color: $border_color !default;
-$blockquote_border_style: $border_style !default;
 
 // Transition durations.
 // These are here as a nicety for things like link hovers and font size increases.

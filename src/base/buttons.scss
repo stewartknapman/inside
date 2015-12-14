@@ -1,0 +1,14 @@
+input[type=button],
+input[type=reset],
+input[type=submit],
+button {
+  @include button-base;
+  
+  &:focus {
+    outline: none;
+    color: $selection_color;
+    background: rgba($selection_bg_color, 0.3);
+    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
+    text-shadow: none;
+  }
+}

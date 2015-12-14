@@ -1,0 +1,12 @@
+@if $include_classes and $include_buttons {
+  .button {
+    @include button-base;
+  }
+  
+  .button-highlight,
+  input.button-highlight {
+    $background_color: $highlight_color;
+    $color: if(lightness($background_color) > 55%, $text_color, lighten($background_color, 45%));
+    @include button-style($color, $background_color);
+  }
+}

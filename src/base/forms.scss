@@ -8,7 +8,7 @@ legend {
   width: 100%;
   margin-bottom: $gutter_horizontal;
   padding-bottom: $gutter_horizontal / 2;
-  border-bottom: $border_color $border_size $border_style;
+  border-bottom: $border_color_input $border_size_input $border_style_input;
 }
 
 label {
@@ -35,7 +35,7 @@ label {
   textarea,
   select {
     color: rgba($text_color, .8);
-    border: $border_color $border_size $border_style;
+    border: $border_color_input $border_size_input $border_style_input;
     border-radius: $border_radius_input;
     outline: none;
     transition: $transition_duration_base;

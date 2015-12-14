@@ -35,10 +35,10 @@
   tbody tr{
     transition: $transition_duration_hover;
     &:nth-child(odd) {
-      background-color: $table_background_color;
+      background-color: $background_color_table;
     }
     &:hover {
-      background-color: $table_background_hover_color;
+      background-color: $background_hover_color_table;
     }
   }
 }
@@ -46,18 +46,18 @@
 @mixin table-borders-horizontal {
   thead,
   tfoot {
-    border-top: $table_border_color $border_style $table_border_size_lg;
-    border-bottom: $table_border_color $border_style $table_border_size_lg;
+    border-top: $border_color_table $border_style_table $border_size_table_lg;
+    border-bottom: $border_color_table $border_style_table $border_size_table_lg;
   }
   
   tbody tr {
-    border-bottom: $table_border_color $border_style $border_size;
+    border-bottom: $border_color_table $border_style_table $border_size_table;
     &:last-child {
       border-bottom: none;
     }
     @media (max-width: $breakpoint_tables) {
       &:first-child {
-        border-top: $table_border_color $border_style $table_border_size_lg;
+        border-top: $border_color_table $border_style_table $border_size_table_lg;
       }
     }
   }
@@ -66,17 +66,17 @@
 @mixin table-borders-vertical {
   @media (min-width: $breakpoint_tables) {
     td, th {
-      border-left: $table_border_color $border_style $border_size;
+      border-left: $border_color_table $border_style_table $border_size_table;
       &:last-child {
-        border-right: $table_border_color $border_style $border_size;
+        border-right: $border_color_table $border_style_table $border_size_table;
       }
     }
   }
   
   @media (max-width: $breakpoint_tables) {
     tr {
-      border-left: $table_border_color $border_style $border_size;
-      border-right: $table_border_color $border_style $border_size;
+      border-left: $border_color_table $border_style_table $border_size_table;
+      border-right: $border_color_table $border_style_table $border_size_table;
     }
   }
 }

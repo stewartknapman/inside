@@ -70,7 +70,7 @@ article, aside, nav, section {
 }
 
 blockquote {
-  border-left: $blockquote_border_color $blockquote_border_size $blockquote_border_style;
+  border-left: $border_color_blockquote $border_size_blockquote $border_style_blockquote;
   padding-left: $gutter_vertical;
 }
 
