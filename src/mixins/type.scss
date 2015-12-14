@@ -58,23 +58,3 @@
   font-weight: $font_weight_pullquote;
   font-style: $font_style_pullquote;
 }
-
-@mixin pretty-underlines ($color, $bg_color: $background_color) {
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  
-  @include pretty-underlines-color($color, $bg_color);
-  text-decoration: none;
-  background-repeat: repeat-x;
-  background-position: 0 $underline_position;
-  background-size: $underline_weight $underline_weight;
-}
-
-@mixin pretty-underlines-color ($color, $bg_color: $background_color) {
-  @if ($color == 'inherit') {
-    $color: $text_color;
-  }
-  background-image: linear-gradient(to bottom, $background_color 50%, $color 50%);
-}
