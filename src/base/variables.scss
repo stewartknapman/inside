@@ -161,8 +161,8 @@ $text_hover_color_button: $text_color !default;
 $background_color_button: $background_color !default;
 $background_hover_color_button: darken($background_color_button, 5%) !default;
 
-$background_color_button_primary: $highlight_color;
-$text_color_button_primary: if(lightness($background_color_button_primary) > 55%, $text_color, lighten($background_color, 45%));
+$background_color_button_primary: $highlight_color !default;
+$text_color_button_primary: if(lightness($background_color_button_primary) > 55%, $text_color, lighten($background_color, 45%)) !default;
 
 /*
   Borders
