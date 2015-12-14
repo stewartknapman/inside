@@ -15,5 +15,5 @@
   @if ($color == 'inherit') {
     $color: $text_color;
   }
-  background-image: linear-gradient(to bottom, $background_color 50%, $color 50%);
+  background-image: linear-gradient(to bottom, $bg_color 50%, $color 50%);
 }
