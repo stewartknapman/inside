@@ -3,10 +3,8 @@
     @include button-base;
   }
   
-  .button-highlight,
-  input.button-highlight {
-    $background_color: $highlight_color;
-    $color: if(lightness($background_color) > 55%, $text_color, lighten($background_color, 45%));
-    @include button-style($color, $background_color);
+  .button-primary,
+  input.button-primary {
+    @include button-style($text_color_button_primary, $background_color_button_primary);
   }
 }

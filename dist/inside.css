@@ -1,6 +1,5 @@
 /*
   TODO:
-  - buttons
   - navs
   - code
 */
@@ -1984,16 +1983,16 @@ dl.list-inline dt {
     border-color: #eee;
     cursor: pointer; }
 
-.button-highlight,
-input.button-highlight {
-  color: #c9f5ff;
+.button-primary,
+input.button-primary {
+  color: white;
   background-color: #00b8e3;
   border-color: #008fb0; }
-  .button-highlight:hover,
-  .button-highlight:active,
-  input.button-highlight:hover,
-  input.button-highlight:active {
-    color: #c9f5ff;
+  .button-primary:hover,
+  .button-primary:active,
+  input.button-primary:hover,
+  input.button-primary:active {
+    color: white;
     background-color: #0086a6;
     border-color: #008fb0; }
 
