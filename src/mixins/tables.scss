@@ -80,3 +80,8 @@
     }
   }
 }
+
+@mixin table-borders {
+  @include table-borders-horizontal;
+  @include table-borders-vertical;
+}
