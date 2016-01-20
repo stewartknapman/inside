@@ -4,16 +4,16 @@
       - prob. requires some sort of calculation
   */
   
-  @include pretty-underlines-color($color, $bg_color);
+  @include pretty-underlines-color($color);
   text-decoration: none;
   background-repeat: repeat-x;
   background-position: 0 $underline_position;
   background-size: $underline_weight $underline_weight;
 }
 
-@mixin pretty-underlines-color ($color, $bg_color: $background_color) {
+@mixin pretty-underlines-color ($color) {
   @if ($color == 'inherit') {
     $color: $text_color;
   }
-  background-image: linear-gradient(to bottom, $bg_color 50%, $color 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, $color 50%);
 }

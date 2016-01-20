@@ -190,8 +190,8 @@ a {
     TODO: make underline increase in thickness for large font sizes
       - prob. requires some sort of calculation
   */
-  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
-  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
   text-decoration: none;
   background-repeat: repeat-x;
   background-position: 0 1em;
@@ -200,8 +200,8 @@ a {
   a:active,
   figure > a:hover + figcaption a {
     color: #E91E63;
-    background-image: -webkit-linear-gradient(top, #fff 50%, #E91E63 50%);
-    background-image: linear-gradient(to bottom, #fff 50%, #E91E63 50%); }
+    background-image: -webkit-linear-gradient(top, transparent 50%, #E91E63 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #E91E63 50%); }
   h1 a,
   h2 a,
   h3 a,
@@ -1910,8 +1910,8 @@ body:after {
     TODO: make underline increase in thickness for large font sizes
       - prob. requires some sort of calculation
   */
-  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
-  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
   text-decoration: none;
   background-repeat: repeat-x;
   background-position: 0 1em;
@@ -1922,8 +1922,8 @@ body:after {
     TODO: make underline increase in thickness for large font sizes
       - prob. requires some sort of calculation
   */
-  background-image: -webkit-linear-gradient(top, #fff 50%, #333 50%);
-  background-image: linear-gradient(to bottom, #fff 50%, #333 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
   text-decoration: none;
   background-repeat: repeat-x;
   background-position: 0 1em;
