@@ -1,4 +1,4 @@
-@mixin pretty-underlines ($color, $bg_color: $background_color) {
+@mixin pretty-underlines ($color) {
   /*
     TODO: make underline increase in thickness for large font sizes
       - prob. requires some sort of calculation
