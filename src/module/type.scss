@@ -10,11 +10,16 @@
   .font-size-lg { @include font-size-lg; } // h3
   .font-size-xl { @include font-size-xl; } // h2
   .font-size-xxl { @include font-size-xxl; } // h1
-  
+
+/*
+  [Breaks in < 3.3]
   @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+*/
+  
+  @each $breakpoint in $breakpoint_sizes {
     @each $alignment in (left, center, right) {
-      .text-align-#{$alignment}-#{$breakpoint_key} {
-        @include text-align($alignment, $breakpoint);
+      .text-align-#{$alignment}-#{nth($breakpoint, 1)} {
+        @include text-align($alignment, nth($breakpoint, 2));
       }
     }
   }

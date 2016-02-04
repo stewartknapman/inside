@@ -1861,6 +1861,10 @@ body:after {
   font-size: 2.5em;
   line-height: 1.1; }
 
+/*
+  [Breaks in < 3.3]
+  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+*/
 .text-align-left-xs {
   text-align: left; }
 
