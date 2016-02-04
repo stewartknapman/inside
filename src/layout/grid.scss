@@ -20,7 +20,14 @@
     @include grid-col-rev;
   }
 
+  @each $breakpoint in $breakpoint_sizes {
+    @include build-grid-cols (nth($breakpoint, 1), nth($breakpoint, 2));
+  }
+
+/*
+  [Breaks in < 3.3]
   @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
     @include build-grid-cols ($breakpoint_key, $breakpoint);
   }
+*/
 }

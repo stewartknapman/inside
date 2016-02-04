@@ -114,7 +114,15 @@
 }
 
 @mixin build-grid-cols ($breakpoint_key, $breakpoint) {
+  @each $col in $col_sizes {
+    @include build-grid-col (nth($col, 1), nth($col, 2), $breakpoint_key, $breakpoint);
+  }
+}
+/*
+  [Breaks in < 3.3]
+@mixin build-grid-cols ($breakpoint_key, $breakpoint) {
   @each $col_key, $col_size in $col_sizes {
     @include build-grid-col ($col_key, $col_size, $breakpoint_key, $breakpoint);
   }
 }
+*/
