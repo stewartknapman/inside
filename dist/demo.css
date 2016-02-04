@@ -14,6 +14,10 @@
   xs is implied by whatever is less than sm
 */
 /*
+  [Breaks in < 3.3]
+  $breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
+*/
+/*
   Type
   ---
   
@@ -24,6 +28,10 @@
 /*
   Grids
   ---
+*/
+/*
+  [Breaks in < 3.3]
+$col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%) !default;
 */
 /*
   Colours
@@ -41,6 +49,14 @@
   http://droppen.org/?droppen=m66dtgqcwhfr
   TODO:
   - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+/*
+  [Breaks in < 3.3]
+@mixin build-grid-cols ($breakpoint_key, $breakpoint) {
+  @each $col_key, $col_size in $col_sizes {
+    @include build-grid-col ($col_key, $col_size, $breakpoint_key, $breakpoint);
+  }
+}
 */
 /* Block level elements and resets */
 html {
@@ -1786,6 +1802,12 @@ table {
   .grid-col-two-thirds-xl {
     width: 66.666%; } }
 
+/*
+  [Breaks in < 3.3]
+  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+    @include build-grid-cols ($breakpoint_key, $breakpoint);
+  }
+*/
 /*
   Pass media queries to JS: https://adactio.com/journal/5429
   We do this so we are using one consitant source for this value.
