@@ -737,6 +737,15 @@ table {
 .grid-col-one-third-xs {
   width: 33.333%; }
 
+.grid-col.grid-col-offset-one-sixth-xs {
+  margin-left: 16.666%; }
+
+.grid-col-rev.grid-col-offset-one-sixth-xs {
+  margin-right: 16.666%; }
+
+.grid-col-one-sixth-xs {
+  width: 16.666%; }
+
 .grid-col.grid-col-offset-two-thirds-xs {
   margin-left: 66.666%; }
 
@@ -997,6 +1006,18 @@ table {
 @media (min-width: 37.5em) {
   .grid-col-one-third-sm {
     width: 33.333%; } }
+
+@media (min-width: 37.5em) {
+  .grid-col.grid-col-offset-one-sixth-sm {
+    margin-left: 16.666%; } }
+
+@media (min-width: 37.5em) {
+  .grid-col-rev.grid-col-offset-one-sixth-sm {
+    margin-right: 16.666%; } }
+
+@media (min-width: 37.5em) {
+  .grid-col-one-sixth-sm {
+    width: 16.666%; } }
 
 @media (min-width: 37.5em) {
   .grid-col.grid-col-offset-two-thirds-sm {
@@ -1263,6 +1284,18 @@ table {
     width: 33.333%; } }
 
 @media (min-width: 60em) {
+  .grid-col.grid-col-offset-one-sixth-md {
+    margin-left: 16.666%; } }
+
+@media (min-width: 60em) {
+  .grid-col-rev.grid-col-offset-one-sixth-md {
+    margin-right: 16.666%; } }
+
+@media (min-width: 60em) {
+  .grid-col-one-sixth-md {
+    width: 16.666%; } }
+
+@media (min-width: 60em) {
   .grid-col.grid-col-offset-two-thirds-md {
     margin-left: 66.666%; } }
 
@@ -1527,6 +1560,18 @@ table {
     width: 33.333%; } }
 
 @media (min-width: 75em) {
+  .grid-col.grid-col-offset-one-sixth-lg {
+    margin-left: 16.666%; } }
+
+@media (min-width: 75em) {
+  .grid-col-rev.grid-col-offset-one-sixth-lg {
+    margin-right: 16.666%; } }
+
+@media (min-width: 75em) {
+  .grid-col-one-sixth-lg {
+    width: 16.666%; } }
+
+@media (min-width: 75em) {
   .grid-col.grid-col-offset-two-thirds-lg {
     margin-left: 66.666%; } }
 
@@ -1789,6 +1834,18 @@ table {
 @media (min-width: 93.75em) {
   .grid-col-one-third-xl {
     width: 33.333%; } }
+
+@media (min-width: 93.75em) {
+  .grid-col.grid-col-offset-one-sixth-xl {
+    margin-left: 16.666%; } }
+
+@media (min-width: 93.75em) {
+  .grid-col-rev.grid-col-offset-one-sixth-xl {
+    margin-right: 16.666%; } }
+
+@media (min-width: 93.75em) {
+  .grid-col-one-sixth-xl {
+    width: 16.666%; } }
 
 @media (min-width: 93.75em) {
   .grid-col.grid-col-offset-two-thirds-xl {
