@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-size: 100%;
+  font-size: $font_size_base;
   line-height: $line_height_base;
   font-family: $font_family_body;
   font-weight: $font_weight_base;
