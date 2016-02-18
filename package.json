@@ -1,7 +1,7 @@
 {
   "name": "inside",
-  "version": "0.0.0",
-  "description": "another css framework",
+  "version": "0.0.1",
+  "description": "another scss framework",
   "main": "dist/inside.scss",
   "scripts": {
     "build": "npm run build:dist && npm run build:demo",
