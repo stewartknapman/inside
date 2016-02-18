@@ -1,5 +1,5 @@
 {
-  "name": "inside",
+  "name": "inside-scss",
   "version": "0.0.1",
   "description": "another scss framework",
   "main": "dist/inside.scss",
