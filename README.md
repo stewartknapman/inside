@@ -24,7 +24,7 @@ npm install inside-scss
 ...
 ```
 
-This path is reletive to where your main scss file is stored within your project, so if your file is within `src/scss/styles.scss` then the path to inside will look like this: `'../../node_modules/inside-scss/src/inside'`
+This path is reletive to where your main scss file is stored within your project, so if your file is within `src/scss/styles.scss` then the path to inside will look like this: `'../../node_modules/inside-scss/src/inside'`.
 
 **Step 3:** Profit!
 
