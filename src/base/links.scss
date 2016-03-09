@@ -1,4 +1,4 @@
 a {
   transition: $transition_duration_hover;
-  @include links($link_color, $link_color_hover);
 }
+@include links($link_color, $link_color_hover);

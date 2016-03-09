@@ -1,58 +1,58 @@
-@mixin links ($color, $color_hover) {
-  color: $color;
-  
-  @if $include_pretty_underlines {
-    @include pretty-underlines($color);
+@mixin links ($color, $color_hover: false) {
+  @if ($color_hover == false) {
+    $color_hover: $color;
   }
   
-  &:hover,
-  &:active,
-  figure > &:hover + figcaption a {
+  a {
+    color: $color;
+    @if $include_pretty_underlines {
+      @include pretty-underlines($color);
+    }
+  }
+  a:hover,
+  a:active {
     color: $color_hover;
     @if $include_pretty_underlines {
       @include pretty-underlines-color($color_hover);
     }
   }
-  
-  h1 &,
-  h2 &,
-  h3 &,
-  h4 &,
-  h5 &,
-  h6 & {
-    text-decoration: none;
-    color: inherit;
-    @if $include_pretty_underlines {
-      background: none;
-      &:hover,
-      &:active {
-        background: none;
-      }
-    }
-  }
-  
-  :not(figure) > &:focus {
+  a:focus {
     outline: none;
     color: $selection_color;
     background: rgba($selection_bg_color, 0.3);
     box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
     text-shadow: none;
   }
-  
-  figure > &:focus {
+  figure > a:focus {
     outline-color: rgba($selection_bg_color, 0.3);
   }
   
-  figure > &:hover + figcaption {
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-      @if $include_pretty_underlines {
-        background: none;
-      }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    text-decoration: none;
+    color: inherit;
+    @if $include_pretty_underlines {
+      background: none;
+    }
+  }
+  h1 a:hover,
+  h1 a:active,
+  h2 a:hover,
+  h2 a:active,
+  h3 a:hover,
+  h3 a:active,
+  h4 a:hover,
+  h4 a:active,
+  h5 a:hover,
+  h5 a:active,
+  h6 a:hover,
+  h6 a:active {
+    @if $include_pretty_underlines {
+      background: none;
     }
   }
 }

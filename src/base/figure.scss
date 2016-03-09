@@ -2,6 +2,22 @@ figure {
   img {
     display: block;
   }
+  > a {
+    display: inline-block;
+  }
+  @if ($include_figure_link_hover) {
+    > a:hover + figcaption {
+      @include links($link_color_hover);
+      h1 a,
+      h2 a,
+      h3 a,
+      h4 a,
+      h5 a,
+      h6 a {
+        color: $link_color_hover;
+      }
+    }
+  }
 }
 
 figcaption {

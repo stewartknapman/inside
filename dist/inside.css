@@ -200,7 +200,9 @@ strong {
 
 a {
   -webkit-transition: 0.3s;
-          transition: 0.3s;
+          transition: 0.3s; }
+
+a {
   color: inherit;
   /*
     TODO: make underline increase in thickness for large font sizes
@@ -212,49 +214,46 @@ a {
   background-repeat: repeat-x;
   background-position: 0 1em;
   background-size: 2px 2px; }
-  a:hover,
-  a:active,
-  figure > a:hover + figcaption a {
-    color: #00b8e3;
-    background-image: -webkit-linear-gradient(top, transparent 50%, #00b8e3 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #00b8e3 50%); }
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    text-decoration: none;
-    color: inherit;
-    background: none; }
-    h1 a:hover,
-    h1 a:active,
-    h2 a:hover,
-    h2 a:active,
-    h3 a:hover,
-    h3 a:active,
-    h4 a:hover,
-    h4 a:active,
-    h5 a:hover,
-    h5 a:active,
-    h6 a:hover,
-    h6 a:active {
-      background: none; }
-  :not(figure) > a:focus {
-    outline: none;
-    color: #000;
-    background: rgba(0, 184, 227, 0.3);
-    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
-    text-shadow: none; }
-  figure > a:focus {
-    outline-color: rgba(0, 184, 227, 0.3); }
-  figure > a:hover + figcaption h1 a,
-  figure > a:hover + figcaption h2 a,
-  figure > a:hover + figcaption h3 a,
-  figure > a:hover + figcaption h4 a,
-  figure > a:hover + figcaption h5 a,
-  figure > a:hover + figcaption h6 a {
-    background: none; }
+
+a:hover,
+a:active {
+  color: #00b8e3;
+  background-image: -webkit-linear-gradient(top, transparent 50%, #00b8e3 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #00b8e3 50%); }
+
+a:focus {
+  outline: none;
+  color: #000;
+  background: rgba(0, 184, 227, 0.3);
+  box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
+  text-shadow: none; }
+
+figure > a:focus {
+  outline-color: rgba(0, 184, 227, 0.3); }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+  color: inherit;
+  background: none; }
+
+h1 a:hover,
+h1 a:active,
+h2 a:hover,
+h2 a:active,
+h3 a:hover,
+h3 a:active,
+h4 a:hover,
+h4 a:active,
+h5 a:hover,
+h5 a:active,
+h6 a:hover,
+h6 a:active {
+  background: none; }
 
 ul {
   padding-left: 1em; }
@@ -428,6 +427,70 @@ button {
 
 figure img {
   display: block; }
+
+figure > a {
+  display: inline-block; }
+
+figure > a:hover + figcaption a {
+  color: #00b8e3;
+  /*
+    TODO: make underline increase in thickness for large font sizes
+      - prob. requires some sort of calculation
+  */
+  background-image: -webkit-linear-gradient(top, transparent 50%, #00b8e3 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #00b8e3 50%);
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-position: 0 1em;
+  background-size: 2px 2px; }
+
+figure > a:hover + figcaption a:hover,
+figure > a:hover + figcaption a:active {
+  color: #00b8e3;
+  background-image: -webkit-linear-gradient(top, transparent 50%, #00b8e3 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #00b8e3 50%); }
+
+figure > a:hover + figcaption a:focus {
+  outline: none;
+  color: #000;
+  background: rgba(0, 184, 227, 0.3);
+  box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
+  text-shadow: none; }
+
+figure > a:hover + figcaption figure > a:focus {
+  outline-color: rgba(0, 184, 227, 0.3); }
+
+figure > a:hover + figcaption h1 a,
+figure > a:hover + figcaption h2 a,
+figure > a:hover + figcaption h3 a,
+figure > a:hover + figcaption h4 a,
+figure > a:hover + figcaption h5 a,
+figure > a:hover + figcaption h6 a {
+  text-decoration: none;
+  color: inherit;
+  background: none; }
+
+figure > a:hover + figcaption h1 a:hover,
+figure > a:hover + figcaption h1 a:active,
+figure > a:hover + figcaption h2 a:hover,
+figure > a:hover + figcaption h2 a:active,
+figure > a:hover + figcaption h3 a:hover,
+figure > a:hover + figcaption h3 a:active,
+figure > a:hover + figcaption h4 a:hover,
+figure > a:hover + figcaption h4 a:active,
+figure > a:hover + figcaption h5 a:hover,
+figure > a:hover + figcaption h5 a:active,
+figure > a:hover + figcaption h6 a:hover,
+figure > a:hover + figcaption h6 a:active {
+  background: none; }
+
+figure > a:hover + figcaption h1 a,
+figure > a:hover + figcaption h2 a,
+figure > a:hover + figcaption h3 a,
+figure > a:hover + figcaption h4 a,
+figure > a:hover + figcaption h5 a,
+figure > a:hover + figcaption h6 a {
+  color: #00b8e3; }
 
 figcaption {
   overflow: auto;
