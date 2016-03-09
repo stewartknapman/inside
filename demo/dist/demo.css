@@ -199,9 +199,9 @@ strong {
   font-weight: 600; }
 
 a {
-  color: inherit;
   -webkit-transition: 0.3s;
           transition: 0.3s;
+  color: inherit;
   /*
     TODO: make underline increase in thickness for large font sizes
       - prob. requires some sort of calculation
