@@ -107,13 +107,17 @@ There are two types of containers: `.container` & `.container-fluid`. The fluid 
 $container_max_width: 55em;
 ```
 
+### Grids
 
+Like all other things grids can be set by classes: `grid-col-[size]-[breakpoint]` e.g. `grid-col-50-xs` or by a mixin: `@include grid-col-size($size, $breakpoint);`. When using the mixin the second parameter, $breakpoint, is optional and defaults to false which will set just the width.
+Be sure to include the `grid-col` or `grid-col-rev` base classes/mixins on your columns.
 
+There is a default list* of grid columns for classes, much like breakpoints, which can be overridden. This allows you to include only the classes you want/need. The list items key will be used as the size portion of the class:
 
+```
+$col_sizes: (5 5%) (10 10%) (15 15%) (20 20%) (25 25%) (30 30%) (40 40%) (50 50%) (60 60%) (70 70%) (75 75%) (80 80%) (85 85%) (90 90%) (95 95%) (100 100%) (quarter 25%) (half 50%) (three-quarters 75%) (full 100%) (one-third 33.333%) (one-sixth 16.666%) (two-thirds 66.666%);
+```
 
-
+For more information on grids refer to [the grids section on the demo page](http://stewartknapman.github.io/inside/).
 
 * I've used nested lists instead of maps as maps don't exists in versions of sass < 3.3. But why does that matter you ask? Because the version of sass that Shopify uses is < 3 and a lot of my work is with Shopify.
-
-
-*TODO: Describe the containers, percentage based grids and how to use them as well as how to setup custom breakpoints and col-sizes.*
