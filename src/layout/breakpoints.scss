@@ -14,17 +14,10 @@
     margin-top: ($line_height_base * -1em);
     padding: 0;
     
-    @media (min-width: $breakpoint_sm) {
-      content: 'sm';
-    }
-    @media (min-width: $breakpoint_md) {
-      content: 'md';
-    }
-    @media (min-width: $breakpoint_lg) {
-      content: 'lg';
-    }
-    @media (min-width: $breakpoint_xl) {
-      content: 'xl';
+    @each $breakpoint in $breakpoint_sizes {
+      @media (min-width: nth($breakpoint, 2)) {
+        content: '#{nth($breakpoint, 1)}';
+      }
     }
   }
 }

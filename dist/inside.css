@@ -1941,18 +1941,21 @@ body:after {
   height: 0;
   margin-top: -1.5em;
   padding: 0; }
+  @media (min-width: false) {
+    body:after {
+      content: "xs"; } }
   @media (min-width: 37.5em) {
     body:after {
-      content: 'sm'; } }
+      content: "sm"; } }
   @media (min-width: 60em) {
     body:after {
-      content: 'md'; } }
+      content: "md"; } }
   @media (min-width: 75em) {
     body:after {
-      content: 'lg'; } }
+      content: "lg"; } }
   @media (min-width: 93.75em) {
     body:after {
-      content: 'xl'; } }
+      content: "xl"; } }
 
 .reading-length {
   max-width: 40em; }

@@ -80,12 +80,33 @@ These opinions are as follows:
 
 **Pretty Underlines:** This will stop chromes underlines looking super chunky at larger font sizes. [Some discussion about this here](https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9).
 
-## Grids, Containers & Breakpoints
+## Breakpoints, Containers & Grids
+
+### Breakpoints
+
+By default there are four breakpoints: `$breakpoint_sm`, `$breakpoint_md`, `$breakpoint_lg` and `$breakpoint_xl`, these can be set with variables. Anything below `$breakpoint_sm` is considered `xs`.
+
+However you can create your own breakpoints and have as many as you want or need. This is done with a nested list* like this:
+
+```
+$breakpoint_sizes: (xs false) (sm $breakpoint_sm) (md $breakpoint_md) (lg $breakpoint_lg) (xl $breakpoint_xl);
+```
+
+The first item for each list item is the key, this will be used when passing breakpoints (see opinion above) and for constructing your grid classes.
+The second item for each list item is the breakpoint to be used. The first list item has no breakpoint as this will happen before the first one kicks in. 
+
+
+### Containers
 
 
 
 
 
+
+
+
+
+* I've used nested lists instead of maps as maps don't exists in versions of sass < 3.3. But why does that matter you ask? Because the version of sass that Shopify uses is < 3 and a lot of my work is with Shopify.
 
 
 *TODO: Describe the containers, percentage based grids and how to use them as well as how to setup custom breakpoints and col-sizes.*
