@@ -6,7 +6,6 @@
 
 @if $include_breakpoint_sizes {
   body:after {
-    content: 'xs';
     display: block;
     visibility: hidden;
     width: 0;
@@ -15,7 +14,11 @@
     padding: 0;
     
     @each $breakpoint in $breakpoint_sizes {
-      @media (min-width: nth($breakpoint, 2)) {
+      @if (nth($breakpoint, 2)) {
+        @media (min-width: nth($breakpoint, 2)) {
+          content: '#{nth($breakpoint, 1)}';
+        }
+      } @else {
         content: '#{nth($breakpoint, 1)}';
       }
     }

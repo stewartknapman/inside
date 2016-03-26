@@ -1,7 +1,5 @@
 /*
-  http://droppen.org/?droppen=m66dtgqcwhfr
-  TODO:
-  - flex? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  Containers
 */
 
 @mixin container-fluid {
@@ -10,65 +8,85 @@
   width: $container_width_fluid;
 }
 
+@mixin build-container ($container_key, $container_size, $breakpoint_key, $breakpoint) {
+  @if ($container_key == $breakpoint_key) {
+    @if ($breakpoint) {
+      @media (min-width: $breakpoint) {
+        width: $container_size
+      }
+    } @else {
+      width: $container_size
+    }
+  }
+}
+
+@mixin build-containers ($breakpoint_key, $breakpoint) {
+  @each $container in $container_sizes {
+    @include build-container (nth($container, 1), nth($container, 2), $breakpoint_key, $breakpoint);
+  }
+}
+
 @mixin container {
   margin: 0 auto;
-  width: $container_width_xs;
   @if ($container_max_width) {
     max-width: $container_max_width;
   }
+  @each $breakpoint in $breakpoint_sizes {
+    @include build-containers (nth($breakpoint, 1), nth($breakpoint, 2));
+  }
+}
+
+/* Grid Rows */
+@mixin build-grid-row ($grid_gutter_key, $grid_gutter_size, $breakpoint_key, $breakpoint) {
+  @if ($grid_gutter_key == $breakpoint_key) {
+    @if ($breakpoint) {
+      @media (min-width: $breakpoint) {
+        margin: auto ($grid_gutter_size / 2) * -1;
+      }
+    } @else {
+      margin: auto ($grid_gutter_size / 2) * -1;
+    }
+  }
+}
   
-  @media (min-width: $breakpoint_sm) {
-    width: $container_width_sm;
-  }
-  @media (min-width: $breakpoint_md) {
-    width: $container_width_md;
-  }
-  @media (min-width: $breakpoint_lg) {
-    width: $container_width_lg;
-  }
-  @media (min-width: $breakpoint_xl) {
-    width: $container_width_xl;
+@mixin build-grid-rows ($breakpoint_key, $breakpoint) {
+  @each $grid_gutter in $grid_gutter_sizes {
+    @include build-grid-row (nth($grid_gutter, 1), nth($grid_gutter, 2), $breakpoint_key, $breakpoint);
   }
 }
 
 @mixin grid-row {
   @include clearfix;
-  margin: auto ($grid_gutter_xs / 2) * -1;
+  @each $breakpoint in $breakpoint_sizes {
+    @include build-grid-rows (nth($breakpoint, 1), nth($breakpoint, 2));
+  }
+}
+
+/* Grid cols */
+@mixin build-grid-col-gutter ($grid_gutter_key, $grid_gutter_size, $breakpoint_key, $breakpoint) {
+  @if ($grid_gutter_key == $breakpoint_key) {
+    @if ($breakpoint) {
+      @media (min-width: $breakpoint) {
+        padding-left: ($grid_gutter_size / 2);
+        padding-right: ($grid_gutter_size / 2);
+      }
+    } @else {
+      padding-left: ($grid_gutter_size / 2);
+      padding-right: ($grid_gutter_size / 2);
+    }
+  }
+}
   
-  @media (min-width: $breakpoint_sm) {
-    margin: auto ($grid_gutter_sm / 2) * -1;
-  }
-  @media (min-width: $breakpoint_md) {
-    margin: auto ($grid_gutter_md / 2) * -1;
-  }
-  @media (min-width: $breakpoint_lg) {
-    margin: auto ($grid_gutter_lg / 2) * -1;
-  }
-  @media (min-width: $breakpoint_xl) {
-    margin: auto ($grid_gutter_xl / 2) * -1;
+@mixin build-grid-col-gutters ($breakpoint_key, $breakpoint) {
+  @each $grid_gutter in $grid_gutter_sizes {
+    @include build-grid-col-gutter (nth($grid_gutter, 1), nth($grid_gutter, 2), $breakpoint_key, $breakpoint);
   }
 }
 
 @mixin grid-col-base {
   width: 100%;
-  padding-left: ($grid_gutter_xs / 2);
-  padding-right: ($grid_gutter_xs / 2);
-  
-  @media (min-width: $breakpoint_sm) {
-    padding-left: ($grid_gutter_sm / 2);
-    padding-right: ($grid_gutter_sm / 2);
-  }
-  @media (min-width: $breakpoint_md) {
-    padding-left: ($grid_gutter_md / 2);
-    padding-right: ($grid_gutter_md / 2);
-  }
-  @media (min-width: $breakpoint_lg) {
-    padding-left: ($grid_gutter_lg / 2);
-    padding-right: ($grid_gutter_lg / 2);
-  }
-  @media (min-width: $breakpoint_xl) {
-    padding-left: ($grid_gutter_xl / 2);
-    padding-right: ($grid_gutter_xl / 2);
+  @each $breakpoint in $breakpoint_sizes {
+    @include build-grid-col-gutters (nth($breakpoint, 1), nth($breakpoint, 2));
   }
 }
 

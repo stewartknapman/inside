@@ -95,10 +95,17 @@ $breakpoint_sizes: (xs false) (sm $breakpoint_sm) (md $breakpoint_md) (lg $break
 The first item for each list item is the key, this will be used when passing breakpoints (see opinion above) and for constructing your grid classes.
 The second item for each list item is the breakpoint to be used. The first list item has no breakpoint as this will happen before the first one kicks in. 
 
+Note: if you do change the breakpoints you will also need to create `$container_width_` and `$grid_gutter_` variables to match your breakpoint keys.
 
 ### Containers
 
+Containers can either be set as a class on your container element: `.container` or with a mixin: `.container { @include container; }` if you don't want to include the base classes.
 
+There are two types of containers: `.container` & `.container-fluid`. The fluid container is always 100% or what ever you set with the `$container_width_fluid` variable. The standard container has a percentage based width, which changes on each break point. You can also set the `$container_max_width` variable to constrain it's width e.g. (the default is false: no max width)
+
+```
+$container_max_width: 55em;
+```
 
 
 
