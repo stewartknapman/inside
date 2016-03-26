@@ -13,6 +13,9 @@
 @mixin container {
   margin: 0 auto;
   width: $container_width_xs;
+  @if ($container_max_width) {
+    max-width: $container_max_width;
+  }
   
   @media (min-width: $breakpoint_sm) {
     width: $container_width_sm;

@@ -32,7 +32,7 @@ This path is reletive to where your main scss file is stored within your project
 
 ### Classes
 
-Everything in Inside is a mixin. This way it can be as light and modualr as you need, however each mixin has its own class for convenience.
+Everything in Inside is a mixin. This way it can be as light and modular as you need, however each mixin has its own class for convenience.
 
 For example to add the base button styles you can use the `button-base` mixin:
 
@@ -80,6 +80,12 @@ These opinions are as follows:
 
 **Pretty Underlines:** This will stop chromes underlines looking super chunky at larger font sizes. [Some discussion about this here](https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9).
 
-## Grids & Breakpoints
+## Grids, Containers & Breakpoints
 
-*TODO: Describe the percentage based grids and how to use them as well as how to setup custom breakpoints and col-sizes.*
+
+
+
+
+
+
+*TODO: Describe the containers, percentage based grids and how to use them as well as how to setup custom breakpoints and col-sizes.*

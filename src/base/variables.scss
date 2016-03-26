@@ -130,6 +130,9 @@ $container_width_md: 90% !default;
 $container_width_lg: 85% !default;
 $container_width_xl: 80% !default;
 
+// Set to a value like 55em to constrain the max width of a container
+$container_max_width: false !default;
+
 $gutter_horizontal: 1rem !default;
 $gutter_vertical: 1em !default;
 
