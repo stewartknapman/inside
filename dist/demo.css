@@ -117,6 +117,9 @@ dl {
 img {
   max-width: 100%; }
 
+svg {
+  fill: currentColor; }
+
 hr {
   border: none;
   border-bottom: #eee 1px solid;
@@ -210,25 +213,26 @@ strong {
 a {
   -webkit-transition: 0.3s;
           transition: 0.3s; }
+  a svg {
+    vertical-align: top; }
 
 a {
   color: inherit;
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
   text-decoration: none;
+  background-image: -webkit-linear-gradient(left, currentColor 0%, currentColor 100%);
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
   background-repeat: repeat-x;
-  background-position: 0 1em;
-  background-size: 2px 2px; }
-
-a:hover,
-a:active {
-  color: #E91E63;
-  background-image: -webkit-linear-gradient(top, transparent 50%, #E91E63 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #E91E63 50%); }
+  background-position: 0 95%;
+  background-size: 100% 1px; }
+  a:hover,
+  a:active {
+    color: #E91E63;
+    /* 
+          Arbitrary webkit-only property that forces a redraw
+          Fixes currentColor bug
+          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+        */
+    -webkit-margin-start: .1px; }
 
 a:focus {
   outline: none;
@@ -248,20 +252,6 @@ h5 a,
 h6 a {
   text-decoration: none;
   color: inherit;
-  background: none; }
-
-h1 a:hover,
-h1 a:active,
-h2 a:hover,
-h2 a:active,
-h3 a:hover,
-h3 a:active,
-h4 a:hover,
-h4 a:active,
-h5 a:hover,
-h5 a:active,
-h6 a:hover,
-h6 a:active {
   background: none; }
 
 ul {
@@ -410,7 +400,8 @@ button {
   border: #eee 1px solid;
   border-radius: 3px;
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+          transition: 0.3s;
+  -webkit-appearance: none; }
   input[type=button]:hover,
   input[type=button]:active,
   input[type=reset]:hover,
@@ -433,6 +424,11 @@ button {
     background: rgba(233, 30, 99, 0.3);
     box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3);
     text-shadow: none; }
+  input[type=button] svg,
+  input[type=reset] svg,
+  input[type=submit] svg,
+  button svg {
+    vertical-align: top; }
 
 figure img {
   display: block; }
@@ -440,66 +436,20 @@ figure img {
 figure > a {
   display: inline-block; }
 
+figure > a:hover + figcaption h1 a,
+figure > a:hover + figcaption h2 a,
+figure > a:hover + figcaption h3 a,
+figure > a:hover + figcaption h4 a,
+figure > a:hover + figcaption h5 a,
+figure > a:hover + figcaption h6 a,
 figure > a:hover + figcaption a {
   color: #E91E63;
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  background-image: -webkit-linear-gradient(top, transparent 50%, #E91E63 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #E91E63 50%);
-  text-decoration: none;
-  background-repeat: repeat-x;
-  background-position: 0 1em;
-  background-size: 2px 2px; }
-
-figure > a:hover + figcaption a:hover,
-figure > a:hover + figcaption a:active {
-  color: #E91E63;
-  background-image: -webkit-linear-gradient(top, transparent 50%, #E91E63 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #E91E63 50%); }
-
-figure > a:hover + figcaption a:focus {
-  outline: none;
-  color: #000;
-  background: rgba(233, 30, 99, 0.3);
-  box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3);
-  text-shadow: none; }
-
-figure > a:hover + figcaption figure > a:focus {
-  outline-color: rgba(233, 30, 99, 0.3); }
-
-figure > a:hover + figcaption h1 a,
-figure > a:hover + figcaption h2 a,
-figure > a:hover + figcaption h3 a,
-figure > a:hover + figcaption h4 a,
-figure > a:hover + figcaption h5 a,
-figure > a:hover + figcaption h6 a {
-  text-decoration: none;
-  color: inherit;
-  background: none; }
-
-figure > a:hover + figcaption h1 a:hover,
-figure > a:hover + figcaption h1 a:active,
-figure > a:hover + figcaption h2 a:hover,
-figure > a:hover + figcaption h2 a:active,
-figure > a:hover + figcaption h3 a:hover,
-figure > a:hover + figcaption h3 a:active,
-figure > a:hover + figcaption h4 a:hover,
-figure > a:hover + figcaption h4 a:active,
-figure > a:hover + figcaption h5 a:hover,
-figure > a:hover + figcaption h5 a:active,
-figure > a:hover + figcaption h6 a:hover,
-figure > a:hover + figcaption h6 a:active {
-  background: none; }
-
-figure > a:hover + figcaption h1 a,
-figure > a:hover + figcaption h2 a,
-figure > a:hover + figcaption h3 a,
-figure > a:hover + figcaption h4 a,
-figure > a:hover + figcaption h5 a,
-figure > a:hover + figcaption h6 a {
-  color: #E91E63; }
+  /* 
+          Arbitrary webkit-only property that forces a redraw
+          Fixes currentColor bug
+          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+        */
+  -webkit-margin-start: .1px; }
 
 figcaption {
   overflow: auto;
@@ -2060,30 +2010,6 @@ body:after {
   font-weight: 300;
   font-style: italic; }
 
-.pretty-underlines {
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
-  text-decoration: none;
-  background-repeat: repeat-x;
-  background-position: 0 1em;
-  background-size: 2px 2px; }
-
-.pretty-underlines-text {
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  background-image: -webkit-linear-gradient(top, transparent 50%, #333 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #333 50%);
-  text-decoration: none;
-  background-repeat: repeat-x;
-  background-position: 0 1em;
-  background-size: 2px 2px; }
-
 ol.list-unstyled,
 ul.list-unstyled {
   padding: 0;
@@ -2296,4 +2222,12 @@ h5.demo-heading {
 
 .example-block {
   margin-bottom: 1rem; }
+
+.demo-contrast-block {
+  color: #FFF6FA;
+  background: #E91E63;
+  padding: 1rem 1em; }
+  .demo-contrast-block a:hover,
+  .demo-contrast-block a:active {
+    color: #333; }
 
