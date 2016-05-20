@@ -1,7 +1,7 @@
 @mixin hero-block {
   @include clearfix;
   padding-top: ($gutter_horizontal * 2);
-  padding-bottom: $gutter_horizontal;
+  padding-bottom: ($gutter_horizontal * 2);
   
   font-size: $font_size_md;      
   @media (min-width: $breakpoint_sm) {

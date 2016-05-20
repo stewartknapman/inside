@@ -77,3 +77,8 @@ blockquote {
 strong {
   font-weight: $font_weight_bold;
 }
+
+hr {
+  border: none;
+  border-bottom: $border_color $border_size $border_style;
+}

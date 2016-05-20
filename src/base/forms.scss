@@ -1,50 +1,45 @@
 fieldset {
   border: none;
-  margin: 0;
   padding: 0;
 }
 
 legend {
   width: 100%;
-  margin-bottom: $gutter_horizontal;
-  padding-bottom: $gutter_horizontal / 2;
+  padding-bottom: ($gutter_horizontal / 4);
   border-bottom: $border_color_input $border_size_input $border_style_input;
 }
 
 label {
   display: inline-block;
-  margin-bottom: ($gutter_horizontal / 4);
 }
 
-  input[type=text],
-  input[type=email],
-  input[type=password],
-  input[type=url],
-  input[type=tel],
-  input[type=text],
-  input[type=number],
-  input[type=search],
-  input[type=time],
-  input[type=week],
-  input[type=month],
-  input[type=date],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=checkbox],
-  input[type=radio],
-  textarea,
-  select {
-    color: rgba($text_color, .8);
-    border: $border_color_input $border_size_input $border_style_input;
-    border-radius: $border_radius_input;
-    outline: none;
-    transition: $transition_duration_base;
-    &:focus {
-      color: $text_color;
-      border-color: $highlight_color;
-      box-shadow: 0 0 6px rgba($highlight_color, .6);
-    }
-  }
+label + label,
+ {
+  margin-top: 0;
+  margin-left: $gutter_vertical;
+}
+
+label + input,
+label + textarea {
+  margin-top: ($gutter_horizontal / 4);
+}
+
+label + select {
+  margin-top: 0;
+  margin-left: ($gutter_vertical / 2);
+}
+
+select {
+  display: inline-block;
+  font-size: $font_size_forms;
+  background-color: #fff;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  resize: vertical;
+}
 
 input[type=text],
 input[type=email],
@@ -60,8 +55,38 @@ input[type=month],
 input[type=date],
 input[type=datetime],
 input[type=datetime-local],
+input[type=checkbox],
+input[type=radio],
 textarea,
 select {
+  color: rgba($text_color, .8);
+  border: $border_color_input $border_size_input $border_style_input;
+  border-radius: $border_radius_input;
+  outline: none;
+  transition: $transition_duration_base;
+  &:focus {
+    color: $text_color;
+    border-color: $highlight_color;
+    box-shadow: 0 0 6px rgba($highlight_color, .6);
+  }
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=tel],
+input[type=text],
+input[type=number],
+input[type=search],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+textarea {
+  -webkit-appearance: none;
   font-size: $font_size_forms;
   line-height: $line_height_base;
   font-weight: $font_weight_base;
@@ -101,14 +126,4 @@ input[type=file] {
     border-color: $highlight_color;
     box-shadow: 0 0 6px rgba($highlight_color, .6);
   }
-}
-
-textarea {
-  min-width: 100%;
-  max-width: 100%;
-  resize: vertical;
-}
-
-select {
-  display: inline-block;
 }

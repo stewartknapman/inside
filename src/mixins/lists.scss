@@ -21,6 +21,7 @@
   @include clearfix;
   dt {
     float: left;
+    margin-top: 0;
     margin-right: ($gutter_vertical / 2);
   }
 }

@@ -11,7 +11,6 @@
 @import './mixins/type.scss';
 @import './mixins/links.scss';
 @import './mixins/lists.scss';
-@import './mixins/forms.scss';
 @import './mixins/buttons.scss';
 @import './mixins/tables.scss';
 @import './mixins/hero.scss';
@@ -31,11 +30,11 @@
 
 @import './module/type.scss';
 @import './module/lists.scss';
-@import './module/forms.scss';
 @import './module/buttons.scss';
 @import './module/tables.scss';
 @import './module/hero.scss';
 @import './module/code.scss';
 @import './module/embed.scss';
+@import './module/utilities.scss';
 
 @import './theme/wireframe.scss';

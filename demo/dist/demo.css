@@ -76,55 +76,22 @@ html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
-
-html, body {
-  height: 100%; }
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-figure,
-ol,
-ul,
-dl,
-hr,
-th,
-td {
+  box-sizing: inherit;
   padding: 0;
   margin: 0; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-figure,
-ol,
-ul,
-dl {
-  margin-bottom: 1rem; }
+* + * {
+  margin-top: 1rem; }
+
+html, body {
+  height: 100%;
+  margin: 0; }
 
 img {
   max-width: 100%; }
 
 svg {
   fill: currentColor; }
-
-hr {
-  border: none;
-  border-bottom: #eee 1px solid;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
 
 ::-moz-selection {
   color: #000;
@@ -210,6 +177,10 @@ blockquote {
 strong {
   font-weight: 600; }
 
+hr {
+  border: none;
+  border-bottom: #eee 1px solid; }
+
 a {
   color: inherit;
   -webkit-transition: 0.3s;
@@ -258,23 +229,46 @@ ul {
 ol {
   padding-left: 1.5em; }
 
+li {
+  margin-top: 0; }
+
 dd {
+  margin-top: 0;
   margin-left: 2em; }
 
 fieldset {
   border: none;
-  margin: 0;
   padding: 0; }
 
 legend {
   width: 100%;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
   border-bottom: #eee 1px solid; }
 
 label {
+  display: inline-block; }
+
+label + label {
+  margin-top: 0;
+  margin-left: 1em; }
+
+label + input,
+label + textarea {
+  margin-top: 0.25rem; }
+
+label + select {
+  margin-top: 0;
+  margin-left: 0.5em; }
+
+select {
   display: inline-block;
-  margin-bottom: 0.25rem; }
+  font-size: 0.8125em;
+  background-color: #fff; }
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  resize: vertical; }
 
 input[type=text],
 input[type=email],
@@ -336,8 +330,8 @@ input[type=month],
 input[type=date],
 input[type=datetime],
 input[type=datetime-local],
-textarea,
-select {
+textarea {
+  -webkit-appearance: none;
   font-size: 0.8125em;
   line-height: 1.5;
   font-weight: 300;
@@ -370,14 +364,6 @@ input[type=file]:focus {
   color: #333;
   border-color: #E91E63;
   box-shadow: 0 0 6px rgba(233, 30, 99, 0.6); }
-
-textarea {
-  min-width: 100%;
-  max-width: 100%;
-  resize: vertical; }
-
-select {
-  display: inline-block; }
 
 input[type=button],
 input[type=reset],
@@ -463,7 +449,6 @@ figcaption {
 
 table {
   width: 100%;
-  margin-bottom: 1rem;
   border-collapse: collapse;
   text-align: left; }
   @media (min-width: 37.5em) {
@@ -475,7 +460,8 @@ table {
     table thead {
       display: none; }
     table tbody, table tfoot, table tr, table td, table th {
-      display: block; }
+      display: block;
+      margin-top: 0; }
     table tr {
       padding: 0.5rem 0.5em; }
     table td:before {
@@ -486,11 +472,13 @@ table {
 
 .container-fluid {
   overflow: hidden;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%; }
 
 .container {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 95%; }
   @media (min-width: 37.5em) {
     .container {
@@ -506,23 +494,31 @@ table {
       width: 80%; } }
 
 .grid-row {
-  margin: auto -0.125em; }
+  margin-left: -0.125em;
+  margin-right: -0.125em;
+  margin-top: 0; }
   .grid-row:after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 37.5em) {
     .grid-row {
-      margin: auto -0.25em; } }
+      margin-left: -0.25em;
+      margin-right: -0.25em; } }
   @media (min-width: 60em) {
     .grid-row {
-      margin: auto -0.375em; } }
+      margin-left: -0.375em;
+      margin-right: -0.375em; } }
   @media (min-width: 75em) {
     .grid-row {
-      margin: auto -0.5em; } }
+      margin-left: -0.5em;
+      margin-right: -0.5em; } }
   @media (min-width: 93.75em) {
     .grid-row {
-      margin: auto -0.5em; } }
+      margin-left: -0.5em;
+      margin-right: -0.5em; } }
+  .grid-row > * {
+    margin-top: 0; }
 
 .grid-col {
   float: left;
@@ -2032,10 +2028,8 @@ dl.list-inline:after {
 
 dl.list-inline dt {
   float: left;
+  margin-top: 0;
   margin-right: 0.5em; }
-
-.form-group {
-  margin-bottom: 0.66667rem; }
 
 .button {
   display: inline-block;
@@ -2133,7 +2127,7 @@ input.button-primary {
 
 .hero-block {
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   font-size: 1.25em; }
   .hero-block:after {
     content: "";
@@ -2178,6 +2172,11 @@ input.button-primary {
   height: 100%;
   border: 0; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 header {
   overflow: hidden;
   padding-bottom: 2rem;
@@ -2185,14 +2184,15 @@ header {
   color: #FFF6FA; }
   header .description {
     max-width: 40em;
-    margin: auto; }
+    margin-left: auto;
+    margin-right: auto; }
   header ::-moz-selection {
     background-color: #FFF6FA; }
   header ::selection {
     background-color: #FFF6FA; }
 
 main {
-  padding: 2rem 0; }
+  margin-bottom: 2rem; }
 
 h2.demo-heading {
   padding-bottom: 1rem;
@@ -2203,7 +2203,7 @@ h5.demo-heading {
 
 .grid-item {
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1); }
   .grid-item .grid-item,
@@ -2212,14 +2212,11 @@ h5.demo-heading {
     margin-bottom: 0.5rem; }
 
 .container-example {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1); }
-
-.example-block {
-  margin-bottom: 1rem; }
 
 .demo-contrast-block {
   color: #FFF6FA;

@@ -1,0 +1,5 @@
+@if $include_utilities and $include_classes {
+  .clearfix {
+    @include clearfix;
+  }
+}
