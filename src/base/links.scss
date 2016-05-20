@@ -9,7 +9,7 @@ a {
       Fixes currentColor bug
       see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
     */
-    -webkit-margin-start: .1px;
+    -webkit-margin-start: -.1px;
   }
   
   @if ($transition_duration_hover) {

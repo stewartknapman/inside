@@ -5,6 +5,7 @@ figure {
   > a {
     display: inline-block;
   }
+  
   @if ($include_figure_link_hover) {
     > a:hover + figcaption {
       h1 a,
@@ -20,23 +21,22 @@ figure {
           Fixes currentColor bug
           see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
         */
-        -webkit-margin-start: .1px;
+        -webkit-margin-start: -.1px;
       }
     }
+  }
+  
+  .grid-col &,
+  .grid-col-rev & {
+    margin-top: $gutter_horizontal;
   }
 }
 
 figcaption {
   overflow: auto;
-  padding-top: $gutter_horizontal / 2;
+  margin-top: 0;
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin-bottom: $gutter_horizontal / 2;
+  * + * {
+    margin-top: $gutter_horizontal / 2;
   }
 }

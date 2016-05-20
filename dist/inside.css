@@ -199,7 +199,7 @@ a {
       Fixes currentColor bug
       see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
     */
-    -webkit-margin-start: .1px; }
+    -webkit-margin-start: -.1px; }
   a svg {
     vertical-align: top; }
 
@@ -433,19 +433,17 @@ figure > a:hover + figcaption a {
           Fixes currentColor bug
           see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
         */
-  -webkit-margin-start: .1px; }
+  -webkit-margin-start: -.1px; }
+
+.grid-col figure,
+.grid-col-rev figure {
+  margin-top: 1rem; }
 
 figcaption {
   overflow: auto;
-  padding-top: 0.5rem; }
-  figcaption h1,
-  figcaption h2,
-  figcaption h3,
-  figcaption h4,
-  figcaption h5,
-  figcaption h6,
-  figcaption p {
-    margin-bottom: 0.5rem; }
+  margin-top: 0; }
+  figcaption * + * {
+    margin-top: 0.5rem; }
 
 table {
   width: 100%;
