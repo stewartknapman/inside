@@ -7,14 +7,20 @@ figure {
   }
   @if ($include_figure_link_hover) {
     > a:hover + figcaption {
-      @include links($link_color_hover);
       h1 a,
       h2 a,
       h3 a,
       h4 a,
       h5 a,
-      h6 a {
+      h6 a,
+      a {
         color: $link_color_hover;
+        /* 
+          Arbitrary webkit-only property that forces a redraw
+          Fixes currentColor bug
+          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+        */
+        -webkit-margin-start: .1px;
       }
     }
   }

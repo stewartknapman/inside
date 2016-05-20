@@ -1,4 +1,10 @@
 a {
-  transition: $transition_duration_hover;
+  @if ($transition_duration_hover) {
+    transition: $transition_duration_hover;
+  }
+  
+  svg {
+    vertical-align: top;
+  }
 }
 @include links($link_color, $link_color_hover);

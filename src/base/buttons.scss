@@ -11,4 +11,10 @@ button {
     box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
     text-shadow: none;
   }
+  
+  -webkit-appearance: none;
+  
+  svg {
+    vertical-align: top;
+  }
 }

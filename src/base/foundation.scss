@@ -55,6 +55,10 @@ img {
   max-width: 100%;
 }
 
+svg {
+  fill: currentColor;
+}
+
 hr {
   border: none;
   border-bottom: $border_color $border_size $border_style;

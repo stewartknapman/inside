@@ -1,6 +1,7 @@
 // @import '../../src/inside.scss';
 
 $highlight_color: #E91E63;
+$light_text: #FFF6FA;
 $background_color_grey: rgba(0,0,0,0.1);
 
 @import '../../src/inside.scss';
@@ -9,7 +10,7 @@ header {
   overflow: hidden;
   padding-bottom: $gutter_horizontal * 2;
   background: $highlight_color;
-  color: #FFF6FA;
+  color: $light_text;
   
   .description {
     @include reading-length;
@@ -17,7 +18,7 @@ header {
   }
   
   ::selection {
-    background-color: #FFF6FA;
+    background-color: $light_text;
   }
 }
 
@@ -56,4 +57,15 @@ h5.demo-heading {
 
 .example-block {
    margin-bottom: $gutter_horizontal;
+}
+
+.demo-contrast-block {
+  color: $light_text;
+  background: $highlight_color;
+  padding: $gutter_horizontal $gutter_vertical;
+  
+  a:hover,
+  a:active {
+    color: #333;
+  }
 }

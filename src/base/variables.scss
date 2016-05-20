@@ -116,8 +116,8 @@ $font_weight_button:    $font_weight_base !default;
 $font_style_pullquote: italic !default;
 
 // Underline thickness
-$underline_weight: 2px !default;
-$underline_position: 1em !default;
+$underline_weight: 1px !default; // 2px !default;
+$underline_position: 95% !default;
 
 /*
   Grids

@@ -27,15 +27,4 @@
   .pull-quote {
     @include pull-quote;
   }
-  
-  @if $include_pretty_underlines {
-    .pretty-underlines {
-      @include pretty-underlines($link_color);
-    }
-    
-    .pretty-underlines-text {
-      @include pretty-underlines($text_color);
-    }
-  }
-
 }

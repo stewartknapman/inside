@@ -1,21 +1,25 @@
 @mixin links ($color, $color_hover: false) {
-  @if ($color_hover == false) {
-    $color_hover: $color;
-  }
-  
   a {
     color: $color;
+    
+    @if ($color_hover) {
+      &:hover,
+      &:active {
+        color: $color_hover;
+        /* 
+          Arbitrary webkit-only property that forces a redraw
+          Fixes currentColor bug
+          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+        */
+        -webkit-margin-start: .1px;
+      }
+    }
+    
     @if $include_pretty_underlines {
-      @include pretty-underlines($color);
+      @include pretty-underlines();
     }
   }
-  a:hover,
-  a:active {
-    color: $color_hover;
-    @if $include_pretty_underlines {
-      @include pretty-underlines-color($color_hover);
-    }
-  }
+  
   a:focus {
     outline: none;
     color: $selection_color;
@@ -39,40 +43,12 @@
       background: none;
     }
   }
-  h1 a:hover,
-  h1 a:active,
-  h2 a:hover,
-  h2 a:active,
-  h3 a:hover,
-  h3 a:active,
-  h4 a:hover,
-  h4 a:active,
-  h5 a:hover,
-  h5 a:active,
-  h6 a:hover,
-  h6 a:active {
-    @if $include_pretty_underlines {
-      background: none;
-    }
-  }
 }
 
-@mixin pretty-underlines ($color) {
-  /*
-    TODO: make underline increase in thickness for large font sizes
-      - prob. requires some sort of calculation
-  */
-  
-  @include pretty-underlines-color($color);
+@mixin pretty-underlines () {
   text-decoration: none;
+  background-image: linear-gradient( to right, currentColor 0%, currentColor 100% );
   background-repeat: repeat-x;
   background-position: 0 $underline_position;
-  background-size: $underline_weight $underline_weight;
-}
-
-@mixin pretty-underlines-color ($color) {
-  @if ($color == 'inherit') {
-    $color: $text_color;
-  }
-  background-image: linear-gradient(to bottom, transparent 50%, $color 50%);
+  background-size: 100% $underline_weight;
 }
