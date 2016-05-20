@@ -211,13 +211,9 @@ strong {
   font-weight: 600; }
 
 a {
-  -webkit-transition: 0.3s;
-          transition: 0.3s; }
-  a svg {
-    vertical-align: top; }
-
-a {
   color: inherit;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
   text-decoration: none;
   background-image: -webkit-linear-gradient(left, currentColor 0%, currentColor 100%);
   background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
@@ -228,11 +224,13 @@ a {
   a:active {
     color: #00b8e3;
     /* 
-          Arbitrary webkit-only property that forces a redraw
-          Fixes currentColor bug
-          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-        */
+      Arbitrary webkit-only property that forces a redraw
+      Fixes currentColor bug
+      see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+    */
     -webkit-margin-start: .1px; }
+  a svg {
+    vertical-align: top; }
 
 a:focus {
   outline: none;

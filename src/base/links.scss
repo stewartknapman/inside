@@ -1,10 +1,51 @@
 a {
+  color: $link_color;
+  
+  &:hover,
+  &:active {
+    color: $link_color_hover;
+    /* 
+      Arbitrary webkit-only property that forces a redraw
+      Fixes currentColor bug
+      see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+    */
+    -webkit-margin-start: .1px;
+  }
+  
   @if ($transition_duration_hover) {
     transition: $transition_duration_hover;
+  }
+  
+  @if $include_pretty_underlines {
+    @include pretty-underlines();
   }
   
   svg {
     vertical-align: top;
   }
 }
-@include links($link_color, $link_color_hover);
+
+a:focus {
+  outline: none;
+  color: $selection_color;
+  background: rgba($selection_bg_color, 0.3);
+  box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
+  text-shadow: none;
+}
+
+figure > a:focus {
+  outline-color: rgba($selection_bg_color, 0.3);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+  color: inherit;
+  @if $include_pretty_underlines {
+    background: none;
+  }
+}
