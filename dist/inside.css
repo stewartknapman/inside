@@ -58,6 +58,15 @@ $col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60
   }
 }
 */
+/*
+  Responsive tables base
+*/
+/*
+  Stripes
+*/
+/*
+  Borders
+*/
 /* Block level elements and resets */
 html {
   -ms-text-size-adjust: 100%;
@@ -2159,9 +2168,10 @@ input.button-primary {
   border-bottom: #eee solid 1px; }
   .table-borders-horizontal tbody tr:last-child {
     border-bottom: none; }
-  @media (max-width: 37.5em) {
-    .table-borders-horizontal tbody tr:first-child {
-      border-top: #eee solid 2px; } }
+
+@media (max-width: 37.5em) {
+  .table-borders-horizontal tbody tr:first-child {
+    border-top: #eee solid 2px; } }
 
 @media (min-width: 37.5em) {
   .table-borders-vertical td, .table-borders-vertical th {
@@ -2174,17 +2184,6 @@ input.button-primary {
     border-left: #eee solid 1px;
     border-right: #eee solid 1px; } }
 
-@media (min-width: 37.5em) {
-  .table-borders td, .table-borders th {
-    border-left: #eee solid 1px; }
-    .table-borders td:last-child, .table-borders th:last-child {
-      border-right: #eee solid 1px; } }
-
-@media (max-width: 37.5em) {
-  .table-borders tr {
-    border-left: #eee solid 1px;
-    border-right: #eee solid 1px; } }
-
 .table-borders thead,
 .table-borders tfoot {
   border-top: #eee solid 2px;
@@ -2194,9 +2193,19 @@ input.button-primary {
   border-bottom: #eee solid 1px; }
   .table-borders tbody tr:last-child {
     border-bottom: none; }
-  @media (max-width: 37.5em) {
-    .table-borders tbody tr:first-child {
-      border-top: #eee solid 2px; } }
+
+@media (min-width: 37.5em) {
+  .table-borders td, .table-borders th {
+    border-left: #eee solid 1px; }
+    .table-borders td:last-child, .table-borders th:last-child {
+      border-right: #eee solid 1px; } }
+
+@media (max-width: 37.5em) {
+  .table-borders tbody tr:first-child {
+    border-top: #eee solid 2px; }
+  .table-borders tr {
+    border-left: #eee solid 1px;
+    border-right: #eee solid 1px; } }
 
 .hero-block {
   padding-top: 2rem;

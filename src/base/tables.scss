@@ -3,5 +3,14 @@ table {
   margin-bottom: $gutter_horizontal;
   border-collapse: collapse;
   text-align: left;
-  @include responsive-table;
+  
+  @media (min-width: $breakpoint_tables) {
+    td, th {
+      padding: ($gutter_horizontal / 2) ($gutter_vertical / 2);
+    }
+  }
+  
+  @media (max-width: $breakpoint_tables) {
+    @include responsive-table;
+  }
 }

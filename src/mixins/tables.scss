@@ -1,11 +1,8 @@
+/*
+  Responsive tables base
+*/
 @mixin responsive-table {
-  @media (min-width: $breakpoint_tables) {
-    td, th {
-      padding: ($gutter_horizontal / 2) ($gutter_vertical / 2);
-    }
-  }
-  
-  @media (max-width: $breakpoint_tables) {
+  @if $include_tables_responsive {
     table {
       display: block;
     }
@@ -31,6 +28,9 @@
   }
 }
 
+/*
+  Stripes
+*/
 @mixin table-stripes {
   tbody tr{
     transition: $transition_duration_hover;
@@ -43,6 +43,9 @@
   }
 }
 
+/*
+  Borders
+*/
 @mixin table-borders-horizontal {
   thead,
   tfoot {
@@ -55,10 +58,13 @@
     &:last-child {
       border-bottom: none;
     }
-    @media (max-width: $breakpoint_tables) {
-      &:first-child {
-        border-top: $border_color_table $border_style_table $border_size_table_lg;
-      }
+  }
+}
+
+@mixin table-borders-horizontal-responsive {
+  @if $include_tables_responsive {
+    tbody tr:first-child {
+      border-top: $border_color_table $border_style_table $border_size_table_lg;
     }
   }
 }
@@ -72,8 +78,10 @@
       }
     }
   }
-  
-  @media (max-width: $breakpoint_tables) {
+}
+
+@mixin table-borders-vertical-responsive {
+  @if $include_tables_responsive {
     tr {
       border-left: $border_color_table $border_style_table $border_size_table;
       border-right: $border_color_table $border_style_table $border_size_table;

@@ -4,15 +4,24 @@
   }
   
   .table-borders-horizontal {
-    @include table-borders-horizontal;
+    @include table-borders-horizontal;  
+    @media (max-width: $breakpoint_tables) {
+      @include table-borders-horizontal-responsive;
+    }
   }
   
   .table-borders-vertical {
-    @include table-borders-vertical;
+    @include table-borders-vertical;  
+    @media (max-width: $breakpoint_tables) {
+      @include table-borders-vertical-responsive;
+    }
   }
   
   .table-borders {
-    @include table-borders-vertical;
-    @include table-borders-horizontal;
+    @include table-borders;  
+    @media (max-width: $breakpoint_tables) {
+      @include table-borders-horizontal-responsive;
+      @include table-borders-vertical-responsive;
+    }
   }
 }
