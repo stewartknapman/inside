@@ -369,6 +369,7 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 button {
+  margin-top: 0;
   display: inline-block;
   padding: 0.25rem 0.5em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

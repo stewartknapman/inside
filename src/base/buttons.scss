@@ -2,6 +2,9 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 button {
+  
+  margin-top: 0;
+  
   @include button-base;
   
   &:focus {
