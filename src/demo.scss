@@ -14,7 +14,8 @@ header {
   
   .description {
     @include reading-length;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   ::selection {
@@ -23,7 +24,7 @@ header {
 }
 
 main {
-  padding: ($gutter_horizontal * 2) 0;
+  margin-bottom: $gutter_horizontal * 2;
 }
 
 h2.demo-heading {
@@ -36,7 +37,7 @@ h5.demo-heading {
 
 .grid-item {
   overflow: hidden;
-  margin-bottom: $gutter_horizontal;
+  margin-top: $gutter_horizontal;
   text-align: center;
   background-color: $background_color_grey;
   
@@ -48,15 +49,11 @@ h5.demo-heading {
 }
 
 .container-example {
-  margin-bottom: $gutter_horizontal * 2;
+  margin-top: $gutter_horizontal;
   padding-top: $gutter_horizontal / 2;
-  padding-bottom: $gutter_horizontal / 2; 
+  padding-bottom: $gutter_horizontal / 2;
   text-align: center;
   background-color: $background_color_grey;
-}
-
-.example-block {
-   margin-bottom: $gutter_horizontal;
 }
 
 .demo-contrast-block {
