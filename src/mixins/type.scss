@@ -31,6 +31,7 @@
 
 // Styles
 @mixin heading-style {
+  color: currentColor;
   font-family: $font_family_headings;
   font-weight: $font_weight_headings;
 }

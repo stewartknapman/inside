@@ -179,7 +179,9 @@ $background_color_button: $background_color !default;
 $background_hover_color_button: darken($background_color_button, 5%) !default;
 
 $background_color_button_primary: $highlight_color !default;
+$background_hover_color_button_primary: darken($highlight_color, 10%) !default;
 $text_color_button_primary: if(lightness($background_color_button_primary) > 55%, $text_color, lighten($background_color, 45%)) !default;
+$text_hover_color_button_primary: $text_color_button_primary !default;
 
 /*
   Borders
@@ -206,6 +208,8 @@ $border_radius_input: $border_radius !default;
 // buttons
 $border_color_button: $border_color !default;
 $border_color_hover_button: $border_color !default;
+$border_color_button_primary: darken($background_color_button_primary, 5%) !default;
+$border_color_hover_button_primary: darken($border_color_button_primary, 10%) !default;
 $border_size_button: $border_size !default;
 $border_style_button: $border_style !default;
 $border_radius_button: $border_radius !default;

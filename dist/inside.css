@@ -134,6 +134,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: currentColor;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
@@ -369,24 +370,29 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 button {
-  margin-top: 0;
   display: inline-block;
-  padding: 0.25rem 0.5em;
+  margin-top: 0;
+  padding: 0.25rem 0.66667em;
+  -webkit-appearance: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5;
-  color: #333;
-  text-decoration: none;
   vertical-align: middle;
+  color: currentColor;
+  text-decoration: none;
   background: none;
-  outline: none;
-  background-color: #fff;
-  border: #eee 1px solid;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 3px;
   -webkit-transition: 0.3s;
-          transition: 0.3s;
-  -webkit-appearance: none; }
+          transition: 0.3s; }
+  input[type=button] svg,
+  input[type=reset] svg,
+  input[type=submit] svg,
+  button svg {
+    vertical-align: middle; }
   input[type=button]:hover,
   input[type=button]:active,
   input[type=reset]:hover,
@@ -395,25 +401,15 @@ button {
   input[type=submit]:active,
   button:hover,
   button:active {
-    color: #333;
-    background: none;
-    background-color: #f2f2f2;
-    border-color: #eee;
+    color: #00b8e3;
     cursor: pointer; }
   input[type=button]:focus,
   input[type=reset]:focus,
   input[type=submit]:focus,
   button:focus {
     outline: none;
-    color: #000;
-    background: rgba(0, 184, 227, 0.3);
-    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3);
-    text-shadow: none; }
-  input[type=button] svg,
-  input[type=reset] svg,
-  input[type=submit] svg,
-  button svg {
-    vertical-align: top; }
+    background: none;
+    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3); }
 
 figure img {
   display: block; }
@@ -2032,41 +2028,59 @@ dl.list-inline dt {
 
 .button {
   display: inline-block;
-  padding: 0.25rem 0.5em;
+  margin-top: 0;
+  padding: 0.25rem 0.66667em;
+  -webkit-appearance: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5;
-  color: #333;
-  text-decoration: none;
   vertical-align: middle;
+  color: currentColor;
+  text-decoration: none;
   background: none;
-  outline: none;
-  background-color: #fff;
-  border: #eee 1px solid;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 3px;
   -webkit-transition: 0.3s;
           transition: 0.3s; }
+  .button svg {
+    vertical-align: middle; }
   .button:hover,
   .button:active {
-    color: #333;
-    background: none;
-    background-color: #f2f2f2;
-    border-color: #eee;
+    color: #00b8e3;
     cursor: pointer; }
+  .button:focus {
+    outline: none;
+    background: none;
+    box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3); }
+
+.button-default,
+input.button-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #eee; }
+  .button-default:hover,
+  .button-default:active,
+  input.button-default:hover,
+  input.button-default:active {
+    color: #333;
+    background-color: #f2f2f2;
+    border-color: #eee; }
 
 .button-primary,
 input.button-primary {
   color: white;
   background-color: #00b8e3;
-  border-color: #008fb0; }
+  border-color: #00a3ca; }
   .button-primary:hover,
   .button-primary:active,
   input.button-primary:hover,
   input.button-primary:active {
     color: white;
-    background-color: #0086a6;
-    border-color: #008fb0; }
+    background-color: #008fb0;
+    border-color: #007a97; }
 
 .table-stripes tbody tr {
   -webkit-transition: 0.3s;

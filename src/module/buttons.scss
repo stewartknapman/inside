@@ -2,9 +2,14 @@
   .button {
     @include button-base;
   }
+
+  .button-default,
+  input.button-default {
+    @include button-default;
+  }
   
   .button-primary,
   input.button-primary {
-    @include button-style($text_color_button_primary, $background_color_button_primary);
+    @include button-primary;
   }
 }

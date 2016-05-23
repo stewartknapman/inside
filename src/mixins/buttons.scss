@@ -1,58 +1,74 @@
 @mixin button-base {
   display: inline-block;
-  padding: ($gutter_horizontal / 4) ($gutter_vertical / 2);
+  margin-top: 0;
+  padding: ($gutter_horizontal / 4) ($gutter_vertical / 1.5);
+  -webkit-appearance: none;
   
   font-family: $font_family_button;
   font-weight: $font_weight_button;
   font-size: $font_size_base;
   line-height: $line_height_base;
-  color: $text_color_button;
-  text-decoration: none;
   vertical-align: middle;
+  color: currentColor;
+  text-decoration: none;
   
-  @if ($include_pretty_underlines) {
-    background: none;
-  }
-  outline: none;
-  background-color: $background_color_button;
-  border: $border_color_button $border_size_button $border_style_button;
+  background: none;
+  border-color: currentColor;
+  border-style: $border_style_button;
+  border-width: $border_size_button;
   border-radius: $border_radius_button;
   transition: $transition_duration_hover;
   
+  svg {
+    vertical-align: middle;
+  }
+  
   &:hover,
   &:active {
-    color: $text_hover_color_button;
-    @if ($include_pretty_underlines) {
-      background: none;
-    }
-    background-color: $background_hover_color_button;
-    border-color: $border_color_hover_button;
+    color: $highlight_color;
     cursor: pointer;
+  }
+  
+  &:focus {
+    outline: none;
+    background: none;
+    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
   }
 }
 
-@mixin button-style ($color, $background_color: $background_color_button, $border_color: false, $color_hover: false, $background_color_hover: false, $border_color_hover: false) {
-  @if ($border_color == false) {
-    $border_color: darken($background_color, 10%);
-  }
-  @if ($color_hover == false) {
-    $color_hover: $color;
-  }
-  @if ($background_color_hover == false) {
-    $background_color_hover: darken($background_color, 12%);
-  }
-  @if ($border_color_hover == false) {
-    $border_color_hover: $border_color;
-  }
-  
+@mixin button-style ($color, $background_color: false, $border_color: false, $color_hover: false, $background_color_hover: false, $border_color_hover: false, $focus_color: false) {
   color: $color;
-  background-color: $background_color;
-  border-color: $border_color;
+  @if ($background_color) {
+    background-color: $background_color;
+  }
+  @if ($border_color) {
+    border-color: $border_color;
+  }
   
   &:hover,
   &:active {
-    color: $color_hover;
-    background-color: $background_color_hover;
-    border-color: $border_color_hover;
+    @if ($color_hover) {
+      color: $color_hover;
+    }
+    @if ($background_color_hover) {
+      background-color: $background_color_hover;
+    }
+    @if ($border_color_hover) {
+      border-color: $border_color_hover;
+    }
   }
+  
+  @if ($focus_color) {
+    &:focus {
+      box-shadow: 0 0 0 0.2em rgba($focus_color, 0.3);
+    }
+  }
+}
+
+@mixin button-default {
+  @include button-style($text_color_button, $background_color_button, $border_color_button, $text_hover_color_button, $background_hover_color_button, $border_color_hover_button);
+}
+
+@mixin button-primary {
+  @include button-style($text_color_button_primary, $background_color_button_primary, $border_color_button_primary, $text_hover_color_button_primary, $background_hover_color_button_primary, $border_color_hover_button_primary);
 }
