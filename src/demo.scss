@@ -1,5 +1,3 @@
-// @import '../../src/inside.scss';
-
 $highlight_color: #E91E63;
 $light_text: #FFF6FA;
 $background_color_grey: rgba(0,0,0,0.1);
@@ -59,10 +57,20 @@ h5.demo-heading {
 .demo-contrast-block {
   color: $light_text;
   background: $highlight_color;
-  padding: $gutter_horizontal $gutter_vertical;
+  padding: $gutter_horizontal 0;
   
-  a:hover,
-  a:active {
-    color: #333;
+  a,
+  input[type=button],
+  input[type=reset],
+  input[type=submit],
+  button {
+    &:hover,
+    &:active {
+      color: #333;
+    }
+  }
+  
+  h5.demo-heading {
+    color: currentColor;
   }
 }
