@@ -16,12 +16,7 @@ figure {
       h6 a,
       a {
         color: $link_color_hover;
-        /* 
-          Arbitrary webkit-only property that forces a redraw
-          Fixes currentColor bug
-          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-        */
-        -webkit-margin-start: -.1px;
+        @include force-redraw;
       }
     }
   }

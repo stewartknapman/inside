@@ -196,11 +196,11 @@ a {
   a:active {
     color: #E91E63;
     /* 
-      Arbitrary webkit-only property that forces a redraw
-      Fixes currentColor bug
-      see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-    */
-    -webkit-margin-start: -.1px; }
+    Arbitrary webkit-only property that forces a redraw
+    Fixes currentColor bug
+    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+  */
+    -webkit-margin-start: -.001px; }
   a svg {
     vertical-align: top; }
 
@@ -426,11 +426,11 @@ figure > a:hover + figcaption h6 a,
 figure > a:hover + figcaption a {
   color: #E91E63;
   /* 
-          Arbitrary webkit-only property that forces a redraw
-          Fixes currentColor bug
-          see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-        */
-  -webkit-margin-start: -.1px; }
+    Arbitrary webkit-only property that forces a redraw
+    Fixes currentColor bug
+    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+  */
+  -webkit-margin-start: -.001px; }
 
 .grid-col figure,
 .grid-col-rev figure {
