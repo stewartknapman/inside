@@ -408,7 +408,7 @@ button {
   input[type=submit]:focus,
   button:focus {
     outline: none;
-    background: none;
+    background: inherit;
     box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3); }
 
 figure img {
@@ -2053,7 +2053,7 @@ dl.list-inline dt {
     cursor: pointer; }
   .button:focus {
     outline: none;
-    background: none;
+    background: inherit;
     box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3); }
 
 .button-default,
@@ -2063,8 +2063,10 @@ input.button-default {
   border-color: #eee; }
   .button-default:hover,
   .button-default:active,
+  .button-default:focus,
   input.button-default:hover,
-  input.button-default:active {
+  input.button-default:active,
+  input.button-default:focus {
     color: #333;
     background-color: #f2f2f2;
     border-color: #eee; }
@@ -2076,8 +2078,10 @@ input.button-primary {
   border-color: #d81557; }
   .button-primary:hover,
   .button-primary:active,
+  .button-primary:focus,
   input.button-primary:hover,
-  input.button-primary:active {
+  input.button-primary:active,
+  input.button-primary:focus {
     color: white;
     background-color: #c1134e;
     border-color: #aa1145; }
@@ -2237,15 +2241,26 @@ h5.demo-heading {
   padding: 1rem 0; }
   .demo-contrast-block a:hover,
   .demo-contrast-block a:active,
+  .demo-contrast-block a:focus,
   .demo-contrast-block input[type=button]:hover,
   .demo-contrast-block input[type=button]:active,
+  .demo-contrast-block input[type=button]:focus,
   .demo-contrast-block input[type=reset]:hover,
   .demo-contrast-block input[type=reset]:active,
+  .demo-contrast-block input[type=reset]:focus,
   .demo-contrast-block input[type=submit]:hover,
   .demo-contrast-block input[type=submit]:active,
+  .demo-contrast-block input[type=submit]:focus,
   .demo-contrast-block button:hover,
-  .demo-contrast-block button:active {
+  .demo-contrast-block button:active,
+  .demo-contrast-block button:focus {
     color: #333; }
+  .demo-contrast-block a:focus,
+  .demo-contrast-block input[type=button]:focus,
+  .demo-contrast-block input[type=reset]:focus,
+  .demo-contrast-block input[type=submit]:focus,
+  .demo-contrast-block button:focus {
+    box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.3); }
   .demo-contrast-block h5.demo-heading {
     color: currentColor; }
 

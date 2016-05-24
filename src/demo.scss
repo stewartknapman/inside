@@ -65,8 +65,12 @@ h5.demo-heading {
   input[type=submit],
   button {
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: #333;
+    } 
+    &:focus {
+      box-shadow: 0 0 0 0.2em rgba(#fff, 0.3);
     }
   }
   
