@@ -1,6 +1,6 @@
 {
   "name": "inside-scss",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "another scss framework",
   "main": "dist/inside.scss",
   "scripts": {
