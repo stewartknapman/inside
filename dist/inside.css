@@ -408,7 +408,7 @@ button {
   input[type=submit]:focus,
   button:focus {
     outline: none;
-    background: none;
+    background: inherit;
     box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3); }
 
 figure img {
@@ -2053,7 +2053,7 @@ dl.list-inline dt {
     cursor: pointer; }
   .button:focus {
     outline: none;
-    background: none;
+    background: inherit;
     box-shadow: 0 0 0 0.2em rgba(0, 184, 227, 0.3); }
 
 .button-default,
@@ -2063,8 +2063,10 @@ input.button-default {
   border-color: #eee; }
   .button-default:hover,
   .button-default:active,
+  .button-default:focus,
   input.button-default:hover,
-  input.button-default:active {
+  input.button-default:active,
+  input.button-default:focus {
     color: #333;
     background-color: #f2f2f2;
     border-color: #eee; }
@@ -2076,8 +2078,10 @@ input.button-primary {
   border-color: #00a3ca; }
   .button-primary:hover,
   .button-primary:active,
+  .button-primary:focus,
   input.button-primary:hover,
-  input.button-primary:active {
+  input.button-primary:active,
+  input.button-primary:focus {
     color: white;
     background-color: #008fb0;
     border-color: #007a97; }

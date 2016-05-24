@@ -31,7 +31,7 @@
   
   &:focus {
     outline: none;
-    background: none;
+    background: inherit;
     box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
   }
 }
@@ -46,7 +46,8 @@
   }
   
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     @if ($color_hover) {
       color: $color_hover;
     }
@@ -58,8 +59,8 @@
     }
   }
   
-  @if ($focus_color) {
-    &:focus {
+  &:focus {
+    @if ($focus_color) {
       box-shadow: 0 0 0 0.2em rgba($focus_color, 0.3);
     }
   }
