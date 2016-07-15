@@ -13,8 +13,7 @@ label {
   display: inline-block;
 }
 
-label + label,
- {
+label + label {
   margin-top: 0;
   margin-left: $gutter_vertical;
 }
