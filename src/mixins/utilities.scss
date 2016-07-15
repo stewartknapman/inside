@@ -6,6 +6,17 @@
   }
 }
 
+@mixin lobotomized-owl ($margin-top) {
+  * + * {
+    margin-top: $margin-top;
+  }
+  
+  * + br,
+  option + option {
+    margin-top: 0;
+  }
+}
+
 @mixin force-redraw {
   /* 
     Arbitrary webkit-only property that forces a redraw

@@ -14,9 +14,7 @@ html {
   margin: 0;
 }
 
-* + * {
-  margin-top: $gutter_horizontal;
-}
+@include lobotomized-owl($gutter_horizontal);
 
 html, body {
   height: 100%;

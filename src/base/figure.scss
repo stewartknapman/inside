@@ -1,9 +1,8 @@
 figure {
+  @include lobotomized-owl($gutter_horizontal/2);
+  
   img {
     display: block;
-  }
-  > a {
-    display: inline-block;
   }
   
   @if ($include_figure_link_hover) {
@@ -24,14 +23,5 @@ figure {
   .grid-col &,
   .grid-col-rev & {
     margin-top: $gutter_horizontal;
-  }
-}
-
-figcaption {
-  overflow: auto;
-  margin-top: 0;
-  
-  * + * {
-    margin-top: $gutter_horizontal / 2;
   }
 }
