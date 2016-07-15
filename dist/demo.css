@@ -83,6 +83,10 @@ html {
 * + * {
   margin-top: 1rem; }
 
+* + br,
+option + option {
+  margin-top: 0; }
+
 html, body {
   height: 100%;
   margin: 0; }
@@ -192,8 +196,7 @@ a {
   background-repeat: repeat-x;
   background-position: 0 95%;
   background-size: 100% 1px; }
-  a:hover,
-  a:active {
+  a:hover, a:active {
     color: #E91E63;
     /* 
     Arbitrary webkit-only property that forces a redraw
@@ -393,8 +396,7 @@ button {
   input[type=submit] svg,
   button svg {
     vertical-align: middle; }
-  input[type=button]:hover,
-  input[type=button]:active,
+  input[type=button]:hover, input[type=button]:active,
   input[type=reset]:hover,
   input[type=reset]:active,
   input[type=submit]:hover,
@@ -411,11 +413,15 @@ button {
     background: inherit;
     box-shadow: 0 0 0 0.2em rgba(233, 30, 99, 0.3); }
 
+figure * + * {
+  margin-top: 0.5rem; }
+
+figure * + br,
+figure option + option {
+  margin-top: 0; }
+
 figure img {
   display: block; }
-
-figure > a {
-  display: inline-block; }
 
 figure > a:hover + figcaption h1 a,
 figure > a:hover + figcaption h2 a,
@@ -435,12 +441,6 @@ figure > a:hover + figcaption a {
 .grid-col figure,
 .grid-col-rev figure {
   margin-top: 1rem; }
-
-figcaption {
-  overflow: auto;
-  margin-top: 0; }
-  figcaption * + * {
-    margin-top: 0.5rem; }
 
 table {
   width: 100%;
@@ -2047,8 +2047,7 @@ dl.list-inline dt {
           transition: 0.3s; }
   .button svg {
     vertical-align: middle; }
-  .button:hover,
-  .button:active {
+  .button:hover, .button:active {
     color: #E91E63;
     cursor: pointer; }
   .button:focus {
@@ -2061,9 +2060,7 @@ input.button-default {
   color: #333;
   background-color: #fff;
   border-color: #eee; }
-  .button-default:hover,
-  .button-default:active,
-  .button-default:focus,
+  .button-default:hover, .button-default:active, .button-default:focus,
   input.button-default:hover,
   input.button-default:active,
   input.button-default:focus {
@@ -2075,10 +2072,8 @@ input.button-default {
 input.button-primary {
   color: white;
   background-color: #E91E63;
-  border-color: #d81557; }
-  .button-primary:hover,
-  .button-primary:active,
-  .button-primary:focus,
+  border-color: #d81558; }
+  .button-primary:hover, .button-primary:active, .button-primary:focus,
   input.button-primary:hover,
   input.button-primary:active,
   input.button-primary:focus {
@@ -2239,9 +2234,7 @@ h5.demo-heading {
   color: #FFF6FA;
   background: #E91E63;
   padding: 1rem 0; }
-  .demo-contrast-block a:hover,
-  .demo-contrast-block a:active,
-  .demo-contrast-block a:focus,
+  .demo-contrast-block a:hover, .demo-contrast-block a:active, .demo-contrast-block a:focus,
   .demo-contrast-block input[type=button]:hover,
   .demo-contrast-block input[type=button]:active,
   .demo-contrast-block input[type=button]:focus,
