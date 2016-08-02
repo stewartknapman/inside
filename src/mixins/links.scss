@@ -5,3 +5,14 @@
   background-position: 0 $underline_position;
   background-size: 100% $underline_weight;
 }
+
+@mixin force-redraw {
+  /* 
+    Arbitrary webkit-only property that forces a redraw
+    Fixes currentColor bug
+    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+  */
+  @if ($include_pretty_underlines) {
+    -webkit-margin-start: -.001px;
+  }
+}

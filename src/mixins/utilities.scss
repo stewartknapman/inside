@@ -16,12 +16,3 @@
     margin-top: 0;
   }
 }
-
-@mixin force-redraw {
-  /* 
-    Arbitrary webkit-only property that forces a redraw
-    Fixes currentColor bug
-    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-  */
-  -webkit-margin-start: -.001px;
-}

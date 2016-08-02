@@ -130,7 +130,7 @@ body {
   font-weight: 300;
   color: #333;
   -webkit-transition: font-size 0.3s;
-          transition: font-size 0.3s; }
+  transition: font-size 0.3s; }
 
 h1,
 h2,
@@ -189,7 +189,7 @@ hr {
 a {
   color: inherit;
   -webkit-transition: 0.3s;
-          transition: 0.3s;
+  transition: 0.3s;
   text-decoration: none;
   background-image: -webkit-linear-gradient(left, currentColor 0%, currentColor 100%);
   background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
@@ -297,7 +297,7 @@ select {
   border-radius: 3px;
   outline: none;
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+  transition: 0.3s; }
   input[type=text]:focus,
   input[type=email]:focus,
   input[type=password]:focus,
@@ -390,7 +390,7 @@ button {
   border-width: 1px;
   border-radius: 3px;
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+  transition: 0.3s; }
   input[type=button] svg,
   input[type=reset] svg,
   input[type=submit] svg,
@@ -2044,7 +2044,7 @@ dl.list-inline dt {
   border-width: 1px;
   border-radius: 3px;
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+  transition: 0.3s; }
   .button svg {
     vertical-align: middle; }
   .button:hover, .button:active {
@@ -2083,7 +2083,7 @@ input.button-primary {
 
 .table-stripes tbody tr {
   -webkit-transition: 0.3s;
-          transition: 0.3s; }
+  transition: 0.3s; }
   .table-stripes tbody tr:nth-child(odd) {
     background-color: #f9f9f9; }
   .table-stripes tbody tr:hover {
