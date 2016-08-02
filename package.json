@@ -4,8 +4,8 @@
   "description": "another scss framework",
   "main": "dist/inside.scss",
   "scripts": {
-    "build": "npm run build:dist && npm run build:demo",
-    "build:watch": "parallelshell 'npm run watch:dist' 'npm run watch:demo' 'npm run livereload:demo'",
+    "build": "parallelshell 'npm run watch:dist' 'npm run watch:demo' 'npm run livereload:demo'",
+    "build:once": "npm run build:dist && npm run build:demo",
     "build:dist": "node-sass ./src/inside.scss | postcss --use autoprefixer -o ./dist/inside.css",
     "build:demo": "node-sass ./demo/src/demo.scss | postcss --use autoprefixer -o ./demo/dist/demo.css",
     "postbuild:dist": "cssmin ./dist/inside.css > ./dist/inside.min.css",
