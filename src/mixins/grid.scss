@@ -24,10 +24,10 @@
   @if ($container_key == $breakpoint_key) {
     @if ($breakpoint) {
       @media (min-width: $breakpoint) {
-        width: $container_size
+        width: $container_size;
       }
     } @else {
-      width: $container_size
+      width: $container_size;
     }
   }
 }
