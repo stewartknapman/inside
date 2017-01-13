@@ -4,8 +4,9 @@
 */
 
 // Include css classes in output.
-// Set to false if you intend on just using mixins and setting your own classes.
-$include_classes: true !default;
+// Set to true if you want the classnames
+// Default is false to encourage using mixins and setting your own classes.
+$include_classes: false !default;
 
 // Include fluid type settings: http://trentwalton.com/2012/06/19/fluid-type/
 // This will increase the font size as the screen size increases.
@@ -18,7 +19,7 @@ $include_pretty_underlines: true !default;
 
 // Include modules.
 // Set to false if you don't need the extended modules.
-$include_grid:    true !default;
+$include_grid:    false !default; // Default is false to encorrage flexbox and/or css grids
 $include_type:    true !default;
 $include_lists:   true !default;
 $include_buttons: true !default;
