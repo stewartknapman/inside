@@ -444,6 +444,7 @@ figure > a:hover + figcaption a {
 
 table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: left; }
   @media (min-width: 37.5em) {
