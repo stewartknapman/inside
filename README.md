@@ -74,7 +74,7 @@ If you really *REALLY* don't like my opinions you can ~~find~~ [fight me](https:
 
 These opinions are as follows:
 
-**Fluid Type:** This will increase the font size as the screen size increases. [Read more about this on Trent Waltons site here](http://trentwalton.com/2012/06/19/fluid-type/).
+**Fluid Type:** This will increase the font size as the screen size increases. Read more about this on the [Typekit blog](https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/) and on [Smashing Magazine](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
 **Passing breakpoints from css to js:** This will add some breakpoint information to a sudo-class on the body tag which can be read in by Javascript (Javascript not included). [Jeremy Keith talks about this here](https://adactio.com/journal/5429).
 
@@ -108,6 +108,8 @@ $container_max_width: 55em;
 ```
 
 ### Grids
+
+_Grid classes are now turned off by default to encourage you to use flexbox and CSS grids._
 
 Like all other things grids can be set by classes: `grid-col-[size]-[breakpoint]` e.g. `grid-col-50-xs` or by a mixin: `@include grid-col-size($size, $breakpoint);`. When using the mixin the second parameter, $breakpoint, is optional and defaults to false which will set just the width.
 Be sure to include the `grid-col` or `grid-col-rev` base classes/mixins on your columns.

@@ -4,9 +4,8 @@
 */
 
 // Include css classes in output.
-// Set to true if you want the classnames
-// Default is false to encourage using mixins and setting your own classes.
-$include_classes: false !default;
+// Set to false if you want to use mixins and set your own classes.
+$include_classes: true !default;
 
 // Include fluid type settings:
 //  - https://www.smashingmagazine.com/2016/05/fluid-typography/
