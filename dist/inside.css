@@ -107,25 +107,23 @@ svg {
   background: rgba(0, 184, 227, 0.6);
   text-shadow: none; }
 
-@media (min-width: 37.5em) {
-  html {
-    font-size: 1.1em; } }
-
-@media (min-width: 60em) {
-  html {
-    font-size: 1.2em; } }
-
-@media (min-width: 75em) {
-  html {
-    font-size: 1.3em; } }
-
-@media (min-width: 93.75em) {
-  html {
-    font-size: 1.4em; } }
+html {
+  font-size: 1em;
+  line-height: 1.3em; }
+  @media (min-width: 20em) {
+    html {
+      font-size: calc(1em + 0.5 * (100vw - 20em) / 67.5); } }
+  @media (min-width: 87.5em) {
+    html {
+      font-size: 1.5em; } }
+  @media (min-width: 20em) {
+    html {
+      line-height: calc(1.3em + 0.2 * (100vw - 20em) / 67.5); } }
+  @media (min-width: 87.5em) {
+    html {
+      line-height: 1.5em; } }
 
 body {
-  font-size: 1em;
-  line-height: 1.5;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #333;

@@ -1,23 +1,9 @@
 html {
-  @if $include_fluid_type {
-    @media (min-width: $breakpoint_sm) {
-      font-size: $fluid_type_sm;
-    }
-    @media (min-width: $breakpoint_md) {
-      font-size: $fluid_type_md;
-    }
-    @media (min-width: $breakpoint_lg) {
-      font-size: $fluid_type_lg;
-    }
-    @media (min-width: $breakpoint_xl) {
-      font-size: $fluid_type_xl;
-    }
-  }
+  @include fluid-lock(font-size, $fluid_type_min_vw, $fluid_type_max_vw, $font_size_min_value, $font_size_max_value);
+  @include fluid-lock(line-height, $fluid_type_min_vw, $fluid_type_max_vw, $line_height_min_value, $line_height_max_value);
 }
 
 body {
-  font-size: $font_size_base;
-  line-height: $line_height_base;
   font-family: $font_family_body;
   font-weight: $font_weight_base;
   color: $text_color;

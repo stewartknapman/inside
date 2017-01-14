@@ -1,3 +1,29 @@
+// `strip-unit()` function by Hugo Giraudel
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// `fluid-lock()` mixin by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+@mixin fluid-lock($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+  
+  @if $include_fluid_type {
+    @media (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      }
+    }
+  
+    @media (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
 // Sizes
 @mixin font-size-xs {
   font-size: $font_size_xs;

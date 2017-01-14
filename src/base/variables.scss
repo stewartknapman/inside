@@ -8,7 +8,9 @@
 // Default is false to encourage using mixins and setting your own classes.
 $include_classes: false !default;
 
-// Include fluid type settings: http://trentwalton.com/2012/06/19/fluid-type/
+// Include fluid type settings:
+//  - https://www.smashingmagazine.com/2016/05/fluid-typography/
+//  - https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/
 // This will increase the font size as the screen size increases.
 // Set to false if you want to keep a consistent font size across all screen sizes.
 $include_fluid_type: true !default;
@@ -67,6 +69,16 @@ $breakpoint_sizes: (xs false) (sm $breakpoint_sm) (md $breakpoint_md) (lg $break
   A standard line height of 1.5ems on the body (@16px) is 24px
 */
 
+// Heading and component sizes
+$font_size_base:  1em !default;
+$font_size_xxl:   2.5em !default;             // ~ 40px
+$font_size_xl:    2em !default;               // ~ 32px
+$font_size_lg:    1.5em !default;             // ~ 24px and used inside hero objects
+$font_size_md:    1.25em !default;            // ~ 20px
+$font_size_sm:    $font_size_base !default;   // ~ 16px
+$font_size_xs:    0.8125em !default;          // ~ 13px
+$font_size_forms: $font_size_xs !default;
+
 // Base sizes and heights
 $line_height_base:  1.5 !default;
 $line_height_xxl:   1.1 !default;
@@ -76,24 +88,15 @@ $line_height_md:    1.4 !default;
 $line_height_sm:    $line_height_base !default;
 $line_height_xs:    1.6 !default;
 
-$font_size_base:  1em !default;
-
 // Fluid type sizes
-$fluid_type_sm:   1.1em !default;
-$fluid_type_md:   1.2em !default;
-$fluid_type_lg:   1.3em !default;
-$fluid_type_xl:   1.4em !default;
+$fluid_type_min_vw:     20em !default;
+$fluid_type_max_vw:     87.5em !default;
+$font_size_min_value:   $font_size_base !default;
+$font_size_max_value:   1.5em !default;
+$line_height_min_value: 1.3em !default;
+$line_height_max_value: 1.5em !default;
 
-$max_reading_length: 40em !default;
-
-// Heading and component sizes
-$font_size_xxl:   2.5em !default;             // ~ 40px
-$font_size_xl:    2em !default;               // ~ 32px
-$font_size_lg:    1.5em !default;             // ~ 24px and used inside hero objects
-$font_size_md:    1.25em !default;            // ~ 20px
-$font_size_sm:    $font_size_base !default;   // ~ 16px
-$font_size_xs:    0.8125em !default;          // ~ 13px
-$font_size_forms: $font_size_xs !default;
+$max_reading_length: 35em !default;
 
 // Font families
 $font_family_serif:      Georgia, "Times New Roman", Times, serif !default;
