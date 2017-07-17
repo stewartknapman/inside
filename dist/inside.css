@@ -39,7 +39,7 @@ svg {
 
 html {
   font-size: 1em;
-  line-height: 1.3em; }
+  line-height: 1.3; }
   @media (min-width: 20em) {
     html {
       font-size: calc(1em + 0.5 * (100vw - 20em) / 67.5); } }
@@ -48,10 +48,10 @@ html {
       font-size: 1.5em; } }
   @media (min-width: 20em) {
     html {
-      line-height: calc(1.3em + 0.2 * (100vw - 20em) / 67.5); } }
+      line-height: calc(1.3 + 0.2 * (100vw - 20em) / 67.5); } }
   @media (min-width: 87.5em) {
     html {
-      line-height: 1.5em; } }
+      line-height: 1.5; } }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
