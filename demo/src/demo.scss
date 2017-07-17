@@ -10,13 +10,13 @@ header {
   padding-bottom: $gutter_horizontal * 2;
   background: $highlight_color;
   color: $light_text;
-  
+
   .description {
     @include reading-length;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   ::selection {
     background-color: $light_text;
   }
@@ -39,7 +39,7 @@ h5.demo-heading {
   margin-top: $gutter_horizontal;
   text-align: center;
   background-color: $background_color_grey;
-  
+
   .grid-item,
   p {
     margin-top: $gutter_horizontal / 2;
@@ -59,7 +59,7 @@ h5.demo-heading {
   color: $light_text;
   background: $highlight_color;
   padding: $gutter_horizontal 0;
-  
+
   a,
   input[type=button],
   input[type=reset],
@@ -69,12 +69,12 @@ h5.demo-heading {
     &:active,
     &:focus {
       color: #333;
-    } 
+    }
     &:focus {
       box-shadow: 0 0 0 0.2em rgba(#fff, 0.3);
     }
   }
-  
+
   h5.demo-heading {
     color: currentColor;
   }
