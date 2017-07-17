@@ -155,6 +155,9 @@ ol {
 
 li {
   margin-top: 0; }
+  li > ul,
+  li > ol {
+    margin-top: 0; }
 
 dd {
   margin-top: 0;
