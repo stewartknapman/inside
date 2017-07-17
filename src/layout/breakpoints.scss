@@ -1,8 +1,6 @@
-/*
-  Pass media queries to JS: https://adactio.com/journal/5429
-  We do this so we are using one consitant source for this value.
-  But also slightly tweaked because Chrome stopped letting us collect the value if the content was inside display:none;
-*/
+// Pass media queries to JS: https://adactio.com/journal/5429
+// We do this so we are using one consitant source for this value.
+// But also slightly tweaked because Chrome stopped letting us collect the value if the content was inside display:none;
 
 @if $include_breakpoint_sizes {
   body:after {
@@ -12,7 +10,7 @@
     height: 0;
     margin-top: ($line_height_base * -1em);
     padding: 0;
-    
+
     @each $breakpoint in $breakpoint_sizes {
       @if (nth($breakpoint, 2)) {
         @media (min-width: nth($breakpoint, 2)) {

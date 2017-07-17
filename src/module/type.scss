@@ -1,9 +1,9 @@
 @if $include_type and $include_classes {
-  
+
   .reading-length {
     @include reading-length;
   }
-  
+
   .font-size-xs { @include font-size-xs; } // h6
   .font-size-sm { @include font-size-sm; } // h5
   .font-size-md { @include font-size-md; } // h4
@@ -11,11 +11,9 @@
   .font-size-xl { @include font-size-xl; } // h2
   .font-size-xxl { @include font-size-xxl; } // h1
 
-/*
-  [Breaks in < 3.3]
-  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-*/
-  
+// [Breaks in >= 3.3]
+// @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+
   @each $breakpoint in $breakpoint_sizes {
     @each $alignment in (left, center, right) {
       .text-align-#{$alignment}-#{nth($breakpoint, 1)} {
@@ -23,7 +21,7 @@
       }
     }
   }
-  
+
   .pull-quote {
     @include pull-quote;
   }

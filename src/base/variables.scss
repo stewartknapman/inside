@@ -1,7 +1,5 @@
-/*
-  Globals & Includes
-  ---
-*/
+// Globals & Includes
+// ---
 
 // Include css classes in output.
 // Set to false if you want to use mixins and set your own classes.
@@ -39,12 +37,10 @@ $include_breakpoint_sizes: true !default;
 // Set to true if you want to include a theme.
 $include_theme_wireframe: false !default;
 
-/*
-  Breakpoints
-  ---
-  
-  xs is implied by whatever is less than sm
-*/
+// Breakpoints
+// ---
+//
+// xs is implied by whatever is less than sm
 $breakpoint_sm:     37.5em !default;  // 600px @ 16px
 $breakpoint_md:     60em !default;    // 960px @ 16px
 $breakpoint_lg:     75em !default;    // 1200px @ 16px
@@ -54,19 +50,17 @@ $breakpoint_xl:     93.75em !default; // 1500px @ 16px
 $breakpoint_tables: $breakpoint_sm !default;
 
 $breakpoint_sizes: (xs false) (sm $breakpoint_sm) (md $breakpoint_md) (lg $breakpoint_lg) (xl $breakpoint_xl) !default;
-/*
-  [Breaks in < 3.3]
-  $breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
-*/
 
-/*
-  Type
-  ---
-  
-  Target / Context:
-  Foundtion sets the body font size at 100% which is usually 16px
-  A standard line height of 1.5ems on the body (@16px) is 24px
-*/
+// [Breaks in >= 3.3]
+// $breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
+
+
+//   Type
+//   ---
+//
+//   Target / Context:
+//   Foundtion sets the body font size at 100% which is usually 16px
+//   A standard line height of 1.5ems on the body (@16px) is 24px
 
 // Heading and component sizes
 $font_size_base:  1em !default;
@@ -122,10 +116,8 @@ $font_style_pullquote: italic !default;
 $underline_weight: 1px !default; // 2px !default;
 $underline_position: 95% !default;
 
-/*
-  Grids
-  ---
-*/
+// Grids
+// ---
 
 $container_width_fluid: 100% !default;
 $container_width_xs: 95% !default;
@@ -151,15 +143,11 @@ $grid_gutter_xl: $grid_gutter_lg !default;
 $grid_gutter_sizes: (xs $grid_gutter_xs) (sm $grid_gutter_sm) (md $grid_gutter_md) (lg $grid_gutter_lg) (xl $grid_gutter_xl) !default;
 
 $col_sizes: (5 5%) (10 10%) (15 15%) (20 20%) (25 25%) (30 30%) (40 40%) (50 50%) (60 60%) (70 70%) (75 75%) (80 80%) (85 85%) (90 90%) (95 95%) (100 100%) (quarter 25%) (half 50%) (three-quarters 75%) (full 100%) (one-third 33.333%) (one-sixth 16.666%) (two-thirds 66.666%) !default;
-/*
-  [Breaks in < 3.3]
-$col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%) !default;
-*/
+// [Breaks in >= 3.3]
+// $col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%) !default;
 
-/*
-  Colours
-  ---
-*/
+// Colours
+// ---
 
 $highlight_color: #00b8e3 !default;
 
@@ -186,10 +174,8 @@ $background_hover_color_button_primary: darken($highlight_color, 10%) !default;
 $text_color_button_primary: if(lightness($background_color_button_primary) > 55%, $text_color, lighten($background_color, 45%)) !default;
 $text_hover_color_button_primary: $text_color_button_primary !default;
 
-/*
-  Borders
-  ---
-*/
+// Borders
+// ---
 
 $border_color: #eee !default;
 $border_size: 1px !default;
@@ -223,10 +209,8 @@ $border_size_blockquote: $border_size * 4 !default;
 $border_style_blockquote: $border_style !default;
 
 
-/*
-  Misc
-  ---
-*/
+// Misc
+// ---
 
 // Transition durations.
 // These are here as a nicety for things like link hovers and font size increases.

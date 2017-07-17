@@ -1,6 +1,4 @@
-/*
-  Containers
-*/
+// Containers
 
 @mixin container-fluid {
   overflow: hidden;
@@ -38,7 +36,7 @@
   }
 }
 
-/* Grid Rows */
+// Grid Rows
 @mixin build-grid-row ($grid_gutter_key, $grid_gutter_size, $breakpoint_key, $breakpoint) {
   @if ($grid_gutter_key == $breakpoint_key) {
     @if ($breakpoint) {
@@ -52,7 +50,7 @@
     }
   }
 }
-  
+
 @mixin build-grid-rows ($breakpoint_key, $breakpoint) {
   @each $grid_gutter in $grid_gutter_sizes {
     @include build-grid-row (nth($grid_gutter, 1), nth($grid_gutter, 2), $breakpoint_key, $breakpoint);
@@ -64,14 +62,14 @@
   @each $breakpoint in $breakpoint_sizes {
     @include build-grid-rows (nth($breakpoint, 1), nth($breakpoint, 2));
   }
-  
+
   margin-top: 0;
   > * {
     margin-top: 0;
   }
 }
 
-/* Grid cols */
+// Grid cols
 @mixin build-grid-col-gutter ($grid_gutter_key, $grid_gutter_size, $breakpoint_key, $breakpoint) {
   @if ($grid_gutter_key == $breakpoint_key) {
     @if ($breakpoint) {
@@ -85,7 +83,7 @@
     }
   }
 }
-  
+
 @mixin build-grid-col-gutters ($breakpoint_key, $breakpoint) {
   @each $grid_gutter in $grid_gutter_sizes {
     @include build-grid-col-gutter (nth($grid_gutter, 1), nth($grid_gutter, 2), $breakpoint_key, $breakpoint);
@@ -133,11 +131,11 @@
   .grid-col.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
     @include grid-col-offset($col_size, $breakpoint, left);
   }
-  
+
   .grid-col-rev.grid-col-offset-#{$col_key}-#{$breakpoint_key} {
     @include grid-col-offset($col_size, $breakpoint, right);
   }
-  
+
   .grid-col-#{$col_key}-#{$breakpoint_key} {
     @include grid-col-size($col_size, $breakpoint);
   }
@@ -148,11 +146,10 @@
     @include build-grid-col (nth($col, 1), nth($col, 2), $breakpoint_key, $breakpoint);
   }
 }
-/*
-  [Breaks in < 3.3]
-@mixin build-grid-cols ($breakpoint_key, $breakpoint) {
-  @each $col_key, $col_size in $col_sizes {
-    @include build-grid-col ($col_key, $col_size, $breakpoint_key, $breakpoint);
-  }
-}
-*/
+
+// [Breaks in >= 3.3]
+// @mixin build-grid-cols ($breakpoint_key, $breakpoint) {
+//   @each $col_key, $col_size in $col_sizes {
+//     @include build-grid-col ($col_key, $col_size, $breakpoint_key, $breakpoint);
+//   }
+// }

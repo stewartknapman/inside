@@ -1,25 +1,23 @@
-/*
-  Responsive tables base
-*/
+// Responsive tables base
 @mixin responsive-table {
   @if $include_tables_responsive {
     table {
       display: block;
     }
-    
+
     thead {
       display: none;
     }
-    
+
     tbody, tfoot, tr, td, th {
       display: block;
       margin-top: 0;
     }
-  
+
     tr {
       padding: ($gutter_horizontal / 2) ($gutter_vertical / 2);
     }
-    
+
     td:before {
       content: attr(title);
       display: inline-block;
@@ -29,9 +27,7 @@
   }
 }
 
-/*
-  Stripes
-*/
+// Stripes
 @mixin table-stripes {
   tbody tr{
     transition: $transition_duration_hover;
@@ -44,16 +40,14 @@
   }
 }
 
-/*
-  Borders
-*/
+// Borders
 @mixin table-borders-horizontal {
   thead,
   tfoot {
     border-top: $border_color_table $border_style_table $border_size_table_lg;
     border-bottom: $border_color_table $border_style_table $border_size_table_lg;
   }
-  
+
   tbody tr {
     border-bottom: $border_color_table $border_style_table $border_size_table;
     &:last-child {

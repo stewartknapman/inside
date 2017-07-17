@@ -1,21 +1,21 @@
 @if $include_grid and $include_classes {
-  
+
   .container-fluid {
     @include container-fluid;
   }
-  
+
   .container {
     @include container;
   }
-  
+
   .grid-row {
     @include grid-row;
   }
-  
+
   .grid-col {
     @include grid-col;
   }
-  
+
   .grid-col-rev {
     @include grid-col-rev;
   }
@@ -24,10 +24,8 @@
     @include build-grid-cols (nth($breakpoint, 1), nth($breakpoint, 2));
   }
 
-/*
-  [Breaks in < 3.3]
-  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-    @include build-grid-cols ($breakpoint_key, $breakpoint);
-  }
-*/
+// [Breaks in >= 3.3]
+// @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
+//   @include build-grid-cols ($breakpoint_key, $breakpoint);
+// }
 }

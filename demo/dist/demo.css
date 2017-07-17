@@ -1,73 +1,3 @@
-/*
-  TODO:
-  - navs
-  - code
-*/
-/*
-  Globals & Includes
-  ---
-*/
-/*
-  Breakpoints
-  ---
-  
-  xs is implied by whatever is less than sm
-*/
-/*
-  [Breaks in < 3.3]
-  $breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
-*/
-/*
-  Type
-  ---
-  
-  Target / Context:
-  Foundtion sets the body font size at 100% which is usually 16px
-  A standard line height of 1.5ems on the body (@16px) is 24px
-*/
-/*
-  Grids
-  ---
-*/
-/*
-  [Breaks in < 3.3]
-$col_sizes: (5:5%, 10:10%, 15:15%, 20:20%, 25:25%, 30:30%, 40:40%, 50:50%, 60:60%, 70:70%, 75:75%, 80:80%, 85:85%, 90:90%, 95:95%, 100:100%, quarter:25%, half:50%, three-quarters:75%, full:100%, one-third:33.333%, two-thirds:66.666%) !default;
-*/
-/*
-  Colours
-  ---
-*/
-/*
-  Borders
-  ---
-*/
-/*
-  Misc
-  ---
-*/
-/*
-  Containers
-*/
-/* Grid Rows */
-/* Grid cols */
-/*
-  [Breaks in < 3.3]
-@mixin build-grid-cols ($breakpoint_key, $breakpoint) {
-  @each $col_key, $col_size in $col_sizes {
-    @include build-grid-col ($col_key, $col_size, $breakpoint_key, $breakpoint);
-  }
-}
-*/
-/*
-  Responsive tables base
-*/
-/*
-  Stripes
-*/
-/*
-  Borders
-*/
-/* Block level elements and resets */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -193,11 +123,6 @@ a {
   background-size: 100% 1px; }
   a:hover, a:active {
     color: #E91E63;
-    /* 
-    Arbitrary webkit-only property that forces a redraw
-    Fixes currentColor bug
-    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-  */
     -webkit-margin-start: -.001px; }
   a svg {
     vertical-align: top; }
@@ -424,11 +349,6 @@ figure > a:hover + figcaption h5 a,
 figure > a:hover + figcaption h6 a,
 figure > a:hover + figcaption a {
   color: #E91E63;
-  /* 
-    Arbitrary webkit-only property that forces a redraw
-    Fixes currentColor bug
-    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
-  */
   -webkit-margin-start: -.001px; }
 
 .grid-col figure,
@@ -1864,17 +1784,6 @@ table {
   .grid-col-two-thirds-xl {
     width: 66.666%; } }
 
-/*
-  [Breaks in < 3.3]
-  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-    @include build-grid-cols ($breakpoint_key, $breakpoint);
-  }
-*/
-/*
-  Pass media queries to JS: https://adactio.com/journal/5429
-  We do this so we are using one consitant source for this value.
-  But also slightly tweaked because Chrome stopped letting us collect the value if the content was inside display:none;
-*/
 body:after {
   display: block;
   visibility: hidden;
@@ -1923,10 +1832,6 @@ body:after {
   font-size: 2.5em;
   line-height: 1.1; }
 
-/*
-  [Breaks in < 3.3]
-  @each $breakpoint_key, $breakpoint in $breakpoint_sizes {
-*/
 .text-align-left-xs {
   text-align: left; }
 
