@@ -1,36 +1,37 @@
-// Block level elements and resets
+@if $include_base {
+  // Block level elements and resets
+  html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
+  *, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-}
+  @include lobotomized-owl($gutter_horizontal);
 
-@include lobotomized-owl($gutter_horizontal);
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
+  img {
+    max-width: 100%;
+  }
 
-img {
-  max-width: 100%;
-}
+  svg {
+    fill: currentColor;
+  }
 
-svg {
-  fill: currentColor;
-}
-
-::selection {
-  color: $selection_color;
-  background: $selection_bg_color;
-  text-shadow: none;
+  ::selection {
+    color: $selection_color;
+    background: $selection_bg_color;
+    text-shadow: none;
+  }
 }

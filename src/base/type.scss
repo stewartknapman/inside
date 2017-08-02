@@ -1,70 +1,72 @@
-html {
-  @include fluid-lock(font-size, $fluid_type_min_vw, $fluid_type_max_vw, $font_size_min_value, $font_size_max_value);
-  @include fluid-lock(line-height, $fluid_type_min_vw, $fluid_type_max_vw, $line_height_min_value, $line_height_max_value);
-}
-
-body {
-  font-family: $font_family_body;
-  font-weight: $font_weight_base;
-  color: $text_color;
-  
-  @if $transition_duration_fontsize {
-    transition: font-size $transition_duration_fontsize;
+@if $include_base {
+  html {
+    @include fluid-lock(font-size, $fluid_type_min_vw, $fluid_type_max_vw, $font_size_min_value, $font_size_max_value);
+    @include fluid-lock(line-height, $fluid_type_min_vw, $fluid_type_max_vw, $line_height_min_value, $line_height_max_value);
   }
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include heading-style;
-}
+  body {
+    font-family: $font_family_body;
+    font-weight: $font_weight_base;
+    color: $text_color;
 
-h1 {
-  @include font-size-xxl;
-}
-h2 {
-  @include font-size-xl;
-}
-h3 {
-  @include font-size-lg;
-}
-h4 {
-  @include font-size-md;
-}
-h5 {
-  @include font-size-sm;
-}
-h6,
-small {
-  @include font-size-xs;
-}
-
-// -webkit-user-stylesheets adjusts the size of h1's nested in these block elements, so we do as well.
-// Future note: it would be good to use :any() https://developer.mozilla.org/en-US/docs/Web/CSS/%3Aany
-article, aside, nav, section {
-  h1 {
-    @include font-size-xl;
-  }
-  article, aside, nav, section {
-    h1 {
-      @include font-size-lg;
+    @if $transition_duration_fontsize {
+      transition: font-size $transition_duration_fontsize;
     }
   }
-}
 
-blockquote {
-  border-left: $border_color_blockquote $border_size_blockquote $border_style_blockquote;
-  padding-left: $gutter_vertical;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include heading-style;
+  }
 
-strong {
-  font-weight: $font_weight_bold;
-}
+  h1 {
+    @include font-size-xxl;
+  }
+  h2 {
+    @include font-size-xl;
+  }
+  h3 {
+    @include font-size-lg;
+  }
+  h4 {
+    @include font-size-md;
+  }
+  h5 {
+    @include font-size-sm;
+  }
+  h6,
+  small {
+    @include font-size-xs;
+  }
 
-hr {
-  border: none;
-  border-bottom: $border_color $border_size $border_style;
+  // -webkit-user-stylesheets adjusts the size of h1's nested in these block elements, so we do as well.
+  // Future note: it would be good to use :any() https://developer.mozilla.org/en-US/docs/Web/CSS/%3Aany
+  article, aside, nav, section {
+    h1 {
+      @include font-size-xl;
+    }
+    article, aside, nav, section {
+      h1 {
+        @include font-size-lg;
+      }
+    }
+  }
+
+  blockquote {
+    border-left: $border_color_blockquote $border_size_blockquote $border_style_blockquote;
+    padding-left: $gutter_vertical;
+  }
+
+  strong {
+    font-weight: $font_weight_bold;
+  }
+
+  hr {
+    border: none;
+    border-bottom: $border_color $border_size $border_style;
+  }
 }

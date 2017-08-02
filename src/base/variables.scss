@@ -5,6 +5,10 @@
 // Set to false if you want to use mixins and set your own classes.
 $include_classes: true !default;
 
+// Include base styles
+// Useful for building components when you don't want to effect the whole page
+$include_base: true !default;
+
 // Include fluid type settings:
 //  - https://www.smashingmagazine.com/2016/05/fluid-typography/
 //  - https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/

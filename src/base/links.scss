@@ -1,46 +1,48 @@
-a {
-  color: $link_color;
-  
-  &:hover,
-  &:active {
-    color: $link_color_hover;
-    @include force-redraw;
-  }
-  
-  @if ($transition_duration_hover) {
-    transition: $transition_duration_hover;
-  }
-  
-  @if ($include_pretty_underlines) {
-    @include pretty-underlines();
-  }
-  
-  svg {
-    vertical-align: top;
-  }
-}
+@if $include_base {
+  a {
+    color: $link_color;
 
-a:focus {
-  outline: none;
-  color: $selection_color;
-  background: rgba($selection_bg_color, 0.3);
-  box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
-  text-shadow: none;
-}
+    &:hover,
+    &:active {
+      color: $link_color_hover;
+      @include force-redraw;
+    }
 
-figure > a:focus {
-  outline-color: rgba($selection_bg_color, 0.3);
-}
+    @if ($transition_duration_hover) {
+      transition: $transition_duration_hover;
+    }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  text-decoration: none;
-  color: inherit;
-  @if ($include_pretty_underlines) {
-    background: none;
+    @if ($include_pretty_underlines) {
+      @include pretty-underlines();
+    }
+
+    svg {
+      vertical-align: top;
+    }
+  }
+
+  a:focus {
+    outline: none;
+    color: $selection_color;
+    background: rgba($selection_bg_color, 0.3);
+    box-shadow: 0 0 0 0.2em rgba($selection_bg_color, 0.3);
+    text-shadow: none;
+  }
+
+  figure > a:focus {
+    outline-color: rgba($selection_bg_color, 0.3);
+  }
+
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    text-decoration: none;
+    color: inherit;
+    @if ($include_pretty_underlines) {
+      background: none;
+    }
   }
 }

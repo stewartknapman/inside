@@ -1,27 +1,29 @@
-figure {
-  @include lobotomized-owl($gutter_horizontal/2);
-  
-  img {
-    display: block;
-  }
-  
-  @if ($include_figure_link_hover) {
-    > a:hover + figcaption {
-      h1 a,
-      h2 a,
-      h3 a,
-      h4 a,
-      h5 a,
-      h6 a,
-      a {
-        color: $link_color_hover;
-        @include force-redraw;
+@if $include_base {
+  figure {
+    @include lobotomized-owl($gutter_horizontal/2);
+
+    img {
+      display: block;
+    }
+
+    @if ($include_figure_link_hover) {
+      > a:hover + figcaption {
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a,
+        a {
+          color: $link_color_hover;
+          @include force-redraw;
+        }
       }
     }
-  }
-  
-  .grid-col &,
-  .grid-col-rev & {
-    margin-top: $gutter_horizontal;
+
+    .grid-col &,
+    .grid-col-rev & {
+      margin-top: $gutter_horizontal;
+    }
   }
 }

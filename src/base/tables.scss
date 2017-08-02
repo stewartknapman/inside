@@ -1,16 +1,18 @@
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  text-align: left;
-  
-  @media (min-width: $breakpoint_tables) {
-    td, th {
-      padding: ($gutter_horizontal / 2) ($gutter_vertical / 2);
+@if $include_base {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: left;
+
+    @media (min-width: $breakpoint_tables) {
+      td, th {
+        padding: ($gutter_horizontal / 2) ($gutter_vertical / 2);
+      }
     }
-  }
-  
-  @media (max-width: $breakpoint_tables) {
-    @include responsive-table;
+
+    @media (max-width: $breakpoint_tables) {
+      @include responsive-table;
+    }
   }
 }
