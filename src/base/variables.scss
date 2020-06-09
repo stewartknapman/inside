@@ -55,7 +55,7 @@ $breakpoint_tables: $breakpoint_sm !default;
 
 $breakpoint_sizes: (xs false) (sm $breakpoint_sm) (md $breakpoint_md) (lg $breakpoint_lg) (xl $breakpoint_xl) !default;
 
-// [Breaks in >= 3.3]
+// [No available in <= 3.3]
 // $breakpoint_sizes: (xs:false, sm:$breakpoint_sm, md:$breakpoint_md, lg:$breakpoint_lg, xl:$breakpoint_xl) !default;
 
 
